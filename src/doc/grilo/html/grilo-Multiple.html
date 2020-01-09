@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Multiple: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="multiple.html" title="Search in multiple sources">
+<link rel="prev" href="multiple.html" title="Search in multiple sources">
+<link rel="next" href="configure.html" title="Configuring plug-ins">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#grilo-Multiple.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="multiple.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="multiple.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="configure.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="grilo-Multiple"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="grilo-Multiple.top_of_page"></a>Multiple</span></h2>
+<p>Multiple — Search in multiple loaded sources</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="grilo-Multiple.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-Multiple.html#grl-multiple-get-media-from-uri" title="grl_multiple_get_media_from_uri ()">grl_multiple_get_media_from_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-Multiple.html#grl-multiple-search" title="grl_multiple_search ()">grl_multiple_search</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="grilo-Multiple.html#grl-multiple-search-sync" title="grl_multiple_search_sync ()">grl_multiple_search_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="grilo-Multiple.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="grilo-Multiple.description"></a><h2>Description</h2>
+<p>These helper functions are due to ease the search in multiple sources.
+You can specify the list of sources to use for the searching. Those sources
+must have enabled the search capability.</p>
+<p>Also you can set <code class="literal">NULL</code> that sources list, so the function will use all
+the available sources with the search capability.</p>
+</div>
+<div class="refsect1">
+<a name="grilo-Multiple.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="grl-multiple-get-media-from-uri"></a><h3>grl_multiple_get_media_from_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_multiple_get_media_from_uri (<em class="parameter"><code>const <span class="type">gchar</span> *uri</code></em>,
+                                 <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                                 <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                 <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceResolveCb" title="GrlSourceResolveCb ()"><span class="type">GrlSourceResolveCb</span></a> callback</code></em>,
+                                 <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Goes though all available media sources until it finds one capable of
+constructing a GrlMedia object representing the media resource exposed
+by <em class="parameter"><code>uri</code></em>
+.</p>
+<p>This method is asynchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.6.2.6.2.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>A URI that can be used to identify a media resource</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> List of metadata keys we want to obtain. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p> the user defined callback. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the user data to pass to the user callback</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-multiple-search"></a><h3>grl_multiple_search ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>
+grl_multiple_search (<em class="parameter"><code>const <span class="type">GList</span> *sources</code></em>,
+                     <em class="parameter"><code>const <span class="type">gchar</span> *text</code></em>,
+                     <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                     <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                     <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceResultCb" title="GrlSourceResultCb ()"><span class="type">GrlSourceResultCb</span></a> callback</code></em>,
+                     <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Search for <em class="parameter"><code>text</code></em>
+ in all the sources specified in <em class="parameter"><code>sources</code></em>
+.</p>
+<p>If <em class="parameter"><code>text</code></em>
+ is <em class="parameter"><code>NULL</code></em>
+ then NULL-text searchs will be used for each searchable
+plugin (see <a class="link" href="GrlSource.html#grl-source-search" title="grl_source_search ()"><span class="type">grl_source_search</span></a> for more details).</p>
+<p>This method is asynchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.6.2.6.3.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sources</p></td>
+<td class="parameter_description"><p>a <span class="type">GList</span> of <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a>s to search from (<code class="literal">NULL</code> for all
+searchable sources). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlSource][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>text</p></td>
+<td class="parameter_description"><p>the text to search for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> to retrieve. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p> the user defined callback. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the user data to pass to the user callback</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.2.6.3.8"></a><h4>Returns</h4>
+<p> the operation identifier</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-multiple-search-sync"></a><h3>grl_multiple_search_sync ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_multiple_search_sync (<em class="parameter"><code>const <span class="type">GList</span> *sources</code></em>,
+                          <em class="parameter"><code>const <span class="type">gchar</span> *text</code></em>,
+                          <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                          <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                          <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Search for <em class="parameter"><code>text</code></em>
+ in all the sources specified in <em class="parameter"><code>sources</code></em>
+.</p>
+<p>This method is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.6.2.6.4.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sources</p></td>
+<td class="parameter_description"><p>a <span class="type">GList</span> of <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a>s where to search from (<code class="literal">NULL</code> for all
+available sources with search capability). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlSource][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>text</p></td>
+<td class="parameter_description"><p>the text to search for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> to retrieve. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.2.6.4.7"></a><h4>Returns</h4>
+<p> a list with <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> elements. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlMedia][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="grilo-Multiple.other_details"></a><h2>Types and Values</h2>
+</div>
+<div class="refsect1">
+<a name="grilo-Multiple.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a>, <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>grl-error: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="misc.html" title="Misc">
+<link rel="prev" href="grilo-grl-log.html" title="grl-log">
+<link rel="next" href="grilo-grl-definitions.html" title="grl-definitions">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#grilo-grl-error.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="misc.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="grilo-grl-log.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="grilo-grl-definitions.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="grilo-grl-error"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="grilo-grl-error.top_of_page"></a>grl-error</span></h2>
+<p>grl-error</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="grilo-grl-error.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="grilo-grl-error.html#GrlCoreError" title="enum GrlCoreError">GrlCoreError</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="grilo-grl-error.html#GRL-CORE-ERROR:CAPS" title="GRL_CORE_ERROR">GRL_CORE_ERROR</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="grilo-grl-error.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="grilo-grl-error.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="grilo-grl-error.functions_details"></a><h2>Functions</h2>
+</div>
+<div class="refsect1">
+<a name="grilo-grl-error.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlCoreError"></a><h3>enum GrlCoreError</h3>
+<p>These constants identify all the available core errors</p>
+<div class="refsect3">
+<a name="id-1.5.9.4.7.2.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-BROWSE-FAILED:CAPS"></a>GRL_CORE_ERROR_BROWSE_FAILED</p></td>
+<td class="enum_member_description">
+<p>The browse operation failed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-SEARCH-FAILED:CAPS"></a>GRL_CORE_ERROR_SEARCH_FAILED</p></td>
+<td class="enum_member_description">
+<p>The search operation failed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-SEARCH-NULL-UNSUPPORTED:CAPS"></a>GRL_CORE_ERROR_SEARCH_NULL_UNSUPPORTED</p></td>
+<td class="enum_member_description">
+<p>Searching NULL-text is not supported</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-QUERY-FAILED:CAPS"></a>GRL_CORE_ERROR_QUERY_FAILED</p></td>
+<td class="enum_member_description">
+<p>The query operation failed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-RESOLVE-FAILED:CAPS"></a>GRL_CORE_ERROR_RESOLVE_FAILED</p></td>
+<td class="enum_member_description">
+<p>The resolution operation failed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-MEDIA-NOT-FOUND:CAPS"></a>GRL_CORE_ERROR_MEDIA_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>The media was not found</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-STORE-FAILED:CAPS"></a>GRL_CORE_ERROR_STORE_FAILED</p></td>
+<td class="enum_member_description">
+<p>The store operation failed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-STORE-METADATA-FAILED:CAPS"></a>GRL_CORE_ERROR_STORE_METADATA_FAILED</p></td>
+<td class="enum_member_description">
+<p>The store metadata operation failed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-REMOVE-FAILED:CAPS"></a>GRL_CORE_ERROR_REMOVE_FAILED</p></td>
+<td class="enum_member_description">
+<p>The removal operation failed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-MEDIA-FROM-URI-FAILED:CAPS"></a>GRL_CORE_ERROR_MEDIA_FROM_URI_FAILED</p></td>
+<td class="enum_member_description">
+<p>The media from_uri operation failed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-CONFIG-LOAD-FAILED:CAPS"></a>GRL_CORE_ERROR_CONFIG_LOAD_FAILED</p></td>
+<td class="enum_member_description">
+<p>Failed to load plugin configuration from a file</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-CONFIG-FAILED:CAPS"></a>GRL_CORE_ERROR_CONFIG_FAILED</p></td>
+<td class="enum_member_description">
+<p>Failed to set configuration for plugin</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-UNREGISTER-SOURCE-FAILED:CAPS"></a>GRL_CORE_ERROR_UNREGISTER_SOURCE_FAILED</p></td>
+<td class="enum_member_description">
+<p>Failed to unregister source</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-LOAD-PLUGIN-FAILED:CAPS"></a>GRL_CORE_ERROR_LOAD_PLUGIN_FAILED</p></td>
+<td class="enum_member_description">
+<p>Failed to load plugin</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-UNLOAD-PLUGIN-FAILED:CAPS"></a>GRL_CORE_ERROR_UNLOAD_PLUGIN_FAILED</p></td>
+<td class="enum_member_description">
+<p>Failed to unload plugin</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-REGISTER-METADATA-KEY-FAILED:CAPS"></a>GRL_CORE_ERROR_REGISTER_METADATA_KEY_FAILED</p></td>
+<td class="enum_member_description">
+<p>Failed to register metadata key</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-NOTIFY-CHANGED-FAILED:CAPS"></a>GRL_CORE_ERROR_NOTIFY_CHANGED_FAILED</p></td>
+<td class="enum_member_description">
+<p>Failed to start changed notifications</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CORE-ERROR-OPERATION-CANCELLED:CAPS"></a>GRL_CORE_ERROR_OPERATION_CANCELLED</p></td>
+<td class="enum_member_description">
+<p>The operation was cancelled</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-CORE-ERROR:CAPS"></a><h3>GRL_CORE_ERROR</h3>
+<pre class="programlisting">#define GRL_CORE_ERROR g_quark_from_static_string("grilo.error.general")
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

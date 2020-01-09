@@ -1,0 +1,674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>grl-log: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="misc.html" title="Misc">
+<link rel="prev" href="grilo-grl-metadata-key.html" title="grl-metadata-key">
+<link rel="next" href="grilo-grl-error.html" title="grl-error">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#grilo-grl-log.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="misc.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="grilo-grl-metadata-key.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="grilo-grl-error.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="grilo-grl-log"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="grilo-grl-log.top_of_page"></a>grl-log</span></h2>
+<p>grl-log — Log system</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="grilo-grl-log.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#GRL-LOG:CAPS" title="GRL_LOG()">GRL_LOG</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#GRL-LOG-DOMAIN:CAPS" title="GRL_LOG_DOMAIN()">GRL_LOG_DOMAIN</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#GRL-LOG-DOMAIN-EXTERN:CAPS" title="GRL_LOG_DOMAIN_EXTERN()">GRL_LOG_DOMAIN_EXTERN</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#GRL-LOG-DOMAIN-FREE:CAPS" title="GRL_LOG_DOMAIN_FREE()">GRL_LOG_DOMAIN_FREE</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#GRL-LOG-DOMAIN-INIT:CAPS" title="GRL_LOG_DOMAIN_INIT()">GRL_LOG_DOMAIN_INIT</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#GRL-LOG-DOMAIN-STATIC:CAPS" title="GRL_LOG_DOMAIN_STATIC()">GRL_LOG_DOMAIN_STATIC</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#GRL-DEBUG:CAPS" title="GRL_DEBUG()">GRL_DEBUG</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#GRL-ERROR:CAPS" title="GRL_ERROR()">GRL_ERROR</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#GRL-INFO:CAPS" title="GRL_INFO()">GRL_INFO</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#GRL-MESSAGE:CAPS" title="GRL_MESSAGE()">GRL_MESSAGE</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#GRL-WARNING:CAPS" title="GRL_WARNING()">GRL_WARNING</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#grl-log" title="grl_log ()">grl_log</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#grl-log-configure" title="grl_log_configure ()">grl_log_configure</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#grl-log-domain-free" title="grl_log_domain_free ()">grl_log_domain_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="grilo-grl-log.html#GrlLogDomain" title="GrlLogDomain"><span class="returnvalue">GrlLogDomain</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="grilo-grl-log.html#grl-log-domain-new" title="grl_log_domain_new ()">grl_log_domain_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="grilo-grl-log.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="grilo-grl-log.html#GrlLogDomain" title="GrlLogDomain">GrlLogDomain</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="grilo-grl-log.html#GrlLogLevel" title="enum GrlLogLevel">GrlLogLevel</a></td>
+</tr>
+<tr>
+<td class="variable_type">extern GrlLogDomain *</td>
+<td class="function_name"><a class="link" href="grilo-grl-log.html#GRL-LOG-DOMAIN-DEFAULT:CAPS" title="GRL_LOG_DOMAIN_DEFAULT">GRL_LOG_DOMAIN_DEFAULT</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="grilo-grl-log.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="grilo-grl-log.description"></a><h2>Description</h2>
+<p>This class stores information related to the log system</p>
+</div>
+<div class="refsect1">
+<a name="grilo-grl-log.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="GRL-LOG:CAPS"></a><h3>GRL_LOG()</h3>
+<pre class="programlisting">#define             GRL_LOG(domain, level, ...)</pre>
+<p>Outputs a debugging message. This is the most general macro for outputting
+debugging messages. You will probably want to use one of the ones described
+below.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>domain</p></td>
+<td class="parameter_description"><p>the log domain to use</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>level</p></td>
+<td class="parameter_description"><p>the severity of the message</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>A printf-style message to output</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-LOG-DOMAIN:CAPS"></a><h3>GRL_LOG_DOMAIN()</h3>
+<pre class="programlisting">#define GRL_LOG_DOMAIN(domain) GrlLogDomain *domain = NULL
+</pre>
+<p>Defines a GrlLogDomain variable.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>domain</p></td>
+<td class="parameter_description"><p>the log domain</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-LOG-DOMAIN-EXTERN:CAPS"></a><h3>GRL_LOG_DOMAIN_EXTERN()</h3>
+<pre class="programlisting">#define GRL_LOG_DOMAIN_EXTERN(domain) extern GrlLogDomain *domain
+</pre>
+<p>Declares a GrlLogDomain variable as extern. Use in header files.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>domain</p></td>
+<td class="parameter_description"><p>the log domain</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-LOG-DOMAIN-FREE:CAPS"></a><h3>GRL_LOG_DOMAIN_FREE()</h3>
+<pre class="programlisting">#define             GRL_LOG_DOMAIN_FREE(domain)</pre>
+<p>Free a previously allocated <a class="link" href="grilo-grl-log.html#GrlLogDomain" title="GrlLogDomain"><span class="type">GrlLogDomain</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>domain</p></td>
+<td class="parameter_description"><p>the log domain to free.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-LOG-DOMAIN-INIT:CAPS"></a><h3>GRL_LOG_DOMAIN_INIT()</h3>
+<pre class="programlisting">#define             GRL_LOG_DOMAIN_INIT(domain, name)</pre>
+<p>Creates a new <a class="link" href="grilo-grl-log.html#GrlLogDomain" title="GrlLogDomain"><span class="type">GrlLogDomain</span></a> with the given name.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>domain</p></td>
+<td class="parameter_description"><p>the log domain to initialize.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>the name of the log domain.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-LOG-DOMAIN-STATIC:CAPS"></a><h3>GRL_LOG_DOMAIN_STATIC()</h3>
+<pre class="programlisting">#define GRL_LOG_DOMAIN_STATIC(domain) static GrlLogDomain *domain = NULL
+</pre>
+<p>Defines a static GrlLogDomain variable.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>domain</p></td>
+<td class="parameter_description"><p>the log domain</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-DEBUG:CAPS"></a><h3>GRL_DEBUG()</h3>
+<pre class="programlisting">#define             GRL_DEBUG(...)</pre>
+<p>Output a debugging message in the default log domain.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>printf-style message to output</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-ERROR:CAPS"></a><h3>GRL_ERROR()</h3>
+<pre class="programlisting">#define             GRL_ERROR(...)</pre>
+<p>Output an error message in the default log domain.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>printf-style message to output</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-INFO:CAPS"></a><h3>GRL_INFO()</h3>
+<pre class="programlisting">#define             GRL_INFO(...)</pre>
+<p>Output an informational message in the default log domain.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>printf-style message to output</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-MESSAGE:CAPS"></a><h3>GRL_MESSAGE()</h3>
+<pre class="programlisting">#define             GRL_MESSAGE(...)</pre>
+<p>Output a logging message in the default log domain.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>printf-style message to output</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-WARNING:CAPS"></a><h3>GRL_WARNING()</h3>
+<pre class="programlisting">#define             GRL_WARNING(...)</pre>
+<p>Output a warning message in the default log domain.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>printf-style message to output</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-log"></a><h3>grl_log ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_log (<em class="parameter"><code><a class="link" href="grilo-grl-log.html#GrlLogDomain" title="GrlLogDomain"><span class="type">GrlLogDomain</span></a> *domain</code></em>,
+         <em class="parameter"><code><a class="link" href="grilo-grl-log.html#GrlLogLevel" title="enum GrlLogLevel"><span class="type">GrlLogLevel</span></a> level</code></em>,
+         <em class="parameter"><code>const <span class="type">gchar</span> *strloc</code></em>,
+         <em class="parameter"><code>const <span class="type">gchar</span> *format</code></em>,
+         <em class="parameter"><code>...</code></em>);</pre>
+<p>Send a log message.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>domain</p></td>
+<td class="parameter_description"><p>a domain</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>level</p></td>
+<td class="parameter_description"><p>log level</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strloc</p></td>
+<td class="parameter_description"><p>string, usually line of code where function is invoked</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>format</p></td>
+<td class="parameter_description"><p>log message</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>parameters to insert in the log message</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.7</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-log-configure"></a><h3>grl_log_configure ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_log_configure (<em class="parameter"><code>const <span class="type">gchar</span> *config</code></em>);</pre>
+<p>Configure a set of log domains. The default configuration is to display
+warning and error messages only for all the log domains.</p>
+<p>The configuration string follows the following grammar:</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6</pre></td>
+        <td class="listing_code"><pre class="programlisting">config<span class="gtkdoc opt">-</span>list<span class="gtkdoc opt">:</span> config <span class="gtkdoc opt">|</span> config <span class="string">','</span> config<span class="gtkdoc opt">-</span>list
+config<span class="gtkdoc opt">:</span> domain <span class="string">':'</span> level
+domain<span class="gtkdoc opt">:</span> <span class="string">'*'</span> <span class="gtkdoc opt">| [</span>a<span class="gtkdoc opt">-</span>zA<span class="gtkdoc opt">-</span>Z0<span class="gtkdoc opt">-</span><span class="number">9</span><span class="gtkdoc opt">]+</span>
+level<span class="gtkdoc opt">:</span> <span class="string">'*'</span> <span class="gtkdoc opt">|</span> <span class="string">'-'</span> <span class="gtkdoc opt">|</span> named<span class="gtkdoc opt">-</span>level <span class="gtkdoc opt">|</span> num<span class="gtkdoc opt">-</span>level
+named<span class="gtkdoc opt">-</span>level<span class="gtkdoc opt">:</span> <span class="string">&quot;none&quot;</span> <span class="gtkdoc opt">|</span> <span class="string">&quot;error&quot;</span> <span class="gtkdoc opt">|</span> <span class="string">&quot;warning&quot;</span> <span class="gtkdoc opt">|</span> <span class="string">&quot;message&quot;</span> <span class="gtkdoc opt">|</span> <span class="string">&quot;info&quot;</span> <span class="gtkdoc opt">|</span> <span class="string">&quot;debug&quot;</span>
+num<span class="gtkdoc opt">-</span>level<span class="gtkdoc opt">: [</span><span class="number">0</span><span class="gtkdoc opt">-</span><span class="number">5</span><span class="gtkdoc opt">]</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p>examples:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>"*:*": maximum verbosity for all the log domains</p></li>
+<li class="listitem"><p>"*:-": don't print any message</p></li>
+<li class="listitem"><p>"media-source:debug,metadata-source:debug": prints debug,
+  info, message warning and error messages for the media-source and
+  metadata-source log domains</p></li>
+</ul></div>
+<div class="note">It's possible to override the log configuration at runtime by
+defining the GRL_DEBUG environment variable to a configuration string
+as described above</div>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.14.11"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>A string describing the wanted log configuration</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.7</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-log-domain-free"></a><h3>grl_log_domain_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_log_domain_free (<em class="parameter"><code><a class="link" href="grilo-grl-log.html#GrlLogDomain" title="GrlLogDomain"><span class="type">GrlLogDomain</span></a> *domain</code></em>);</pre>
+<p>Releases <em class="parameter"><code>domain</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>domain</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-grl-log.html#GrlLogDomain" title="GrlLogDomain"><span class="type">GrlLogDomain</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.7</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-log-domain-new"></a><h3>grl_log_domain_new ()</h3>
+<pre class="programlisting"><a class="link" href="grilo-grl-log.html#GrlLogDomain" title="GrlLogDomain"><span class="returnvalue">GrlLogDomain</span></a> *
+grl_log_domain_new (<em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.16.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>The name for the new log domain</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.9.3.7.16.5"></a><h4>Returns</h4>
+<p> The new log domain</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.7</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="grilo-grl-log.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlLogDomain"></a><h3>GrlLogDomain</h3>
+<pre class="programlisting">typedef struct _GrlLogDomain GrlLogDomain;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlLogLevel"></a><h3>enum GrlLogLevel</h3>
+<p>Grilo log levels. Defines the level of verbosity selected in Grilo.</p>
+<div class="refsect3">
+<a name="id-1.5.9.3.8.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-LOG-LEVEL-NONE:CAPS"></a>GRL_LOG_LEVEL_NONE</p></td>
+<td class="enum_member_description">
+<p>Log level none</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-LOG-LEVEL-ERROR:CAPS"></a>GRL_LOG_LEVEL_ERROR</p></td>
+<td class="enum_member_description">
+<p>Log on error</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-LOG-LEVEL-WARNING:CAPS"></a>GRL_LOG_LEVEL_WARNING</p></td>
+<td class="enum_member_description">
+<p>Log on warning</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-LOG-LEVEL-MESSAGE:CAPS"></a>GRL_LOG_LEVEL_MESSAGE</p></td>
+<td class="enum_member_description">
+<p>Log on message</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-LOG-LEVEL-INFO:CAPS"></a>GRL_LOG_LEVEL_INFO</p></td>
+<td class="enum_member_description">
+<p>Log on info</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-LOG-LEVEL-DEBUG:CAPS"></a>GRL_LOG_LEVEL_DEBUG</p></td>
+<td class="enum_member_description">
+<p>Log on debug</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-LOG-LEVEL-LAST:CAPS"></a>GRL_LOG_LEVEL_LAST</p></td>
+<td class="enum_member_description">
+<p>Last level of log</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-LOG-DOMAIN-DEFAULT:CAPS"></a><h3>GRL_LOG_DOMAIN_DEFAULT</h3>
+<pre class="programlisting">extern GrlLogDomain *GRL_LOG_DOMAIN_DEFAULT;
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

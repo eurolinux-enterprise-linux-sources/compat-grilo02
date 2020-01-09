@@ -1,0 +1,1727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlRegistry: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="plugin-management.html" title="Plug-in management">
+<link rel="prev" href="plugin-management.html" title="Plug-in management">
+<link rel="next" href="sources.html" title="Data sources">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GrlRegistry.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GrlRegistry.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#GrlRegistry.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="plugin-management.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="plugin-management.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="sources.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GrlRegistry"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GrlRegistry.top_of_page"></a>GrlRegistry</span></h2>
+<p>GrlRegistry — Grilo plugins loader and manager</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GrlRegistry.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#GRL-PLUGIN-REGISTER:CAPS" title="GRL_PLUGIN_REGISTER()">GRL_PLUGIN_REGISTER</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-add-config" title="grl_registry_add_config ()">grl_registry_add_config</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-add-config-from-file" title="grl_registry_add_config_from_file ()">grl_registry_add_config_from_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-add-config-from-resource" title="grl_registry_add_config_from_resource ()">grl_registry_add_config_from_resource</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-add-directory" title="grl_registry_add_directory ()">grl_registry_add_directory</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="returnvalue">GrlRegistry</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-get-default" title="grl_registry_get_default ()">grl_registry_get_default</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-get-metadata-keys" title="grl_registry_get_metadata_keys ()">grl_registry_get_metadata_keys</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-get-plugins" title="grl_registry_get_plugins ()">grl_registry_get_plugins</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-get-sources" title="grl_registry_get_sources ()">grl_registry_get_sources</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-get-sources-by-operations" title="grl_registry_get_sources_by_operations ()">grl_registry_get_sources_by_operations</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-load-all-plugins" title="grl_registry_load_all_plugins ()">grl_registry_load_all_plugins</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-load-plugin" title="grl_registry_load_plugin ()">grl_registry_load_plugin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-load-plugin-by-id" title="grl_registry_load_plugin_by_id ()">grl_registry_load_plugin_by_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-load-plugin-directory" title="grl_registry_load_plugin_directory ()">grl_registry_load_plugin_directory</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="returnvalue">GrlKeyID</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-lookup-metadata-key" title="grl_registry_lookup_metadata_key ()">grl_registry_lookup_metadata_key</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-lookup-metadata-key-desc" title="grl_registry_lookup_metadata_key_desc ()">grl_registry_lookup_metadata_key_desc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-lookup-metadata-key-name" title="grl_registry_lookup_metadata_key_name ()">grl_registry_lookup_metadata_key_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-lookup-metadata-key-relation" title="grl_registry_lookup_metadata_key_relation ()">grl_registry_lookup_metadata_key_relation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GType</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-lookup-metadata-key-type" title="grl_registry_lookup_metadata_key_type ()">grl_registry_lookup_metadata_key_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="returnvalue">GrlPlugin</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-lookup-plugin" title="grl_registry_lookup_plugin ()">grl_registry_lookup_plugin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlSource.html" title="GrlSource"><span class="returnvalue">GrlSource</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-lookup-source" title="grl_registry_lookup_source ()">grl_registry_lookup_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-metadata-key-validate" title="grl_registry_metadata_key_validate ()">grl_registry_metadata_key_validate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="returnvalue">GrlKeyID</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-register-metadata-key" title="grl_registry_register_metadata_key ()">grl_registry_register_metadata_key</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-register-metadata-key-relation" title="grl_registry_register_metadata_key_relation ()">grl_registry_register_metadata_key_relation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-register-source" title="grl_registry_register_source ()">grl_registry_register_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-unload-plugin" title="grl_registry_unload_plugin ()">grl_registry_unload_plugin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlRegistry.html#grl-registry-unregister-source" title="grl_registry_unregister_source ()">grl_registry_unregister_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlRegistry.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="signals_return">
+<col width="300px" class="signals_name">
+<col width="200px" class="signals_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GrlRegistry.html#GrlRegistry-metadata-key-added" title="The “metadata-key-added” signal">metadata-key-added</a></td>
+<td class="signal_flags">Action</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GrlRegistry.html#GrlRegistry-source-added" title="The “source-added” signal">source-added</a></td>
+<td class="signal_flags">Action</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GrlRegistry.html#GrlRegistry-source-removed" title="The “source-removed” signal">source-removed</a></td>
+<td class="signal_flags">Action</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlRegistry.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GrlRegistry.html#GrlRank" title="enum GrlRank">GrlRank</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlRegistry.html#GrlRegistry-struct" title="struct GrlRegistry">GrlRegistry</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlRegistry.html#GrlRegistryClass" title="struct GrlRegistryClass">GrlRegistryClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlRegistry.html#GrlPluginDescriptor" title="struct GrlPluginDescriptor">GrlPluginDescriptor</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlRegistry.html#GRL-PLUGIN-LIST-VAR:CAPS" title="GRL_PLUGIN_LIST_VAR">GRL_PLUGIN_LIST_VAR</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlRegistry.html#GRL-PLUGIN-PATH-VAR:CAPS" title="GRL_PLUGIN_PATH_VAR">GRL_PLUGIN_PATH_VAR</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlRegistry.html#GRL-PLUGIN-RANKS-VAR:CAPS" title="GRL_PLUGIN_RANKS_VAR">GRL_PLUGIN_RANKS_VAR</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlRegistry.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GrlRegistry
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlRegistry.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlRegistry.description"></a><h2>Description</h2>
+<p>The registry holds the metadata of a set of plugins.</p>
+<p>The <a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> object is a list of plugins and some functions
+for dealing with them. Each <a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> is matched 1-1 with a file
+on disk, and may or may not be loaded a given time. There only can be
+a single instance of <a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> (singleton pattern).</p>
+<p>A <a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> can hold several data <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> sources, and <a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a>
+shall register each one of them.</p>
+</div>
+<div class="refsect1">
+<a name="GrlRegistry.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="GRL-PLUGIN-REGISTER:CAPS"></a><h3>GRL_PLUGIN_REGISTER()</h3>
+<pre class="programlisting">#define             GRL_PLUGIN_REGISTER(init,                                    \
+                                        deinit,                                  \
+                                        id)</pre>
+<p>Define the boilerplate for loadable modules. Defines a new module
+descriptor which provides a set of <a href="GrlPlugin.html"><span class="type">GrlPlugins</span></a></p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>init</p></td>
+<td class="parameter_description"><p>the module initialization. It shall instantiate
+the <a href="GrlPlugin.html"><span class="type">GrlPlugins</span></a> provided</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>deinit</p></td>
+<td class="parameter_description"><p> function to execute when the registry needs to dispose the module. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>the module identifier</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-add-config"></a><h3>grl_registry_add_config ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_registry_add_config (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                         <em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                         <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Add a configuration for a plugin/source.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p> a configuration set. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>error return location or <em class="parameter"><code>NULL</code></em>
+to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.3.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-add-config-from-file"></a><h3>grl_registry_add_config_from_file ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_registry_add_config_from_file (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                   <em class="parameter"><code>const <span class="type">gchar</span> *config_file</code></em>,
+                                   <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Load plugin configurations from a .ini-like config file.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>config_file</p></td>
+<td class="parameter_description"><p>a key-value file containing the configuration</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>error return location or <em class="parameter"><code>NULL</code></em>
+to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.4.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-add-config-from-resource"></a><h3>grl_registry_add_config_from_resource ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_registry_add_config_from_resource (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                       <em class="parameter"><code>const <span class="type">gchar</span> *resource_path</code></em>,
+                                       <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Load plugin configurations from a .ini-like resource file.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>resource_path</p></td>
+<td class="parameter_description"><p>a key-value file containing the configuration</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>error return location or <em class="parameter"><code>NULL</code></em>
+to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.5.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-add-directory"></a><h3>grl_registry_add_directory ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_registry_add_directory (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                            <em class="parameter"><code>const <span class="type">gchar</span> *path</code></em>);</pre>
+<p>Set this path as part of default paths to load plugins.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a path with plugins</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-get-default"></a><h3>grl_registry_get_default ()</h3>
+<pre class="programlisting"><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="returnvalue">GrlRegistry</span></a> *
+grl_registry_get_default (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>As the registry is designed to work as a singleton, this
+method is in charge of creating the only instance or
+returned it if it is already in memory.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.7.5"></a><h4>Returns</h4>
+<p> a new or an already created instance of the registry.</p>
+<p>It is NOT MT-safe. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-get-metadata-keys"></a><h3>grl_registry_get_metadata_keys ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_registry_get_metadata_keys (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>);</pre>
+<p>Returns a list with all registered keys in system.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.8.6"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> with all the available
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s. The content of the list should not be modified or freed.
+Use <code class="function">g_list_free()</code> when done using the list. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-get-plugins"></a><h3>grl_registry_get_plugins ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_registry_get_plugins (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                          <em class="parameter"><code><span class="type">gboolean</span> only_loaded</code></em>);</pre>
+<p>This function will return all the available plugins in the <em class="parameter"><code>registry</code></em>
+.</p>
+<p>If <em class="parameter"><code>only_loaded</code></em>
+ is <code class="literal">TRUE</code>, the plugin list will contain only plugins that are
+loaded.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.9.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>only_loaded</p></td>
+<td class="parameter_description"><p>whether the returned list shall include only loaded plugins</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.9.7"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> of
+available <a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a>s. The content of the list should not be modified
+or freed. Use <code class="function">g_list_free()</code> when done using the list. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlPlugin][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-get-sources"></a><h3>grl_registry_get_sources ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_registry_get_sources (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                          <em class="parameter"><code><span class="type">gboolean</span> ranked</code></em>);</pre>
+<p>This function will return all the available sources in the <em class="parameter"><code>registry</code></em>
+.</p>
+<p>If <em class="parameter"><code>ranked</code></em>
+ is <code class="literal">TRUE</code>, the source list will be ordered by rank.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.10.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ranked</p></td>
+<td class="parameter_description"><p>whether the returned list shall be returned ordered by rank</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.10.7"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> of
+available <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a>s. The content of the list should not be
+modified or freed. Use <code class="function">g_list_free()</code> when done using the list. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlSource][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-get-sources-by-operations"></a><h3>grl_registry_get_sources_by_operations ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_registry_get_sources_by_operations
+                               (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSupportedOps" title="enum GrlSupportedOps"><span class="type">GrlSupportedOps</span></a> ops</code></em>,
+                                <em class="parameter"><code><span class="type">gboolean</span> ranked</code></em>);</pre>
+<p>Give an array of all the available sources in the <em class="parameter"><code>registry</code></em>
+ capable of
+perform the operations requested in <em class="parameter"><code>ops</code></em>
+.</p>
+<p>If <em class="parameter"><code>ranked</code></em>
+ is <code class="literal">TRUE</code>, the source list will be ordered by rank.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.11.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ops</p></td>
+<td class="parameter_description"><p>a bitwise mangle of the requested operations.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ranked</p></td>
+<td class="parameter_description"><p>whether the returned list shall be returned ordered by rank</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.11.7"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> of
+available <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a>s. The content of the list should not be
+modified or freed. Use <code class="function">g_list_free()</code> when done using the list. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlSource][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-load-all-plugins"></a><h3>grl_registry_load_all_plugins ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_registry_load_all_plugins (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                               <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Load all the modules available in the default directory path.</p>
+<p>The default directory path can be changed through the environment
+variable <code class="literal">GRL_PLUGIN_PATH</code> and it can contain several paths separated
+by ":"</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.12.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>error return location or <em class="parameter"><code>NULL</code></em>
+to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.12.7"></a><h4>Returns</h4>
+<p> <code class="literal">FALSE</code>% is all the configured plugin paths are invalid,
+<code class="literal">TRUE</code>% otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-load-plugin"></a><h3>grl_registry_load_plugin ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_registry_load_plugin (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                          <em class="parameter"><code>const <span class="type">gchar</span> *library_filename</code></em>,
+                          <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Loads a module from shared object file stored in <em class="parameter"><code>path</code></em>
+</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>library_filename</p></td>
+<td class="parameter_description"><p>the path to the so file</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>error return location or <em class="parameter"><code>NULL</code></em>
+to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.13.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if the module is loaded correctly</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-load-plugin-by-id"></a><h3>grl_registry_load_plugin_by_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_registry_load_plugin_by_id (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *plugin_id</code></em>,
+                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Loads plugin identified by <em class="parameter"><code>plugin_id</code></em>
+.</p>
+<p>This requires the XML plugin information file to define a "module" key with
+the name of the module that provides the plugin or the absolute path of the
+actual module file.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.14.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>plugin_id</p></td>
+<td class="parameter_description"><p>plugin identifier</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>error return location or <em class="parameter"><code>NULL</code></em>
+to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.14.7"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if the plugin is loaded correctly</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-load-plugin-directory"></a><h3>grl_registry_load_plugin_directory ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_registry_load_plugin_directory (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                    <em class="parameter"><code>const <span class="type">gchar</span> *path</code></em>,
+                                    <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Loads a set of modules from directory in <em class="parameter"><code>path</code></em>
+ which contains
+a group shared object files.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>the path to the directory</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>error return location or <em class="parameter"><code>NULL</code></em>
+to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.15.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if the directory is valid.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-lookup-metadata-key"></a><h3>grl_registry_lookup_metadata_key ()</h3>
+<pre class="programlisting"><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="returnvalue">GrlKeyID</span></a>
+grl_registry_lookup_metadata_key (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gchar</span> *key_name</code></em>);</pre>
+<p>Look up for the metadata key with name <em class="parameter"><code>key_name</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key_name</p></td>
+<td class="parameter_description"><p>the key name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.16.6"></a><h4>Returns</h4>
+<p> The metadata key, or GRL_METADATA_KEY_INVALID if not found</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-lookup-metadata-key-desc"></a><h3>grl_registry_lookup_metadata_key_desc ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_registry_lookup_metadata_key_desc (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                       <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Returns <em class="parameter"><code>key</code></em>
+ description.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a metadata key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.17.6"></a><h4>Returns</h4>
+<p> metadata key description, or <em class="parameter"><code>NULL</code></em>
+if not found</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-lookup-metadata-key-name"></a><h3>grl_registry_lookup_metadata_key_name ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_registry_lookup_metadata_key_name (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                       <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Returns <em class="parameter"><code>key</code></em>
+ name.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a metadata key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.18.6"></a><h4>Returns</h4>
+<p> metadata key name, or <em class="parameter"><code>NULL</code></em>
+if not found</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-lookup-metadata-key-relation"></a><h3>grl_registry_lookup_metadata_key_relation ()</h3>
+<pre class="programlisting">const <span class="returnvalue">GList</span> *
+grl_registry_lookup_metadata_key_relation
+                               (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Look up the list of keys that have a relation with <em class="parameter"><code>key</code></em>
+.</p>
+<p><em class="parameter"><code>key</code></em>
+ is included in that list.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.19.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a metadata key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.19.7"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> of
+related keys, or <em class="parameter"><code>NULL</code></em>
+if key is invalid. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-lookup-metadata-key-type"></a><h3>grl_registry_lookup_metadata_key_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">GType</span>
+grl_registry_lookup_metadata_key_type (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                       <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Returns <em class="parameter"><code>key</code></em>
+ expected value type.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a metadata key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.20.6"></a><h4>Returns</h4>
+<p> metadata key type, or <em class="parameter"><code>G_TYPE_INVALID</code></em>
+if not found</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-lookup-plugin"></a><h3>grl_registry_lookup_plugin ()</h3>
+<pre class="programlisting"><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="returnvalue">GrlPlugin</span></a> *
+grl_registry_lookup_plugin (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                            <em class="parameter"><code>const <span class="type">gchar</span> *plugin_id</code></em>);</pre>
+<p>This function will search and retrieve a plugin given its identifier.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>plugin_id</p></td>
+<td class="parameter_description"><p>the id of a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.21.6"></a><h4>Returns</h4>
+<p> The plugin found. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-lookup-source"></a><h3>grl_registry_lookup_source ()</h3>
+<pre class="programlisting"><a class="link" href="GrlSource.html" title="GrlSource"><span class="returnvalue">GrlSource</span></a> *
+grl_registry_lookup_source (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                            <em class="parameter"><code>const <span class="type">gchar</span> *source_id</code></em>);</pre>
+<p>This function will search and retrieve a source given its identifier.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>source_id</p></td>
+<td class="parameter_description"><p>the id of a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.22.6"></a><h4>Returns</h4>
+<p> The source found. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-metadata-key-validate"></a><h3>grl_registry_metadata_key_validate ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_registry_metadata_key_validate (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                    <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                                    <em class="parameter"><code><span class="type">GValue</span> *value</code></em>);</pre>
+<p>Validates <em class="parameter"><code>value</code></em>
+ content complies with the key specification. That is, it has
+the expected type, and value are within the range specified in key (for
+integer values).</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a metadata key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>value to be validate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.23.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if complies</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-register-metadata-key"></a><h3>grl_registry_register_metadata_key ()</h3>
+<pre class="programlisting"><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="returnvalue">GrlKeyID</span></a>
+grl_registry_register_metadata_key (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                    <em class="parameter"><code><span class="type">GParamSpec</span> *param_spec</code></em>,
+                                    <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Registers a metadata key</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>The plugin registry</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param_spec</p></td>
+<td class="parameter_description"><p> The definition of the key to register. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>error return location or <em class="parameter"><code>NULL</code></em>
+to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.24.6"></a><h4>Returns</h4>
+<p> The <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> registered.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-register-metadata-key-relation"></a><h3>grl_registry_register_metadata_key_relation ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_registry_register_metadata_key_relation
+                               (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key1</code></em>,
+                                <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key2</code></em>);</pre>
+<p>Creates a relation between <em class="parameter"><code>key1</code></em>
+ and <em class="parameter"><code>key2</code></em>
+, meaning that the values of both
+keys are somehow related.</p>
+<p>One example of a relation would be the one between the URI of a media
+resource and its mime-type: they are both tied together and one does not make
+sense without the other.</p>
+<p>Relations between keys allow the framework to provide all the data that is
+somehow related when any of the related keys are requested.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.25.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the plugin registry</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key1</p></td>
+<td class="parameter_description"><p>key involved in relationship</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key2</p></td>
+<td class="parameter_description"><p>key involved in relationship</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-register-source"></a><h3>grl_registry_register_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_registry_register_source (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                              <em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>,
+                              <em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                              <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Register a <em class="parameter"><code>source</code></em>
+ in the <em class="parameter"><code>registry</code></em>
+ with the given <em class="parameter"><code>plugin</code></em>
+ information</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>the plugin which owns the source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p> the source to register. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>error return location or <em class="parameter"><code>NULL</code></em>
+to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.26.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if success, <code class="literal">FALSE</code>% otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-unload-plugin"></a><h3>grl_registry_unload_plugin ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_registry_unload_plugin (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                            <em class="parameter"><code>const <span class="type">gchar</span> *plugin_id</code></em>,
+                            <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Unload from memory a module identified by <em class="parameter"><code>plugin_id</code></em>
+. This means call the
+module's deinit function.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>plugin_id</p></td>
+<td class="parameter_description"><p>the identifier of the plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>error return location or <em class="parameter"><code>NULL</code></em>
+to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.27.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code>% on success.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-registry-unregister-source"></a><h3>grl_registry_unregister_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_registry_unregister_source (<em class="parameter"><code><a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry</code></em>,
+                                <em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Removes the <em class="parameter"><code>source</code></em>
+ from the <em class="parameter"><code>registry</code></em>
+ hash table</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>the source to unregister</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>error return location or <em class="parameter"><code>NULL</code></em>
+to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.3.2.9.28.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if success, <code class="literal">FALSE</code>% otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlRegistry.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlRank"></a><h3>enum GrlRank</h3>
+<p>Source priority ranks. Defines the order in which the resolver
+(or similar rank-picking mechanisms) will choose this source
+over an alternative one with the same function.</p>
+<p>These constants serve as a rough guidance for defining the rank
+of a GrlSource. Any value is valid, including values bigger
+than GRL_RANK_HIGHEST.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.10.2.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-RANK-LOWEST:CAPS"></a>GRL_RANK_LOWEST</p></td>
+<td class="enum_member_description">
+<p>will be chosen last or not at all</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-RANK-LOW:CAPS"></a>GRL_RANK_LOW</p></td>
+<td class="enum_member_description">
+<p>unlikely to be chosen</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-RANK-DEFAULT:CAPS"></a>GRL_RANK_DEFAULT</p></td>
+<td class="enum_member_description">
+<p>likely to be chosen</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-RANK-HIGH:CAPS"></a>GRL_RANK_HIGH</p></td>
+<td class="enum_member_description">
+<p>will be chosen</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-RANK-HIGHEST:CAPS"></a>GRL_RANK_HIGHEST</p></td>
+<td class="enum_member_description">
+<p>will be chosen first</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlRegistry-struct"></a><h3>struct GrlRegistry</h3>
+<pre class="programlisting">struct GrlRegistry;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlRegistryClass"></a><h3>struct GrlRegistryClass</h3>
+<pre class="programlisting">struct GrlRegistryClass {
+  GObjectClass parent_class;
+};
+</pre>
+<p>Grilo Registry class. Dynamic loader of plugins.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.10.4.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">GObjectClass</span> <em class="structfield"><code><a name="GrlRegistryClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent class structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlPluginDescriptor"></a><h3>struct GrlPluginDescriptor</h3>
+<pre class="programlisting">struct GrlPluginDescriptor {
+  gchar *plugin_id;
+  gboolean (*plugin_init) (GrlRegistry *registry,
+                           GrlPlugin *plugin,
+                           GList *configs);
+  void (*plugin_deinit) (GrlPlugin *plugin);
+  GModule *module;
+  void (*plugin_register_keys) (GrlRegistry *registry,
+                                GrlPlugin   *plugin);
+};
+</pre>
+<p>This structure is used for the module loader</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.10.5.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="GrlPluginDescriptor.plugin-id"></a>plugin_id</code></em>;</p></td>
+<td class="struct_member_description"><p>the module identifier</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlPluginDescriptor.plugin-init"></a>plugin_init</code></em> ()</p></td>
+<td class="struct_member_description"><p>the module initialization. It shall instantiate
+the <a href="GrlPlugin.html"><span class="type">GrlPlugins</span></a> provided</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlPluginDescriptor.plugin-deinit"></a>plugin_deinit</code></em> ()</p></td>
+<td class="struct_member_description"><p>function to execute when the registry needs
+to dispose the module.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">GModule</span> *<em class="structfield"><code><a name="GrlPluginDescriptor.module"></a>module</code></em>;</p></td>
+<td class="struct_member_description"><p>the <span class="type">GModule</span> instance.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlPluginDescriptor.plugin-register-keys"></a>plugin_register_keys</code></em> ()</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-PLUGIN-LIST-VAR:CAPS"></a><h3>GRL_PLUGIN_LIST_VAR</h3>
+<pre class="programlisting">#define GRL_PLUGIN_LIST_VAR "GRL_PLUGIN_LIST"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-PLUGIN-PATH-VAR:CAPS"></a><h3>GRL_PLUGIN_PATH_VAR</h3>
+<pre class="programlisting">#define GRL_PLUGIN_PATH_VAR "GRL_PLUGIN_PATH"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-PLUGIN-RANKS-VAR:CAPS"></a><h3>GRL_PLUGIN_RANKS_VAR</h3>
+<pre class="programlisting">#define GRL_PLUGIN_RANKS_VAR "GRL_PLUGIN_RANKS"
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlRegistry.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GrlRegistry-metadata-key-added"></a><h3>The <code class="literal">“metadata-key-added”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry,
+               <span class="type">gchar</span>       *key,
+               <span class="type">gpointer</span>     user_data)</pre>
+<p>Signals that a new metadata key has been registered.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.11.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>the name of the new key added</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Action</p>
+<p class="since">Since 0.2.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlRegistry-source-added"></a><h3>The <code class="literal">“source-added”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry,
+               <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a>   *source,
+               <span class="type">gpointer</span>     user_data)</pre>
+<p>Signals that a source has been added to the registry.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.11.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>the source that has been added</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Action</p>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlRegistry-source-removed"></a><h3>The <code class="literal">“source-removed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GrlRegistry.html" title="GrlRegistry"><span class="type">GrlRegistry</span></a> *registry,
+               <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a>   *source,
+               <span class="type">gpointer</span>     user_data)</pre>
+<p>Signals that a source has been removed from the registry.</p>
+<div class="refsect3">
+<a name="id-1.5.3.2.11.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>registry</p></td>
+<td class="parameter_description"><p>the registry</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>the source that has been removed</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Action</p>
+<p class="since">Since 0.2.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlRegistry.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a>, <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

@@ -1,0 +1,1077 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlOperationOptions: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="caps-options.html" title="Capabilities and Options">
+<link rel="prev" href="GrlCaps.html" title="GrlCaps">
+<link rel="next" href="multiple.html" title="Search in multiple sources">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GrlOperationOptions.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GrlOperationOptions.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="caps-options.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="GrlCaps.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="multiple.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GrlOperationOptions"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GrlOperationOptions.top_of_page"></a>GrlOperationOptions</span></h2>
+<p>GrlOperationOptions — Describes the options to be passed to an operation</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GrlOperationOptions.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="returnvalue">GrlOperationOptions</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-new" title="grl_operation_options_new ()">grl_operation_options_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="returnvalue">GrlOperationOptions</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-copy" title="grl_operation_options_copy ()">grl_operation_options_copy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-get-count" title="grl_operation_options_get_count ()">grl_operation_options_get_count</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlSource.html#GrlResolutionFlags" title="enum GrlResolutionFlags"><span class="returnvalue">GrlResolutionFlags</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-get-flags" title="grl_operation_options_get_flags ()">grl_operation_options_get_flags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GValue</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-get-key-filter" title="grl_operation_options_get_key_filter ()">grl_operation_options_get_key_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-get-key-filter-list" title="grl_operation_options_get_key_filter_list ()">grl_operation_options_get_key_filter_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-get-key-range-filter" title="grl_operation_options_get_key_range_filter ()">grl_operation_options_get_key_range_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-get-key-range-filter-list" title="grl_operation_options_get_key_range_filter_list ()">grl_operation_options_get_key_range_filter_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-get-skip" title="grl_operation_options_get_skip ()">grl_operation_options_get_skip</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlCaps.html#GrlTypeFilter" title="enum GrlTypeFilter"><span class="returnvalue">GrlTypeFilter</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-get-type-filter" title="grl_operation_options_get_type_filter ()">grl_operation_options_get_type_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-obey-caps" title="grl_operation_options_obey_caps ()">grl_operation_options_obey_caps</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-set-count" title="grl_operation_options_set_count ()">grl_operation_options_set_count</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-set-flags" title="grl_operation_options_set_flags ()">grl_operation_options_set_flags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-set-key-filter-dictionary" title="grl_operation_options_set_key_filter_dictionary ()">grl_operation_options_set_key_filter_dictionary</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-set-key-filter-value" title="grl_operation_options_set_key_filter_value ()">grl_operation_options_set_key_filter_value</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-set-key-filters" title="grl_operation_options_set_key_filters ()">grl_operation_options_set_key_filters</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-set-key-range-filter" title="grl_operation_options_set_key_range_filter ()">grl_operation_options_set_key_range_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-set-key-range-filter-value" title="grl_operation_options_set_key_range_filter_value ()">grl_operation_options_set_key_range_filter_value</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-set-skip" title="grl_operation_options_set_skip ()">grl_operation_options_set_skip</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlOperationOptions.html#grl-operation-options-set-type-filter" title="grl_operation_options_set_type_filter ()">grl_operation_options_set_type_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlOperationOptions.html#GRL-COUNT-INFINITY:CAPS" title="GRL_COUNT_INFINITY">GRL_COUNT_INFINITY</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlOperationOptions.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlOperationOptions.html#GrlOperationOptions-struct" title="GrlOperationOptions">GrlOperationOptions</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlOperationOptions.html#GrlOperationOptionsClass" title="GrlOperationOptionsClass">GrlOperationOptionsClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlOperationOptions.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GrlOperationOptions
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlOperationOptions.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlOperationOptions.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="GrlOperationOptions.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="grl-operation-options-new"></a><h3>grl_operation_options_new ()</h3>
+<pre class="programlisting"><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="returnvalue">GrlOperationOptions</span></a> *
+grl_operation_options_new (<em class="parameter"><code><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> *caps</code></em>);</pre>
+<p>Creates a new GrlOperationOptions object.</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>caps</p></td>
+<td class="parameter_description"><p> caps that options will have to match. If <code class="literal">NULL</code>, all
+options will be accepted. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.2.6"></a><h4>Returns</h4>
+<p> a new GrlOperationOptions instance.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-copy"></a><h3>grl_operation_options_copy ()</h3>
+<pre class="programlisting"><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="returnvalue">GrlOperationOptions</span></a> *
+grl_operation_options_copy (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.3.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.3.5"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance with its values being copies of
+the values of <em class="parameter"><code>options</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-get-count"></a><h3>grl_operation_options_get_count ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_operation_options_get_count (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>);</pre>
+<p>Get the count option, that is, the number of elements to retrieve in an
+operation done with <em class="parameter"><code>options</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.4.6"></a><h4>Returns</h4>
+<p> the value of the count option, or a default value if it is not set.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-get-flags"></a><h3>grl_operation_options_get_flags ()</h3>
+<pre class="programlisting"><a class="link" href="GrlSource.html#GrlResolutionFlags" title="enum GrlResolutionFlags"><span class="returnvalue">GrlResolutionFlags</span></a>
+grl_operation_options_get_flags (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">grl_operation_options_get_flags</code> has been deprecated since version 0.2.12 and should not be used in newly-written code.</p>
+<p>Use <code class="function">grl_operation_options_get_resolution_flags()</code> instead.</p>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.5.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.5.7"></a><h4>Returns</h4>
+<p> resolution flags of <em class="parameter"><code>options</code></em>
+.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-get-key-filter"></a><h3>grl_operation_options_get_key_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">GValue</span> *
+grl_operation_options_get_key_filter (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                      <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.6.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.6.5"></a><h4>Returns</h4>
+<p> the filter. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-get-key-filter-list"></a><h3>grl_operation_options_get_key_filter_list ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_operation_options_get_key_filter_list
+                               (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.7.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.7.5"></a><h4>Returns</h4>
+<p>. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-get-key-range-filter"></a><h3>grl_operation_options_get_key_range_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_operation_options_get_key_range_filter
+                               (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                                <em class="parameter"><code><span class="type">GValue</span> **min_value</code></em>,
+                                <em class="parameter"><code><span class="type">GValue</span> **max_value</code></em>);</pre>
+<p>Stores the limits of the range in the filter for <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>min_value</code></em>
+ and
+<em class="parameter"><code>max_value</code></em>
+. If some of the values has no limit, it will set a <code class="literal">NULL</code>.</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>min_value</p></td>
+<td class="parameter_description"><p> the minimum value for the range. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>max_value</p></td>
+<td class="parameter_description"><p> the maximum value for the range. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-get-key-range-filter-list"></a><h3>grl_operation_options_get_key_range_filter_list ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_operation_options_get_key_range_filter_list
+                               (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.9.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.9.5"></a><h4>Returns</h4>
+<p>. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-get-skip"></a><h3>grl_operation_options_get_skip ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>
+grl_operation_options_get_skip (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>);</pre>
+<p>Get the skip option, that is, the number of elements to skip before
+retrieving media items in an operation done with <em class="parameter"><code>options</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.10.6"></a><h4>Returns</h4>
+<p> the value of the skip option, or a default value if it is not set.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-get-type-filter"></a><h3>grl_operation_options_get_type_filter ()</h3>
+<pre class="programlisting"><a class="link" href="GrlCaps.html#GrlTypeFilter" title="enum GrlTypeFilter"><span class="returnvalue">GrlTypeFilter</span></a>
+grl_operation_options_get_type_filter (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.11.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.11.5"></a><h4>Returns</h4>
+<p> resolution flags of <em class="parameter"><code>options</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-obey-caps"></a><h3>grl_operation_options_obey_caps ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_operation_options_obey_caps (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                 <em class="parameter"><code><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> *caps</code></em>,
+                                 <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> **supported_options</code></em>,
+                                 <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> **unsupported_options</code></em>);</pre>
+<p>Check whether <em class="parameter"><code>options</code></em>
+ obey to <em class="parameter"><code>caps</code></em>
+.
+Optionally provide the options that match (respectively don't match) <em class="parameter"><code>caps</code></em>
+
+in <em class="parameter"><code>supported_options</code></em>
+ (respectively <em class="parameter"><code>unsupported_options</code></em>
+).
+This would typically (but not necessarily) be used with a
+<a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance that was created with <code class="literal">NULL</code> caps.</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>caps</p></td>
+<td class="parameter_description"><p>capabilities against which we want to test <em class="parameter"><code>options</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>supported_options</p></td>
+<td class="parameter_description"><p> if not <code class="literal">NULL</code>, will contain a
+newly-allocated <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance containing all the values of
+<em class="parameter"><code>options</code></em>
+that match <em class="parameter"><code>caps</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out callee-allocates</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unsupported_options</p></td>
+<td class="parameter_description"><p> if not <code class="literal">NULL</code>, will contain a
+newly-allocated <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance containing all the values of
+<em class="parameter"><code>options</code></em>
+that do not match <em class="parameter"><code>caps</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out callee-allocates</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.12.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>options</code></em>
+obey to <em class="parameter"><code>caps</code></em>
+, <code class="literal">FALSE</code> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-set-count"></a><h3>grl_operation_options_set_count ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_operation_options_set_count (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                 <em class="parameter"><code><span class="type">gint</span> count</code></em>);</pre>
+<p>Set the count option for an operation. Will only succeed if <em class="parameter"><code>count</code></em>
+ obey to
+the inherent capabilities of <em class="parameter"><code>options</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>count</p></td>
+<td class="parameter_description"><p>number of elements to retrieve in an operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.13.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>count</code></em>
+could be set, <code class="literal">FALSE</code> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-set-flags"></a><h3>grl_operation_options_set_flags ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_operation_options_set_flags (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                 <em class="parameter"><code><a class="link" href="GrlSource.html#GrlResolutionFlags" title="enum GrlResolutionFlags"><span class="type">GrlResolutionFlags</span></a> flags</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">grl_operation_options_set_flags</code> has been deprecated since version 0.2.12 and should not be used in newly-written code.</p>
+<p>Use <code class="function">grl_operation_options_set_resolution_flags()</code> instead.</p>
+</div>
+<p>Set the resolution flags for an operation. Will only succeed if <em class="parameter"><code>flags</code></em>
+ obey
+to the inherent capabilities of <em class="parameter"><code>options</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.14.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>the resolution flags to be set for an operation. See
+<a class="link" href="GrlSource.html#GrlResolutionFlags" title="enum GrlResolutionFlags"><span class="type">GrlResolutionFlags</span></a> for possible values.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.14.8"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>flags</code></em>
+could be set, <code class="literal">FALSE</code> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-set-key-filter-dictionary"></a><h3>grl_operation_options_set_key_filter_dictionary ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_operation_options_set_key_filter_dictionary
+                               (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                <em class="parameter"><code><span class="type">GHashTable</span> *filters</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.15.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filters</p></td>
+<td class="parameter_description"><p>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID GValue]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.15.5"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-set-key-filter-value"></a><h3>grl_operation_options_set_key_filter_value ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_operation_options_set_key_filter_value
+                               (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                                <em class="parameter"><code><span class="type">GValue</span> *value</code></em>);</pre>
+<p>Set filter as "<em class="parameter"><code>key</code></em>
+ == <em class="parameter"><code>value</code></em>
+".</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a <span class="type">GValue</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.16.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-set-key-filters"></a><h3>grl_operation_options_set_key_filters ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_operation_options_set_key_filters (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                       <em class="parameter"><code>...</code></em>);</pre>
+<p>Set filter as "k1 == v1 AND k2 == v2 AND ..."</p>
+<div class="example">
+<a name="id-1.5.5.3.8.17.5"></a><p class="title"><b>Example 1. </b></p>
+<div class="example-contents">
+ Elements from album "Frozen" with a bitrate of 256kbs.
+ <pre class="programlisting">
+  grl_operation_options_set_key_filters (my_options,
+                                         GRL_METADATA_KEY_ALBUM, "Frozen",
+                                         GRL_METADATA_KEY_BITRATE, 256,
+                                         NULL);
+ </pre>
+</div>
+</div>
+<br class="example-break"><div class="refsect3">
+<a name="id-1.5.5.3.8.17.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>pairs of <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>, value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.17.7"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-set-key-range-filter"></a><h3>grl_operation_options_set_key_range_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_operation_options_set_key_range_filter
+                               (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                <em class="parameter"><code>...</code></em>);</pre>
+<p>Set filter as "min1 &lt;= k1 &lt;= max1 AND min2 &lt;= k2 &lt;= max2 AND ..."</p>
+<p>The range can be open if some of the minX, maxX values are <code class="literal">NULL</code>.</p>
+<div class="example">
+<a name="id-1.5.5.3.8.18.6"></a><p class="title"><b>Example 2. </b></p>
+<div class="example-contents">
+ Album must start with "T" and the bitrate should be 256kbs or greater.
+ <pre class="programlisting">
+  grl_operation_options_set_key_range_filters (my_options,
+                                               GRL_METADATA_KEY_ALBUM, "Ta", "Tz",
+                                               GRL_METADATA_KEY_BITRATE, 256, NULL,
+                                               NULL);
+ </pre>
+</div>
+</div>
+<br class="example-break"><div class="refsect3">
+<a name="id-1.5.5.3.8.18.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>triplets of <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>, minvalue, maxvalue</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.18.8"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-set-key-range-filter-value"></a><h3>grl_operation_options_set_key_range_filter_value ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_operation_options_set_key_range_filter_value
+                               (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                                <em class="parameter"><code><span class="type">GValue</span> *min_value</code></em>,
+                                <em class="parameter"><code><span class="type">GValue</span> *max_value</code></em>);</pre>
+<p>Set filter as "<em class="parameter"><code>min_value</code></em>
+ &lt;= <em class="parameter"><code>key</code></em>
+ &lt;= <em class="parameter"><code>max_value</code></em>
+".</p>
+<p>If <em class="parameter"><code>min_value</code></em>
+ is <code class="literal">NULL</code>, then filter is "<em class="parameter"><code>key</code></em>
+ &lt;= <em class="parameter"><code>max_value</code></em>
+".</p>
+<p>If <em class="parameter"><code>max_value</code></em>
+ is <code class="literal">NULL</code>, then filter is "<em class="parameter"><code>key</code></em>
+ &gt;= <em class="parameter"><code>min_value</code></em>
+".</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.19.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>min_value</p></td>
+<td class="parameter_description"><p> minimum value for range. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>max_value</p></td>
+<td class="parameter_description"><p> maximum value for range. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.19.8"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-set-skip"></a><h3>grl_operation_options_set_skip ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_operation_options_set_skip (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                <em class="parameter"><code><span class="type">guint</span> skip</code></em>);</pre>
+<p>Set the skip option for an operation. Will only succeed if <em class="parameter"><code>skip</code></em>
+ obeys to the
+inherent capabilities of <em class="parameter"><code>options</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>skip</p></td>
+<td class="parameter_description"><p>number of elements to skip in an operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.20.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>skip</code></em>
+could be set, <code class="literal">FALSE</code> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-operation-options-set-type-filter"></a><h3>grl_operation_options_set_type_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_operation_options_set_type_filter (<em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                       <em class="parameter"><code><a class="link" href="GrlCaps.html#GrlTypeFilter" title="enum GrlTypeFilter"><span class="type">GrlTypeFilter</span></a> filter</code></em>);</pre>
+<p>Set the type of media filter for an operation. Only those media elements that
+match the <em class="parameter"><code>filter</code></em>
+ will be returned. Will only succeed if <em class="parameter"><code>filter</code></em>
+ obey to the
+inherent capabilities of <em class="parameter"><code>options</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filter</p></td>
+<td class="parameter_description"><p>the type of media to get</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.3.8.21.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>flags</code></em>
+could be set, <code class="literal">FALSE</code> otherwise</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-COUNT-INFINITY:CAPS"></a><h3>GRL_COUNT_INFINITY</h3>
+<pre class="programlisting">#define GRL_COUNT_INFINITY (-1)
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlOperationOptions.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlOperationOptions-struct"></a><h3>GrlOperationOptions</h3>
+<pre class="programlisting">typedef struct _GrlOperationOptions GrlOperationOptions;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlOperationOptionsClass"></a><h3>GrlOperationOptionsClass</h3>
+<pre class="programlisting">typedef struct {
+  GObjectClass parent;
+} GrlOperationOptionsClass;
+</pre>
+<p>Grilo Operation Options class.</p>
+<div class="refsect3">
+<a name="id-1.5.5.3.9.3.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">GObjectClass</span> <em class="structfield"><code><a name="GrlOperationOptionsClass.parent"></a>parent</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent class structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlOperationOptions.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a>, <a class="link" href="GrlSource.html#grl-source-resolve" title="grl_source_resolve ()"><code class="function">grl_source_resolve()</code></a>,
+<a class="link" href="GrlSource.html#grl-source-search" title="grl_source_search ()"><code class="function">grl_source_search()</code></a>, <a class="link" href="GrlSource.html#grl-source-browse" title="grl_source_browse ()"><code class="function">grl_source_browse()</code></a>,
+<a class="link" href="GrlSource.html#grl-source-query" title="grl_source_query ()"><code class="function">grl_source_query()</code></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

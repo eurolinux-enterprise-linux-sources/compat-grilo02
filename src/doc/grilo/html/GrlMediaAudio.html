@@ -1,0 +1,1416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlMediaAudio: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="data.html" title="Media data">
+<link rel="prev" href="GrlMediaVideo.html" title="GrlMediaVideo">
+<link rel="next" href="GrlMediaImage.html" title="GrlMediaImage">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GrlMediaAudio.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GrlMediaAudio.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="data.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="GrlMediaVideo.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="GrlMediaImage.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GrlMediaAudio"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GrlMediaAudio.top_of_page"></a>GrlMediaAudio</span></h2>
+<p>GrlMediaAudio — A multimedia data for audio</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GrlMediaAudio.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-new" title="grl_media_audio_new ()">grl_media_audio_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-add-artist" title="grl_media_audio_add_artist ()">grl_media_audio_add_artist</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-add-genre" title="grl_media_audio_add_genre ()">grl_media_audio_add_genre</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-add-lyrics" title="grl_media_audio_add_lyrics ()">grl_media_audio_add_lyrics</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-add-mb-artist-id" title="grl_media_audio_add_mb_artist_id ()">grl_media_audio_add_mb_artist_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-add-url-data" title="grl_media_audio_add_url_data ()">grl_media_audio_add_url_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-album" title="grl_media_audio_get_album ()">grl_media_audio_get_album</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-artist" title="grl_media_audio_get_artist ()">grl_media_audio_get_artist</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-artist-nth" title="grl_media_audio_get_artist_nth ()">grl_media_audio_get_artist_nth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-bitrate" title="grl_media_audio_get_bitrate ()">grl_media_audio_get_bitrate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-genre" title="grl_media_audio_get_genre ()">grl_media_audio_get_genre</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-genre-nth" title="grl_media_audio_get_genre_nth ()">grl_media_audio_get_genre_nth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-lyrics" title="grl_media_audio_get_lyrics ()">grl_media_audio_get_lyrics</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-lyrics-nth" title="grl_media_audio_get_lyrics_nth ()">grl_media_audio_get_lyrics_nth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-mb-album-id" title="grl_media_audio_get_mb_album_id ()">grl_media_audio_get_mb_album_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-mb-artist-id" title="grl_media_audio_get_mb_artist_id ()">grl_media_audio_get_mb_artist_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-mb-artist-id-nth" title="grl_media_audio_get_mb_artist_id_nth ()">grl_media_audio_get_mb_artist_id_nth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-mb-recording-id" title="grl_media_audio_get_mb_recording_id ()">grl_media_audio_get_mb_recording_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-mb-track-id" title="grl_media_audio_get_mb_track_id ()">grl_media_audio_get_mb_track_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-track-number" title="grl_media_audio_get_track_number ()">grl_media_audio_get_track_number</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-url-data" title="grl_media_audio_get_url_data ()">grl_media_audio_get_url_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-get-url-data-nth" title="grl_media_audio_get_url_data_nth ()">grl_media_audio_get_url_data_nth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-set-album" title="grl_media_audio_set_album ()">grl_media_audio_set_album</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-set-artist" title="grl_media_audio_set_artist ()">grl_media_audio_set_artist</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-set-bitrate" title="grl_media_audio_set_bitrate ()">grl_media_audio_set_bitrate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-set-genre" title="grl_media_audio_set_genre ()">grl_media_audio_set_genre</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-set-lyrics" title="grl_media_audio_set_lyrics ()">grl_media_audio_set_lyrics</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-set-mb-album-id" title="grl_media_audio_set_mb_album_id ()">grl_media_audio_set_mb_album_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-set-mb-artist-id" title="grl_media_audio_set_mb_artist_id ()">grl_media_audio_set_mb_artist_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-set-mb-recording-id" title="grl_media_audio_set_mb_recording_id ()">grl_media_audio_set_mb_recording_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-set-mb-track-id" title="grl_media_audio_set_mb_track_id ()">grl_media_audio_set_mb_track_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-set-track-number" title="grl_media_audio_set_track_number ()">grl_media_audio_set_track_number</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaAudio.html#grl-media-audio-set-url-data" title="grl_media_audio_set_url_data ()">grl_media_audio_set_url_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaAudio.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlMediaAudio.html#GrlMediaAudio-struct" title="struct GrlMediaAudio">GrlMediaAudio</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlMediaAudio.html#GrlMediaAudioClass" title="struct GrlMediaAudioClass">GrlMediaAudioClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaAudio.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> <a class="link" href="GrlData.html" title="GrlData">GrlData</a>
+        <span class="lineart">╰──</span> <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a>
+            <span class="lineart">╰──</span> GrlMediaAudio
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlMediaAudio.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlMediaAudio.description"></a><h2>Description</h2>
+<p>This high level class represents an audio multimedia item. It has methods to
+set and get properties like artist, album, and so on.</p>
+</div>
+<div class="refsect1">
+<a name="GrlMediaAudio.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="grl-media-audio-new"></a><h3>grl_media_audio_new ()</h3>
+<pre class="programlisting"><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+grl_media_audio_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new data audio object.</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.2.5"></a><h4>Returns</h4>
+<p> a newly-allocated data audio.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-add-artist"></a><h3>grl_media_audio_add_artist ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_add_artist (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                            <em class="parameter"><code>const <span class="type">gchar</span> *artist</code></em>);</pre>
+<p>Adds a new artist to <em class="parameter"><code>audio</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>artist</p></td>
+<td class="parameter_description"><p>an audio's artist</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-add-genre"></a><h3>grl_media_audio_add_genre ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_add_genre (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                           <em class="parameter"><code>const <span class="type">gchar</span> *genre</code></em>);</pre>
+<p>Adds a new genre to <em class="parameter"><code>audio</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>genre</p></td>
+<td class="parameter_description"><p>an audio's genre</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-add-lyrics"></a><h3>grl_media_audio_add_lyrics ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_add_lyrics (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                            <em class="parameter"><code>const <span class="type">gchar</span> *lyrics</code></em>);</pre>
+<p>Adds a new lyrics to <em class="parameter"><code>audio</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lyrics</p></td>
+<td class="parameter_description"><p>an audio's lyrics</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-add-mb-artist-id"></a><h3>grl_media_audio_add_mb_artist_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_add_mb_artist_id (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gchar</span> *mb_artist_id</code></em>);</pre>
+<p>Adds a new MusicBrainz artist id to <em class="parameter"><code>audio</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mb_artist_id</p></td>
+<td class="parameter_description"><p>a MusicBrainz artist identifier</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-add-url-data"></a><h3>grl_media_audio_add_url_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_add_url_data (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *url</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *mime</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> bitrate</code></em>);</pre>
+<p>Sets all the keys related with the URL of a media resource and adds it to
+<em class="parameter"><code>audio</code></em>
+ (useful for resources with more than one URL).</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>url</p></td>
+<td class="parameter_description"><p>an audio's url</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p>the <em class="parameter"><code>url</code></em>
+mime-type</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bitrate</p></td>
+<td class="parameter_description"><p>the <em class="parameter"><code>url</code></em>
+bitrate, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-album"></a><h3>grl_media_audio_get_album ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_album (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.8.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.8.5"></a><h4>Returns</h4>
+<p> the album of the audio</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-artist"></a><h3>grl_media_audio_get_artist ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_artist (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.9.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.9.5"></a><h4>Returns</h4>
+<p> the artist of the audio</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-artist-nth"></a><h3>grl_media_audio_get_artist_nth ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_artist_nth (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                                <em class="parameter"><code><span class="type">guint</span> index</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.10.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>element to retrieve, starting at 0</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.10.5"></a><h4>Returns</h4>
+<p> the n-th artist of the audio</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-bitrate"></a><h3>grl_media_audio_get_bitrate ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_media_audio_get_bitrate (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.11.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.11.5"></a><h4>Returns</h4>
+<p> the bitrate of the audio</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-genre"></a><h3>grl_media_audio_get_genre ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_genre (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.12.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.12.5"></a><h4>Returns</h4>
+<p> the genre of the audio</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-genre-nth"></a><h3>grl_media_audio_get_genre_nth ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_genre_nth (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                               <em class="parameter"><code><span class="type">guint</span> index</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.13.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>element to retrieve, starting at 0</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.13.5"></a><h4>Returns</h4>
+<p> the n-th genre of the audio</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-lyrics"></a><h3>grl_media_audio_get_lyrics ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_lyrics (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.14.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.14.5"></a><h4>Returns</h4>
+<p> the lyrics of the audio</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-lyrics-nth"></a><h3>grl_media_audio_get_lyrics_nth ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_lyrics_nth (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                                <em class="parameter"><code><span class="type">guint</span> index</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.15.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>element to retrieve, starting at 0</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.15.5"></a><h4>Returns</h4>
+<p> the n-th lyrics of the audio</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-mb-album-id"></a><h3>grl_media_audio_get_mb_album_id ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_mb_album_id (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.16.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.16.5"></a><h4>Returns</h4>
+<p> the MusicBrainz album identifier</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-mb-artist-id"></a><h3>grl_media_audio_get_mb_artist_id ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_mb_artist_id (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.17.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.17.5"></a><h4>Returns</h4>
+<p> the MusicBrainz artist identifier</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-mb-artist-id-nth"></a><h3>grl_media_audio_get_mb_artist_id_nth ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_mb_artist_id_nth (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                                      <em class="parameter"><code><span class="type">guint</span> index</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.18.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>element to retrieve, starting at 0</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.18.5"></a><h4>Returns</h4>
+<p> the n-th MusicBrainz artist identifier of the audio</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-mb-recording-id"></a><h3>grl_media_audio_get_mb_recording_id ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_mb_recording_id (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.19.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.19.5"></a><h4>Returns</h4>
+<p> the MusicBrainz recording identifier</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-mb-track-id"></a><h3>grl_media_audio_get_mb_track_id ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_mb_track_id (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.20.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.20.5"></a><h4>Returns</h4>
+<p> the MusicBrainz track identifier</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-track-number"></a><h3>grl_media_audio_get_track_number ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_media_audio_get_track_number (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.21.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.21.5"></a><h4>Returns</h4>
+<p> the track number of the audio</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-url-data"></a><h3>grl_media_audio_get_url_data ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_url_data (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                              <em class="parameter"><code><span class="type">gchar</span> **mime</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> *bitrate</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.22.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p> the url mime-type, or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bitrate</p></td>
+<td class="parameter_description"><p> the url bitrate, or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.22.5"></a><h4>Returns</h4>
+<p> all the keys related with the URL of an audio resource in one go.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-get-url-data-nth"></a><h3>grl_media_audio_get_url_data_nth ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_audio_get_url_data_nth (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                                  <em class="parameter"><code><span class="type">guint</span> index</code></em>,
+                                  <em class="parameter"><code><span class="type">gchar</span> **mime</code></em>,
+                                  <em class="parameter"><code><span class="type">gint</span> *bitrate</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.23.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>element to retrieve, starting at 0</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p> the url mime-type, or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bitrate</p></td>
+<td class="parameter_description"><p> the url bitrate, or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.23.5"></a><h4>Returns</h4>
+<p> all the keys related with the URL number <em class="parameter"><code>index</code></em>
+of an audio resource
+in one go.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-set-album"></a><h3>grl_media_audio_set_album ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_set_album (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                           <em class="parameter"><code>const <span class="type">gchar</span> *album</code></em>);</pre>
+<p>Set the album of the audio</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>album</p></td>
+<td class="parameter_description"><p>the audio's album</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-set-artist"></a><h3>grl_media_audio_set_artist ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_set_artist (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                            <em class="parameter"><code>const <span class="type">gchar</span> *artist</code></em>);</pre>
+<p>Set the artist of the audio</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>artist</p></td>
+<td class="parameter_description"><p>the audio's artist</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-set-bitrate"></a><h3>grl_media_audio_set_bitrate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_set_bitrate (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                             <em class="parameter"><code><span class="type">gint</span> bitrate</code></em>);</pre>
+<p>Set the bitrate of the audio</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bitrate</p></td>
+<td class="parameter_description"><p>the audio's bitrate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-set-genre"></a><h3>grl_media_audio_set_genre ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_set_genre (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                           <em class="parameter"><code>const <span class="type">gchar</span> *genre</code></em>);</pre>
+<p>Set the genre of the audio</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>genre</p></td>
+<td class="parameter_description"><p>the audio's genre</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-set-lyrics"></a><h3>grl_media_audio_set_lyrics ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_set_lyrics (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                            <em class="parameter"><code>const <span class="type">gchar</span> *lyrics</code></em>);</pre>
+<p>Set the lyrics of the audio</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lyrics</p></td>
+<td class="parameter_description"><p>the audio's lyrics</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-set-mb-album-id"></a><h3>grl_media_audio_set_mb_album_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_set_mb_album_id (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                                 <em class="parameter"><code>const <span class="type">gchar</span> *mb_album_id</code></em>);</pre>
+<p>Set the MusicBrainz album identifier of the audio</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.29.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mb_album_id</p></td>
+<td class="parameter_description"><p>the MusicBrainz album identifier</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-set-mb-artist-id"></a><h3>grl_media_audio_set_mb_artist_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_set_mb_artist_id (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gchar</span> *mb_artist_id</code></em>);</pre>
+<p>Set the MusicBrainz artist identifier of the audio</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mb_artist_id</p></td>
+<td class="parameter_description"><p>the MusicBrainz artist identifier</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-set-mb-recording-id"></a><h3>grl_media_audio_set_mb_recording_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_set_mb_recording_id (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                                     <em class="parameter"><code>const <span class="type">gchar</span> *mb_recording_id</code></em>);</pre>
+<p>Set the MusicBrainz recording identifier of the audio</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.31.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mb_recording_id</p></td>
+<td class="parameter_description"><p>the MusicBrainz recording identifier</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-set-mb-track-id"></a><h3>grl_media_audio_set_mb_track_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_set_mb_track_id (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                                 <em class="parameter"><code>const <span class="type">gchar</span> *mb_track_id</code></em>);</pre>
+<p>Set the MusicBrainz track identifier of the audio</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mb_track_id</p></td>
+<td class="parameter_description"><p>the MusicBrainz track identifier</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-set-track-number"></a><h3>grl_media_audio_set_track_number ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_set_track_number (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                                  <em class="parameter"><code><span class="type">gint</span> track_number</code></em>);</pre>
+<p>Set the track number of the audio</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.33.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>track_number</p></td>
+<td class="parameter_description"><p>the audio's track number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-audio-set-url-data"></a><h3>grl_media_audio_set_url_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_audio_set_url_data (<em class="parameter"><code><a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a> *audio</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *url</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *mime</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> bitrate</code></em>);</pre>
+<p>Sets all the keys related with the URL of an audio resource in one go.</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.8.34.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>audio</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>url</p></td>
+<td class="parameter_description"><p>the audio's url</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p>the <em class="parameter"><code>url</code></em>
+mime-type</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bitrate</p></td>
+<td class="parameter_description"><p>the <em class="parameter"><code>url</code></em>
+bitrate, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaAudio.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlMediaAudio-struct"></a><h3>struct GrlMediaAudio</h3>
+<pre class="programlisting">struct GrlMediaAudio;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlMediaAudioClass"></a><h3>struct GrlMediaAudioClass</h3>
+<pre class="programlisting">struct GrlMediaAudioClass {
+  GrlMediaClass parent_class;
+};
+</pre>
+<p>Grilo Media audio Class</p>
+<div class="refsect3">
+<a name="id-1.5.8.7.9.3.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><a class="link" href="GrlMedia.html#GrlMediaClass" title="struct GrlMediaClass"><span class="type">GrlMediaClass</span></a> <em class="structfield"><code><a name="GrlMediaAudioClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent class structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaAudio.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a>, <a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a>, <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a>, <a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

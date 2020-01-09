@@ -1,0 +1,1631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlData: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="data.html" title="Media data">
+<link rel="prev" href="data.html" title="Media data">
+<link rel="next" href="GrlRelatedKeys.html" title="GrlRelatedKeys">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GrlData.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GrlData.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="data.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="data.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="GrlRelatedKeys.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GrlData"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GrlData.top_of_page"></a>GrlData</span></h2>
+<p>GrlData — Low-level class for storing metadata information about
+media resources provided by <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> objects.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GrlData.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlData.html" title="GrlData"><span class="returnvalue">GrlData</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-new" title="grl_data_new ()">grl_data_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-add-binary" title="grl_data_add_binary ()">grl_data_add_binary</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-add-boxed" title="grl_data_add_boxed ()">grl_data_add_boxed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-add-float" title="grl_data_add_float ()">grl_data_add_float</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-add-int" title="grl_data_add_int ()">grl_data_add_int</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-add-related-keys" title="grl_data_add_related_keys ()">grl_data_add_related_keys</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-add-string" title="grl_data_add_string ()">grl_data_add_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlData.html" title="GrlData"><span class="returnvalue">GrlData</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-dup" title="grl_data_dup ()">grl_data_dup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">GValue</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-get" title="grl_data_get ()">grl_data_get</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">guint8</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-get-binary" title="grl_data_get_binary ()">grl_data_get_binary</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-get-boolean" title="grl_data_get_boolean ()">grl_data_get_boolean</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gpointer</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-get-boxed" title="grl_data_get_boxed ()">grl_data_get_boxed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gfloat</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-get-float" title="grl_data_get_float ()">grl_data_get_float</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-get-int" title="grl_data_get_int ()">grl_data_get_int</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-get-keys" title="grl_data_get_keys ()">grl_data_get_keys</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlRelatedKeys.html" title="GrlRelatedKeys"><span class="returnvalue">GrlRelatedKeys</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-get-related-keys" title="grl_data_get_related_keys ()">grl_data_get_related_keys</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-get-single-values-for-key" title="grl_data_get_single_values_for_key ()">grl_data_get_single_values_for_key</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-get-single-values-for-key-string" title="grl_data_get_single_values_for_key_string ()">grl_data_get_single_values_for_key_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-get-string" title="grl_data_get_string ()">grl_data_get_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-has-key" title="grl_data_has_key ()">grl_data_has_key</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-length" title="grl_data_length ()">grl_data_length</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-remove" title="grl_data_remove ()">grl_data_remove</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-remove-nth" title="grl_data_remove_nth ()">grl_data_remove_nth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-set" title="grl_data_set ()">grl_data_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-set-binary" title="grl_data_set_binary ()">grl_data_set_binary</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-set-boolean" title="grl_data_set_boolean ()">grl_data_set_boolean</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-set-boxed" title="grl_data_set_boxed ()">grl_data_set_boxed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-set-float" title="grl_data_set_float ()">grl_data_set_float</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-set-int" title="grl_data_set_int ()">grl_data_set_int</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-set-related-keys" title="grl_data_set_related_keys ()">grl_data_set_related_keys</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlData.html#grl-data-set-string" title="grl_data_set_string ()">grl_data_set_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlData.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlData.html#GrlData-struct" title="struct GrlData">GrlData</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlData.html#GrlDataClass" title="struct GrlDataClass">GrlDataClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlData.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GrlData
+        <span class="lineart">╰──</span> <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlData.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlData.description"></a><h2>Description</h2>
+<p>This class acts as a generic metadata dictionary where metadata keys
+and their values can be stored.
+Usually, application and plugin developers would interact with specific
+subclasses of <a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a>, like <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> or <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a>, which provide
+specific API to manipulate well known attributes of these media types.</p>
+</div>
+<div class="refsect1">
+<a name="GrlData.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="grl-data-new"></a><h3>grl_data_new ()</h3>
+<pre class="programlisting"><a class="link" href="GrlData.html" title="GrlData"><span class="returnvalue">GrlData</span></a> *
+grl_data_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new data object.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.2.5"></a><h4>Returns</h4>
+<p> a new data object.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-add-binary"></a><h3>grl_data_add_binary ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_add_binary (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                     <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                     <em class="parameter"><code>const <span class="type">guint8</span> *buf</code></em>,
+                     <em class="parameter"><code><span class="type">gsize</span> size</code></em>);</pre>
+<p>Appends a new binary value for <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to append</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to append. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p>the buffer containing the new value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>size of buffer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-add-boxed"></a><h3>grl_data_add_boxed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_add_boxed (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                    <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                    <em class="parameter"><code><span class="type">gconstpointer</span> boxed</code></em>);</pre>
+<p>Appends a new boxed value for <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to append</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to append. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>boxed</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-add-float"></a><h3>grl_data_add_float ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_add_float (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                    <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                    <em class="parameter"><code><span class="type">gfloat</span> floatvalue</code></em>);</pre>
+<p>Appends a new float value for <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to append</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to append. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>floatvalue</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-add-int"></a><h3>grl_data_add_int ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_add_int (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                  <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                  <em class="parameter"><code><span class="type">gint</span> intvalue</code></em>);</pre>
+<p>Appends a new int value for <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to append</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to append. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>intvalue</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-add-related-keys"></a><h3>grl_data_add_related_keys ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_add_related_keys (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                           <em class="parameter"><code><a class="link" href="GrlRelatedKeys.html" title="GrlRelatedKeys"><span class="type">GrlRelatedKeys</span></a> *relkeys</code></em>);</pre>
+<p>Adds a new set of values into <em class="parameter"><code>data</code></em>
+.</p>
+<p>All keys in <em class="parameter"><code>prop</code></em>
+ must be related among them.</p>
+<p><em class="parameter"><code>data</code></em>
+ will take the ownership of <em class="parameter"><code>relkeys</code></em>
+, so do not modify it.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.7.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to change</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>relkeys</p></td>
+<td class="parameter_description"><p>a set of related properties with their values</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-add-string"></a><h3>grl_data_add_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_add_string (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                     <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                     <em class="parameter"><code>const <span class="type">gchar</span> *strvalue</code></em>);</pre>
+<p>Appends a new string value for <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to append</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to append. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strvalue</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-dup"></a><h3>grl_data_dup ()</h3>
+<pre class="programlisting"><a class="link" href="GrlData.html" title="GrlData"><span class="returnvalue">GrlData</span></a> *
+grl_data_dup (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>);</pre>
+<p>Makes a deep copy of <em class="parameter"><code>data</code></em>
+ and all its contents.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to duplicate</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.9.6"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a>. Free it with <span class="type">g_object_unref</span>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-get"></a><h3>grl_data_get ()</h3>
+<pre class="programlisting">const <span class="returnvalue">GValue</span> *
+grl_data_get (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+              <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Get the first value from <em class="parameter"><code>data</code></em>
+ associated with <em class="parameter"><code>key</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to retrieve value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to look up. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.10.6"></a><h4>Returns</h4>
+<p> a <span class="type">GValue</span>. This value should not be modified nor
+freed by user. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-get-binary"></a><h3>grl_data_get_binary ()</h3>
+<pre class="programlisting">const <span class="returnvalue">guint8</span> *
+grl_data_get_binary (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                     <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                     <em class="parameter"><code><span class="type">gsize</span> *size</code></em>);</pre>
+<p>Returns the first binary value associated with <em class="parameter"><code>key</code></em>
+ from <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+ has
+no first value, or value is not a gfloat, or <em class="parameter"><code>key</code></em>
+ is not in data, then <code class="literal">NULL</code>
+is returned.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to inspect</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to use. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p> location to store the buffer size. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.11.6"></a><h4>Returns</h4>
+<p> buffer location associated with the <em class="parameter"><code>key</code></em>
+, or <code class="literal">NULL</code> in other case. If
+successful <em class="parameter"><code>size</code></em>
+will be set the to the buffer size.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.9</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-get-boolean"></a><h3>grl_data_get_boolean ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_data_get_boolean (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                      <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.12.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to inspect</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to use. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.12.5"></a><h4>Returns</h4>
+<p> the first boolean value associated with <em class="parameter"><code>key</code></em>
+from <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+has
+no first value, or value is not a gboolean, or <em class="parameter"><code>key</code></em>
+is not in the data, then
+FALSE is returned</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-get-boxed"></a><h3>grl_data_get_boxed ()</h3>
+<pre class="programlisting"><span class="returnvalue">gpointer</span>
+grl_data_get_boxed (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                    <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Returns the first boxed value associated with <em class="parameter"><code>key</code></em>
+ from <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+ has
+no first value, that value is not of a boxed type, or <em class="parameter"><code>key</code></em>
+ is not in <em class="parameter"><code>data</code></em>
+,
+then <code class="literal">NULL</code> is returned.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to inspect</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to use. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.13.6"></a><h4>Returns</h4>
+<p> the boxed instance associated with <em class="parameter"><code>key</code></em>
+if
+possible, or <code class="literal">NULL</code> in other cases. The caller should not change nor free the
+value. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-get-float"></a><h3>grl_data_get_float ()</h3>
+<pre class="programlisting"><span class="returnvalue">gfloat</span>
+grl_data_get_float (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                    <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Returns the first float value associated with <em class="parameter"><code>key</code></em>
+ from <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+ has no
+first value, or value is not a gfloat, or <em class="parameter"><code>key</code></em>
+ is not in data, then 0 is
+returned.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to inspect</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to use. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.14.6"></a><h4>Returns</h4>
+<p> float value associated with <em class="parameter"><code>key</code></em>
+, or 0 in other case.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-get-int"></a><h3>grl_data_get_int ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_data_get_int (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                  <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Returns the first int value associated with <em class="parameter"><code>key</code></em>
+ from <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+ has no
+first value, or value is not a gint, or <em class="parameter"><code>key</code></em>
+ is not in data, then 0 is
+returned.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to inspect</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to use. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.15.6"></a><h4>Returns</h4>
+<p> int value associated with <em class="parameter"><code>key</code></em>
+, or 0 in other case.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-get-keys"></a><h3>grl_data_get_keys ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_data_get_keys (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>);</pre>
+<p>Returns a list with keys contained in <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to inspect</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.16.6"></a><h4>Returns</h4>
+<p> an array with the
+keys. The content of the list should not be modified or freed. Use
+<code class="function">g_list_free()</code> when done using the list. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-get-related-keys"></a><h3>grl_data_get_related_keys ()</h3>
+<pre class="programlisting"><a class="link" href="GrlRelatedKeys.html" title="GrlRelatedKeys"><span class="returnvalue">GrlRelatedKeys</span></a> *
+grl_data_get_related_keys (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                           <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                           <em class="parameter"><code><span class="type">guint</span> index</code></em>);</pre>
+<p>Returns a set containing the values for <em class="parameter"><code>key</code></em>
+ and related keys at position
+<em class="parameter"><code>index</code></em>
+ from <em class="parameter"><code>data</code></em>
+.</p>
+<p>If user changes any of the values in the related keys, the changes will
+become permanent.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.17.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a metadata key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>element to retrieve, starting at 0</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.17.7"></a><h4>Returns</h4>
+<p> a <a class="link" href="GrlRelatedKeys.html" title="GrlRelatedKeys"><span class="type">GrlRelatedKeys</span></a>. Do not free it. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-get-single-values-for-key"></a><h3>grl_data_get_single_values_for_key ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_data_get_single_values_for_key (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                                    <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Returns all non-<code class="literal">NULL</code> values for <em class="parameter"><code>key</code></em>
+ from <em class="parameter"><code>data</code></em>
+. This ignores related keys.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a metadata key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.18.6"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> with
+values. Do not change or free the values. Free the list with <span class="type">g_list_free</span>. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GObject.Value][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.1.13</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-get-single-values-for-key-string"></a><h3>grl_data_get_single_values_for_key_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_data_get_single_values_for_key_string
+                               (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                                <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Returns all non-<code class="literal">NULL</code> values for <em class="parameter"><code>key</code></em>
+ from <em class="parameter"><code>data</code></em>
+. <em class="parameter"><code>key</code></em>
+ must have been
+registered as a string-type key. This ignores related keys.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a metadata key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.19.6"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> with values. Do
+not change or free the strings. Free the list with <span class="type">g_list_free</span>. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.1.13</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-get-string"></a><h3>grl_data_get_string ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_data_get_string (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                     <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Returns the first string value associated with <em class="parameter"><code>key</code></em>
+ from <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+ has
+no first value, or value is not string, or <em class="parameter"><code>key</code></em>
+ is not in <em class="parameter"><code>data</code></em>
+, then <code class="literal">NULL</code>
+is returned.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to inspect</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to use. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.20.6"></a><h4>Returns</h4>
+<p> string associated with <em class="parameter"><code>key</code></em>
+, or <code class="literal">NULL</code> in other case. Caller should
+not change nor free the value.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-has-key"></a><h3>grl_data_has_key ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_data_has_key (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                  <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Checks if <em class="parameter"><code>key</code></em>
+ is in <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to inspect</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to search. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.21.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>key</code></em>
+is in <em class="parameter"><code>data</code></em>
+, <code class="literal">FALSE</code> in other case.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-length"></a><h3>grl_data_length ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>
+grl_data_length (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                 <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Returns how many values <em class="parameter"><code>key</code></em>
+ or related keys have in <em class="parameter"><code>data</code></em>
+: if <em class="parameter"><code>key</code></em>
+ has no
+value, but a related key has, then it is counted as positive.</p>
+<p>As example, let's think in three related keys, K1, K2 and K3, and then thinks
+we have added several values for those keys, as:</p>
+<p>  (V10, V20, V30),, (V11, NULL, V31), (V12, NULL, V32)</p>
+<p>Therefore, when invoking grl_data_length (data, K2) it will return 3:
+considering K2 and the related keys (K1 and K3), there are 3 values.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.22.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a metadata key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.22.9"></a><h4>Returns</h4>
+<p> number of values</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-remove"></a><h3>grl_data_remove ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_remove (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                 <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Removes the first value for <em class="parameter"><code>key</code></em>
+ from <em class="parameter"><code>data</code></em>
+. If there are other keys related
+to <em class="parameter"><code>key</code></em>
+ their values will also be removed from <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to change</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to remove. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-remove-nth"></a><h3>grl_data_remove_nth ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_remove_nth (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                     <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                     <em class="parameter"><code><span class="type">guint</span> index</code></em>);</pre>
+<p>Removes the value at position <em class="parameter"><code>index</code></em>
+ for <em class="parameter"><code>key</code></em>
+ from <em class="parameter"><code>data</code></em>
+. If there are other
+keys related to <em class="parameter"><code>key</code></em>
+, their values at position <em class="parameter"><code>index</code></em>
+ will also be removed
+from <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a metadata key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>index of key to be removed, starting at 0</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-set"></a><h3>grl_data_set ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_set (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+              <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+              <em class="parameter"><code>const <span class="type">GValue</span> *value</code></em>);</pre>
+<p>Sets the first value associated with <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+. If key already has a
+value old value is freed and the new one is set.</p>
+<p>Also, checks that <em class="parameter"><code>value</code></em>
+ is compliant with <em class="parameter"><code>key</code></em>
+ specification, modifying it
+accordingly. For instance, if <em class="parameter"><code>key</code></em>
+ requires a number between 0 and 10, but
+<em class="parameter"><code>value</code></em>
+ is outside this range, it will be adapted accordingly.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.25.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to change or add. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-set-binary"></a><h3>grl_data_set_binary ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_set_binary (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                     <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                     <em class="parameter"><code>const <span class="type">guint8</span> *buf</code></em>,
+                     <em class="parameter"><code><span class="type">gsize</span> size</code></em>);</pre>
+<p>Sets the first binary value associated with <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+ already
+has a first value old value is replaced by the new one.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to change</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to change or add. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p>buffer holding the data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>size of the buffer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.9</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-set-boolean"></a><h3>grl_data_set_boolean ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_set_boolean (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                      <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                      <em class="parameter"><code><span class="type">gboolean</span> boolvalue</code></em>);</pre>
+<p>Sets the first boolean value associated with <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+ already
+has a first value, old value is replaced by the new one.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to change</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to change or add. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>boolvalue</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-set-boxed"></a><h3>grl_data_set_boxed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_set_boxed (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                    <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                    <em class="parameter"><code><span class="type">gconstpointer</span> boxed</code></em>);</pre>
+<p>Sets the first boxed value associated with <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+ already
+has a value, the old value is freed and the new one is set.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>key to change or add</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>boxed</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-set-float"></a><h3>grl_data_set_float ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_set_float (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                    <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                    <em class="parameter"><code><span class="type">gfloat</span> floatvalue</code></em>);</pre>
+<p>Sets the first float value associated with <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+ already has
+a first value old value is replaced by the new one.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.29.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to change</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to change or add. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>floatvalue</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-set-int"></a><h3>grl_data_set_int ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_set_int (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                  <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                  <em class="parameter"><code><span class="type">gint</span> intvalue</code></em>);</pre>
+<p>Sets the first int value associated with <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+ already has a
+first value old value is replaced by the new one.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to change</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to change or add. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>intvalue</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-set-related-keys"></a><h3>grl_data_set_related_keys ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_set_related_keys (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                           <em class="parameter"><code><a class="link" href="GrlRelatedKeys.html" title="GrlRelatedKeys"><span class="type">GrlRelatedKeys</span></a> *relkeys</code></em>,
+                           <em class="parameter"><code><span class="type">guint</span> index</code></em>);</pre>
+<p>Updates the values at position <em class="parameter"><code>index</code></em>
+ in <em class="parameter"><code>data</code></em>
+ with values in <em class="parameter"><code>relkeys</code></em>
+.</p>
+<p><em class="parameter"><code>data</code></em>
+ will take ownership of <em class="parameter"><code>relkeys</code></em>
+, so do not free it after invoking this
+function.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.31.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>relkeys</p></td>
+<td class="parameter_description"><p>a set of related keys</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>position to be updated, starting at 0</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-data-set-string"></a><h3>grl_data_set_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_data_set_string (<em class="parameter"><code><a class="link" href="GrlData.html" title="GrlData"><span class="type">GrlData</span></a> *data</code></em>,
+                     <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>,
+                     <em class="parameter"><code>const <span class="type">gchar</span> *strvalue</code></em>);</pre>
+<p>Sets the first string value associated with <em class="parameter"><code>key</code></em>
+ in <em class="parameter"><code>data</code></em>
+. If <em class="parameter"><code>key</code></em>
+ already
+has a value old value is freed and the new one is set.</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.8.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p> key to change or add. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strvalue</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlData.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlData-struct"></a><h3>struct GrlData</h3>
+<pre class="programlisting">struct GrlData;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlDataClass"></a><h3>struct GrlDataClass</h3>
+<pre class="programlisting">struct GrlDataClass {
+  GObjectClass parent_class;
+};
+</pre>
+<p>Grilo Data class</p>
+<div class="refsect3">
+<a name="id-1.5.8.2.9.3.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">GObjectClass</span> <em class="structfield"><code><a name="GrlDataClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent class structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlData.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a>, <a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a>, <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a>, <a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a>,
+<a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

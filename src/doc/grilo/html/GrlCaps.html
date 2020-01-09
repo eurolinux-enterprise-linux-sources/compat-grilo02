@@ -1,0 +1,600 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlCaps: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="caps-options.html" title="Capabilities and Options">
+<link rel="prev" href="caps-options.html" title="Capabilities and Options">
+<link rel="next" href="GrlOperationOptions.html" title="GrlOperationOptions">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GrlCaps.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GrlCaps.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="caps-options.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="caps-options.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="GrlOperationOptions.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GrlCaps"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GrlCaps.top_of_page"></a>GrlCaps</span></h2>
+<p>GrlCaps — Describes the capabilities of a source for a given
+operation.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GrlCaps.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlCaps.html" title="GrlCaps"><span class="returnvalue">GrlCaps</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlCaps.html#grl-caps-new" title="grl_caps_new ()">grl_caps_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlCaps.html#grl-caps-get-key-filter" title="grl_caps_get_key_filter ()">grl_caps_get_key_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlCaps.html#grl-caps-get-key-range-filter" title="grl_caps_get_key_range_filter ()">grl_caps_get_key_range_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlCaps.html#GrlTypeFilter" title="enum GrlTypeFilter"><span class="returnvalue">GrlTypeFilter</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GrlCaps.html#grl-caps-get-type-filter" title="grl_caps_get_type_filter ()">grl_caps_get_type_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlCaps.html#grl-caps-is-key-filter" title="grl_caps_is_key_filter ()">grl_caps_is_key_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlCaps.html#grl-caps-is-key-range-filter" title="grl_caps_is_key_range_filter ()">grl_caps_is_key_range_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlCaps.html#grl-caps-set-key-filter" title="grl_caps_set_key_filter ()">grl_caps_set_key_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlCaps.html#grl-caps-set-key-range-filter" title="grl_caps_set_key_range_filter ()">grl_caps_set_key_range_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlCaps.html#grl-caps-set-type-filter" title="grl_caps_set_type_filter ()">grl_caps_set_type_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlCaps.html#grl-caps-test-option" title="grl_caps_test_option ()">grl_caps_test_option</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlCaps.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlCaps.html#GrlCaps-struct" title="GrlCaps">GrlCaps</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlCaps.html#GrlCapsClass" title="GrlCapsClass">GrlCapsClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GrlCaps.html#GrlTypeFilter" title="enum GrlTypeFilter">GrlTypeFilter</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlCaps.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GrlCaps
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlCaps.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlCaps.description"></a><h2>Description</h2>
+<p>A <a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> instance is here to help you know if a given set of operation
+options is supported for a given operation.</p>
+<p>Here is an example of how this would be used.</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7</pre></td>
+        <td class="listing_code"><pre class="programlisting">GrlCaps <span class="gtkdoc opt">*</span>caps <span class="gtkdoc opt">=</span> <span class="function"><a href="GrlSource.html#grl-source-get-caps">grl_source_get_caps</a></span> <span class="gtkdoc opt">(</span><span class="function">GRL_SOURCE</span> <span class="gtkdoc opt">(</span>my_source<span class="gtkdoc opt">),</span>
+                                     GRL_OP_SEARCH<span class="gtkdoc opt">);</span>
+GrlOperationOptions <span class="gtkdoc opt">*</span>supported_options<span class="gtkdoc opt">;</span>
+<span class="keyword">if</span> <span class="gtkdoc opt">(</span><span class="function"><a href="GrlOperationOptions.html#grl-operation-options-obey-caps">grl_operation_options_obey_caps</a></span> <span class="gtkdoc opt">(</span>my_options<span class="gtkdoc opt">,</span> caps<span class="gtkdoc opt">, &amp;</span>supported_options<span class="gtkdoc opt">,</span> NULL<span class="gtkdoc opt">))</span>
+  <span class="function">grl_media_source_search</span> <span class="gtkdoc opt">(</span>my_source<span class="gtkdoc opt">,</span> <span class="string">&quot;blah&quot;</span><span class="gtkdoc opt">,</span> interesting_keys<span class="gtkdoc opt">,</span> my_options<span class="gtkdoc opt">, ...);</span>
+<span class="keyword">else</span> <span class="gtkdoc slc">// only use a subset of the options we wanted to pass</span>
+  <span class="function">grl_media_source_search</span> <span class="gtkdoc opt">(</span>my_source<span class="gtkdoc opt">,</span> <span class="string">&quot;blah&quot;</span><span class="gtkdoc opt">,</span> interesting_keys<span class="gtkdoc opt">,</span> supported_options<span class="gtkdoc opt">, ...);</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p>A <a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> can also be passed to <a class="link" href="GrlOperationOptions.html#grl-operation-options-new" title="grl_operation_options_new ()"><code class="function">grl_operation_options_new()</code></a>. The created
+<a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> instance would then check any change against its caps.</p>
+</div>
+<div class="refsect1">
+<a name="GrlCaps.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="grl-caps-new"></a><h3>grl_caps_new ()</h3>
+<pre class="programlisting"><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="returnvalue">GrlCaps</span></a> *
+grl_caps_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new caps object.</p>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.2.5"></a><h4>Returns</h4>
+<p> a new caps object.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-caps-get-key-filter"></a><h3>grl_caps_get_key_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_caps_get_key_filter (<em class="parameter"><code><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> *caps</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.3.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>caps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.3.5"></a><h4>Returns</h4>
+<p>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-caps-get-key-range-filter"></a><h3>grl_caps_get_key_range_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_caps_get_key_range_filter (<em class="parameter"><code><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> *caps</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.4.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>caps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.4.5"></a><h4>Returns</h4>
+<p>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-caps-get-type-filter"></a><h3>grl_caps_get_type_filter ()</h3>
+<pre class="programlisting"><a class="link" href="GrlCaps.html#GrlTypeFilter" title="enum GrlTypeFilter"><span class="returnvalue">GrlTypeFilter</span></a>
+grl_caps_get_type_filter (<em class="parameter"><code><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> *caps</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.5.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>caps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.5.5"></a><h4>Returns</h4>
+<p> the supported <a class="link" href="GrlCaps.html#GrlTypeFilter" title="enum GrlTypeFilter"><span class="type">GrlTypeFilter</span></a></p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-caps-is-key-filter"></a><h3>grl_caps_is_key_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_caps_is_key_filter (<em class="parameter"><code><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> *caps</code></em>,
+                        <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Checks if <em class="parameter"><code>key</code></em>
+ is supported for filtering in <em class="parameter"><code>caps</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>caps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.6.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>key</code></em>
+can be used for filtering</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-caps-is-key-range-filter"></a><h3>grl_caps_is_key_range_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_caps_is_key_range_filter (<em class="parameter"><code><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> *caps</code></em>,
+                              <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key</code></em>);</pre>
+<p>Checks if <em class="parameter"><code>key</code></em>
+ is supported for filtering by range in <em class="parameter"><code>caps</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>caps</p></td>
+<td class="parameter_description"><p>a <span class="type">grlCaps</span> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.7.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>key</code></em>
+can be used for filtering</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-caps-set-key-filter"></a><h3>grl_caps_set_key_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_caps_set_key_filter (<em class="parameter"><code><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> *caps</code></em>,
+                         <em class="parameter"><code><span class="type">GList</span> *keys</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.8.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>caps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-caps-set-key-range-filter"></a><h3>grl_caps_set_key_range_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_caps_set_key_range_filter (<em class="parameter"><code><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> *caps</code></em>,
+                               <em class="parameter"><code><span class="type">GList</span> *keys</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.9.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>caps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-caps-set-type-filter"></a><h3>grl_caps_set_type_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_caps_set_type_filter (<em class="parameter"><code><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> *caps</code></em>,
+                          <em class="parameter"><code><a class="link" href="GrlCaps.html#GrlTypeFilter" title="enum GrlTypeFilter"><span class="type">GrlTypeFilter</span></a> filter</code></em>);</pre>
+<p>Sets the supported filter capability.</p>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>caps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filter</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlCaps.html#GrlTypeFilter" title="enum GrlTypeFilter"><span class="type">GrlTypeFilter</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-caps-test-option"></a><h3>grl_caps_test_option ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_caps_test_option (<em class="parameter"><code><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> *caps</code></em>,
+                      <em class="parameter"><code>const <span class="type">gchar</span> *key</code></em>,
+                      <em class="parameter"><code>const <span class="type">GValue</span> *value</code></em>);</pre>
+<p>Checks whether (<em class="parameter"><code>key</code></em>
+, <em class="parameter"><code>value</code></em>
+) are authorized by <em class="parameter"><code>caps</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>caps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlCaps.html" title="GrlCaps"><span class="type">GrlCaps</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a key to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the value corresponding to <em class="parameter"><code>key</code></em>
+to test against <em class="parameter"><code>caps</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.5.2.8.11.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if (<em class="parameter"><code>key</code></em>
+, <em class="parameter"><code>value</code></em>
+) obey to <em class="parameter"><code>caps</code></em>
+, <code class="literal">FALSE</code> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlCaps.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlCaps-struct"></a><h3>GrlCaps</h3>
+<pre class="programlisting">typedef struct _GrlCaps GrlCaps;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlCapsClass"></a><h3>GrlCapsClass</h3>
+<pre class="programlisting">typedef struct {
+  GObjectClass parent;
+} GrlCapsClass;
+</pre>
+<p>Grilo Capabilities class.</p>
+<div class="refsect3">
+<a name="id-1.5.5.2.9.3.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">GObjectClass</span> <em class="structfield"><code><a name="GrlCapsClass.parent"></a>parent</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent class structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlTypeFilter"></a><h3>enum GrlTypeFilter</h3>
+<p>Type of media to allow.</p>
+<div class="refsect3">
+<a name="id-1.5.5.2.9.4.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-TYPE-FILTER-NONE:CAPS"></a>GRL_TYPE_FILTER_NONE</p></td>
+<td class="enum_member_description">
+<p>allow no content (only <a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a>)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-TYPE-FILTER-AUDIO:CAPS"></a>GRL_TYPE_FILTER_AUDIO</p></td>
+<td class="enum_member_description">
+<p>allow audio content</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-TYPE-FILTER-VIDEO:CAPS"></a>GRL_TYPE_FILTER_VIDEO</p></td>
+<td class="enum_member_description">
+<p>allow video content</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-TYPE-FILTER-IMAGE:CAPS"></a>GRL_TYPE_FILTER_IMAGE</p></td>
+<td class="enum_member_description">
+<p>allow image content</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-TYPE-FILTER-ALL:CAPS"></a>GRL_TYPE_FILTER_ALL</p></td>
+<td class="enum_member_description">
+<p>allow any type of content</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlCaps.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a>, <a class="link" href="GrlSource.html#grl-source-get-caps" title="grl_source_get_caps ()"><code class="function">grl_source_get_caps()</code></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

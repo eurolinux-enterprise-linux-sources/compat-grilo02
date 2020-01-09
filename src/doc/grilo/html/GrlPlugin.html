@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlPlugin: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="sources.html" title="Data sources">
+<link rel="prev" href="sources.html" title="Data sources">
+<link rel="next" href="GrlSource.html" title="GrlSource">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GrlPlugin.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GrlPlugin.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#GrlPlugin.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="sources.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="sources.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="GrlSource.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GrlPlugin"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GrlPlugin.top_of_page"></a>GrlPlugin</span></h2>
+<p>GrlPlugin — Base class for Grilo Plugins</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GrlPlugin.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-author" title="grl_plugin_get_author ()">grl_plugin_get_author</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-description" title="grl_plugin_get_description ()">grl_plugin_get_description</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-filename" title="grl_plugin_get_filename ()">grl_plugin_get_filename</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-id" title="grl_plugin_get_id ()">grl_plugin_get_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-info" title="grl_plugin_get_info ()">grl_plugin_get_info</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-info-keys" title="grl_plugin_get_info_keys ()">grl_plugin_get_info_keys</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-license" title="grl_plugin_get_license ()">grl_plugin_get_license</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GModule</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-module" title="grl_plugin_get_module ()">grl_plugin_get_module</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-name" title="grl_plugin_get_name ()">grl_plugin_get_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-site" title="grl_plugin_get_site ()">grl_plugin_get_site</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-sources" title="grl_plugin_get_sources ()">grl_plugin_get_sources</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlPlugin.html#grl-plugin-get-version" title="grl_plugin_get_version ()">grl_plugin_get_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlPlugin.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody><tr>
+<td class="property_type"><span class="type">gboolean</span></td>
+<td class="property_name"><a class="link" href="GrlPlugin.html#GrlPlugin--loaded" title="The “loaded” property">loaded</a></td>
+<td class="property_flags">Read</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlPlugin.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlPlugin.html#GrlPlugin-struct" title="struct GrlPlugin">GrlPlugin</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlPlugin.html#GrlPluginClass" title="struct GrlPluginClass">GrlPluginClass</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlPlugin.html#GRL-PLUGIN-AUTHOR:CAPS" title="GRL_PLUGIN_AUTHOR">GRL_PLUGIN_AUTHOR</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlPlugin.html#GRL-PLUGIN-DESCRIPTION:CAPS" title="GRL_PLUGIN_DESCRIPTION">GRL_PLUGIN_DESCRIPTION</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlPlugin.html#GRL-PLUGIN-LICENSE:CAPS" title="GRL_PLUGIN_LICENSE">GRL_PLUGIN_LICENSE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlPlugin.html#GRL-PLUGIN-NAME:CAPS" title="GRL_PLUGIN_NAME">GRL_PLUGIN_NAME</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlPlugin.html#GRL-PLUGIN-SITE:CAPS" title="GRL_PLUGIN_SITE">GRL_PLUGIN_SITE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlPlugin.html#GRL-PLUGIN-VERSION:CAPS" title="GRL_PLUGIN_VERSION">GRL_PLUGIN_VERSION</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlPlugin.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GrlPlugin
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlPlugin.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlPlugin.description"></a><h2>Description</h2>
+<p>Grilo is extensible, so <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> instances can be loaded at runtime.
+A plugin system can provide one or more of the basic</p>
+<span class="application">Grilo</span><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> subclasses.
+<p>This is a base class for anything that can be added to a Grilo Plugin.</p>
+</div>
+<div class="refsect1">
+<a name="GrlPlugin.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="grl-plugin-get-author"></a><h3>grl_plugin_get_author ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_plugin_get_author (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>);</pre>
+<p>Get the author of the plugin</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.2.6"></a><h4>Returns</h4>
+<p> the author of the <em class="parameter"><code>plugin</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-plugin-get-description"></a><h3>grl_plugin_get_description ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_plugin_get_description (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>);</pre>
+<p>Get the description of the plugin</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.3.6"></a><h4>Returns</h4>
+<p> the description of the <em class="parameter"><code>plugin</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-plugin-get-filename"></a><h3>grl_plugin_get_filename ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_plugin_get_filename (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>);</pre>
+<p>Get the filename containing the plugin</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.4.6"></a><h4>Returns</h4>
+<p> the filename containing <em class="parameter"><code>plugin</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-plugin-get-id"></a><h3>grl_plugin_get_id ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_plugin_get_id (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>);</pre>
+<p>Get the id of the plugin</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.5.6"></a><h4>Returns</h4>
+<p> the id of the <em class="parameter"><code>plugin</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-plugin-get-info"></a><h3>grl_plugin_get_info ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_plugin_get_info (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>,
+                     <em class="parameter"><code>const <span class="type">gchar</span> *key</code></em>);</pre>
+<p>Get the information of the <em class="parameter"><code>plugin</code></em>
+ that is associated with the given key</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a key representing information about this plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.6.6"></a><h4>Returns</h4>
+<p> the information assigned to the given <em class="parameter"><code>key</code></em>
+or NULL if there is no such information</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-plugin-get-info-keys"></a><h3>grl_plugin_get_info_keys ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_plugin_get_info_keys (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>);</pre>
+<p>Returns a list of keys that can be queried to retrieve information about the
+plugin.</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.7.6"></a><h4>Returns</h4>
+<p>a <span class="type">GList</span> of strings containing the keys. The content of the list is
+owned by the plugin and should not be modified or freed. Use <code class="function">g_list_free()</code>
+when done using the list. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-plugin-get-license"></a><h3>grl_plugin_get_license ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_plugin_get_license (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>);</pre>
+<p>Get the license of the plugin</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.8.6"></a><h4>Returns</h4>
+<p> the license of the <em class="parameter"><code>plugin</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-plugin-get-module"></a><h3>grl_plugin_get_module ()</h3>
+<pre class="programlisting"><span class="returnvalue">GModule</span> *
+grl_plugin_get_module (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>);</pre>
+<p>Gets the <span class="type">GModule</span> containing the plugin</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.9.6"></a><h4>Returns</h4>
+<p> a <span class="type">GModule</span></p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-plugin-get-name"></a><h3>grl_plugin_get_name ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_plugin_get_name (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>);</pre>
+<p>Get the name of the plugin</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.10.6"></a><h4>Returns</h4>
+<p> the name of the <em class="parameter"><code>plugin</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-plugin-get-site"></a><h3>grl_plugin_get_site ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_plugin_get_site (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>);</pre>
+<p>Get the site of the plugin</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.11.6"></a><h4>Returns</h4>
+<p> the site of the <em class="parameter"><code>plugin</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-plugin-get-sources"></a><h3>grl_plugin_get_sources ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_plugin_get_sources (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>);</pre>
+<p>Gets the sources belonging to <em class="parameter"><code>plugin</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.12.6"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> of
+<a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a>s. The content of the list should not be modified or
+freed. Use <code class="function">g_list_free()</code> when done using the list. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlSource]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-plugin-get-version"></a><h3>grl_plugin_get_version ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_plugin_get_version (<em class="parameter"><code><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *plugin</code></em>);</pre>
+<p>Get the version of the plugin</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a plugin</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.2.9.13.6"></a><h4>Returns</h4>
+<p> the version of the <em class="parameter"><code>plugin</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlPlugin.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlPlugin-struct"></a><h3>struct GrlPlugin</h3>
+<pre class="programlisting">struct GrlPlugin;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlPluginClass"></a><h3>struct GrlPluginClass</h3>
+<pre class="programlisting">struct GrlPluginClass {
+  GObjectClass parent_class;
+};
+</pre>
+<div class="refsect3">
+<a name="id-1.5.4.2.10.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">GObjectClass</span> <em class="structfield"><code><a name="GrlPluginClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent class structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-PLUGIN-AUTHOR:CAPS"></a><h3>GRL_PLUGIN_AUTHOR</h3>
+<pre class="programlisting">#define GRL_PLUGIN_AUTHOR "author"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-PLUGIN-DESCRIPTION:CAPS"></a><h3>GRL_PLUGIN_DESCRIPTION</h3>
+<pre class="programlisting">#define GRL_PLUGIN_DESCRIPTION "description"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-PLUGIN-LICENSE:CAPS"></a><h3>GRL_PLUGIN_LICENSE</h3>
+<pre class="programlisting">#define GRL_PLUGIN_LICENSE "license"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-PLUGIN-NAME:CAPS"></a><h3>GRL_PLUGIN_NAME</h3>
+<pre class="programlisting">#define GRL_PLUGIN_NAME "name"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-PLUGIN-SITE:CAPS"></a><h3>GRL_PLUGIN_SITE</h3>
+<pre class="programlisting">#define GRL_PLUGIN_SITE "site"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-PLUGIN-VERSION:CAPS"></a><h3>GRL_PLUGIN_VERSION</h3>
+<pre class="programlisting">#define GRL_PLUGIN_VERSION "version"
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlPlugin.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GrlPlugin--loaded"></a><h3>The <code class="literal">“loaded”</code> property</h3>
+<pre class="programlisting">  “loaded”                   <span class="type">gboolean</span></pre>
+<p><em class="parameter"><code>TRUE</code></em>
+ if plugin is loaded.</p>
+<p>Flags: Read</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 0.2.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlPlugin.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

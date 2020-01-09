@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlPls: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="grilo-pls.html" title="Grilo Playlist Functions">
+<link rel="prev" href="grilo-pls.html" title="Grilo Playlist Functions">
+<link rel="next" href="api-index-full.html" title="API Index">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#grilo-GrlPls.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="grilo-pls.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="grilo-pls.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="api-index-full.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="grilo-GrlPls"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="grilo-GrlPls.top_of_page"></a>GrlPls</span></h2>
+<p>GrlPls — playlist handling functions</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="grilo-GrlPls.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="grilo-GrlPls.html#GrlPlsFilterFunc" title="GrlPlsFilterFunc ()">*GrlPlsFilterFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlPls.html#grl-pls-media-is-playlist" title="grl_pls_media_is_playlist ()">grl_pls_media_is_playlist</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlPls.html#grl-pls-browse" title="grl_pls_browse ()">grl_pls_browse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlPls.html#grl-pls-browse-sync" title="grl_pls_browse_sync ()">grl_pls_browse_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlPls.html#grl-pls-browse-by-spec" title="grl_pls_browse_by_spec ()">grl_pls_browse_by_spec</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlPls.html#grl-pls-file-to-media" title="grl_pls_file_to_media ()">grl_pls_file_to_media</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlPls.html#grl-pls-get-file-attributes" title="grl_pls_get_file_attributes ()">grl_pls_get_file_attributes</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="grilo-GrlPls.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="grilo-GrlPls.description"></a><h2>Description</h2>
+<p>Grilo only deals with audio, video or image content, but not with
+playlists. This library allow to identify playlists and browse into them
+exposing playlist entries as GrlMedia objects.</p>
+</div>
+<div class="refsect1">
+<a name="grilo-GrlPls.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="GrlPlsFilterFunc"></a><h3>GrlPlsFilterFunc ()</h3>
+<pre class="programlisting"><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+<span class="c_punctuation">(</span>*GrlPlsFilterFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                     <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                     <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Callback type to filter, or modify <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> created
+when parsing a playlist using one of <a class="link" href="grilo-GrlPls.html#grl-pls-browse" title="grl_pls_browse ()"><code class="function">grl_pls_browse()</code></a>,
+<a class="link" href="grilo-GrlPls.html#grl-pls-browse-sync" title="grl_pls_browse_sync ()"><code class="function">grl_pls_browse_sync()</code></a> or <a class="link" href="grilo-GrlPls.html#grl-pls-browse-by-spec" title="grl_pls_browse_by_spec ()"><code class="function">grl_pls_browse_by_spec()</code></a>.</p>
+<p>The callback is responsible for unreffing <em class="parameter"><code>media</code></em>
+ when returning <code class="literal">NULL</code> or
+another <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.2.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> the browse call came from</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p> a <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> to operate on. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data passed to the browse call</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.2.7"></a><h4>Returns</h4>
+<p> <code class="literal">NULL</code> to not add this entry to the results,
+or a new <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> populated with metadata of your choice. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-pls-media-is-playlist"></a><h3>grl_pls_media_is_playlist ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_pls_media_is_playlist (<em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>);</pre>
+<p>Check if a file identified by GrlMedia object is a playlist or not.
+This function does blocking I/O.</p>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p>GrlMedia</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.3.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if a GrlMedia is recognized as a playlist.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-pls-browse"></a><h3>grl_pls_browse ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>
+grl_pls_browse (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *playlist</code></em>,
+                <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                <em class="parameter"><code><a class="link" href="grilo-GrlPls.html#GrlPlsFilterFunc" title="GrlPlsFilterFunc ()"><span class="type">GrlPlsFilterFunc</span></a> filter_func</code></em>,
+                <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceResultCb" title="GrlSourceResultCb ()"><span class="type">GrlSourceResultCb</span></a> callback</code></em>,
+                <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Browse into a playlist. The playlist entries are
+returned via the <em class="parameter"><code>callback</code></em>
+ function as GrlMedia objects.
+This function imitates the API and way of working of
+<a class="link" href="GrlSource.html#grl-source-browse" title="grl_source_browse ()"><span class="type">grl_source_browse</span></a>.</p>
+<p>The <em class="parameter"><code>playlist</code></em>
+ provided could be of any GrlMedia class,
+as long as its URI points to a valid playlist file.</p>
+<p>This function is asynchronous.</p>
+<p>See <a class="link" href="GrlSource.html#grl-source-browse" title="grl_source_browse ()"><code class="function">grl_source_browse()</code></a> function for additional information
+and sample code.</p>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.4.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>playlist</p></td>
+<td class="parameter_description"><p>a playlist</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filter_func</p></td>
+<td class="parameter_description"><p> A filter function, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p> the user defined callback. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the user data to pass in the callback</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.4.9"></a><h4>Returns</h4>
+<p> the operation identifier</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-pls-browse-sync"></a><h3>grl_pls_browse_sync ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_pls_browse_sync (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                     <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *playlist</code></em>,
+                     <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                     <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                     <em class="parameter"><code><a class="link" href="grilo-GrlPls.html#GrlPlsFilterFunc" title="GrlPlsFilterFunc ()"><span class="type">GrlPlsFilterFunc</span></a> filter_func</code></em>,
+                     <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Browse into a playlist. The playlist entries are
+returned via the <em class="parameter"><code>callback</code></em>
+ function as GrlMedia objects.
+This function imitates the API and way of working of
+<a class="link" href="GrlSource.html#grl-source-browse-sync" title="grl_source_browse_sync ()"><span class="type">grl_source_browse_sync</span></a>.</p>
+<p>The filter function <em class="parameter"><code>filter_func</code></em>
+ will be used for plugins
+or applications to be able to refuse particular entries from
+being listed.</p>
+<p>If a <code class="literal">NULL</code> filter function is passed, the media will be added
+with only the metadata coming from the playlist included.</p>
+<p>This function is synchronous.</p>
+<p>See <a class="link" href="GrlSource.html#grl-source-browse-sync" title="grl_source_browse_sync ()"><code class="function">grl_source_browse_sync()</code></a> function for additional information
+and sample code.</p>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.5.9"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>playlist</p></td>
+<td class="parameter_description"><p>a playlist</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filter_func</p></td>
+<td class="parameter_description"><p> A filter function, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.5.10"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> with <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a>
+elements. After use <code class="function">g_object_unref()</code> every element and <code class="function">g_list_free()</code> the
+list. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> Grl.Media][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-pls-browse-by-spec"></a><h3>grl_pls_browse_by_spec ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_pls_browse_by_spec (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                        <em class="parameter"><code><a class="link" href="grilo-GrlPls.html#GrlPlsFilterFunc" title="GrlPlsFilterFunc ()"><span class="type">GrlPlsFilterFunc</span></a> filter_func</code></em>,
+                        <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceBrowseSpec" title="GrlSourceBrowseSpec"><span class="type">GrlSourceBrowseSpec</span></a> *bs</code></em>);</pre>
+<p>Browse into a playlist. The playlist entries are
+returned via the bs-&gt;callback function as GrlMedia objects.
+This function is more suitable to be called from plugins, which by
+design get the GrlSourceBrowseSpec already filled in.</p>
+<p>The bs-&gt;playlist provided could be of any GrlMedia class,
+as long as its URI points to a valid playlist file.</p>
+<p>This function is asynchronous.</p>
+<p>See <a class="link" href="grilo-GrlPls.html#grl-pls-browse" title="grl_pls_browse ()"><code class="function">grl_pls_browse()</code></a> and <a class="link" href="GrlSource.html#grl-source-browse" title="grl_source_browse ()"><code class="function">grl_source_browse()</code></a> function for additional
+information and sample code.</p>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.6.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filter_func</p></td>
+<td class="parameter_description"><p> A filter function, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bs</p></td>
+<td class="parameter_description"><p>a GrlSourceBrowseSpec structure with details of the browsing operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-pls-file-to-media"></a><h3>grl_pls_file_to_media ()</h3>
+<pre class="programlisting"><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+grl_pls_file_to_media (<em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *content</code></em>,
+                       <em class="parameter"><code><span class="type">GFile</span> *file</code></em>,
+                       <em class="parameter"><code><span class="type">GFileInfo</span> *info</code></em>,
+                       <em class="parameter"><code><span class="type">gboolean</span> handle_pls</code></em>,
+                       <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>);</pre>
+<p>This function will update (if <em class="parameter"><code>content</code></em>
+ is non-<code class="literal">NULL</code>) or create a
+GrlMedia and populate it with information from <em class="parameter"><code>info</code></em>
+.</p>
+<p>If <em class="parameter"><code>info</code></em>
+ is <code class="literal">NULL</code>, a call to <code class="function">g_file_query_info()</code> will be made.</p>
+<p>This function is useful for plugins that browse the local filesystem
+and want to easily create GrlMedia from filesystem information.</p>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.7.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>content</p></td>
+<td class="parameter_description"><p>an existing <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> for the file, or <code class="literal">NULL</code></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>file</p></td>
+<td class="parameter_description"><p>a <span class="type">GFile</span> pointing to the file or directory in question</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>an existing <span class="type">GFileInfo</span>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>handle_pls</p></td>
+<td class="parameter_description"><p>Whether playlists should be handled as containers</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> representing the options to apply
+to this operation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.7.8"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-pls-get-file-attributes"></a><h3>grl_pls_get_file_attributes ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+grl_pls_get_file_attributes (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Returns the list of attributes to pass to
+<code class="function">g_file_query_info()</code> to make it possible to
+populate a GrlMedia using <a class="link" href="grilo-GrlPls.html#grl-pls-file-to-media" title="grl_pls_file_to_media ()"><code class="function">grl_pls_file_to_media()</code></a>.</p>
+<p>Do not free the result of this function.</p>
+<div class="refsect3">
+<a name="id-1.6.5.2.6.8.6"></a><h4>Returns</h4>
+<p> a string containing the
+list of attributes. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="grilo-GrlPls.other_details"></a><h2>Types and Values</h2>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

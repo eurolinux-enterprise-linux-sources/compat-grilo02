@@ -1,0 +1,706 @@
+From c9127ac6218c997ff2ddf250dbf5a6d5af9fd12d Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Mon, 4 May 2015 15:45:47 +0200
+Subject: [PATCH 1/7] Revert "vala: Add some missing definitions"
+
+This reverts commit 78d4690dabd4fe1822ab8d610a76faa385d2e3e3.
+---
+ bindings/vala/grilo-0.2-custom.vala | 6 ------
+ 1 file changed, 6 deletions(-)
+
+diff --git a/bindings/vala/grilo-0.2-custom.vala b/bindings/vala/grilo-0.2-custom.vala
+index d045526..4e075e9 100644
+--- a/bindings/vala/grilo-0.2-custom.vala
++++ b/bindings/vala/grilo-0.2-custom.vala
+@@ -112,12 +112,6 @@ namespace Grl {
+ 		[CCode (cname ="GRL_METADATA_KEY_AUDIO_TRACK")]
+ 		public static Grl.KeyID AUDIO_TRACK;
+ 
+-		[CCode (cname ="GRL_METADATA_KEY_CHILDCOUNT_UNKNOWN")]
+-		public static uint CHILDCOUNT_UNKNOWN;
+-
+-		[CCode (cname ="GRL_SOURCE_REMAINING_UNKNOWN")]
+-		public static uint REMAINING_UNKNOWN;
+-
+ 		public static GLib.List list_new (Grl.KeyID p, ...);
+ 	}
+ }
+-- 
+2.4.0
+
+
+From 62845c257f736472c7bba9043e6ad04c435f4f32 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Mon, 4 May 2015 15:46:56 +0200
+Subject: [PATCH 2/7] Revert "build: fix distcheck for Vala"
+
+This reverts commit 76eafa8194c4563190cbfe6cd058c02576e8c7f4.
+---
+ bindings/vala/Makefile.am | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/bindings/vala/Makefile.am b/bindings/vala/Makefile.am
+index acb859c..bb494be 100644
+--- a/bindings/vala/Makefile.am
++++ b/bindings/vala/Makefile.am
+@@ -1,5 +1,4 @@
+ EXTRA_DIST =
+-CLEANFILES =
+ 
+ if ENABLE_VAPIGEN
+ -include $(VAPIGEN_MAKEFILE)
+@@ -12,7 +11,7 @@ grilo_@GRL_MAJORMINOR_NORM@_vapi_DEPS = gio-2.0
+ grilo_@GRL_MAJORMINOR_NORM@_vapi_METADATADIRS = $(srcdir)
+ grilo_@GRL_MAJORMINOR_NORM@_vapi_FILES = $(srcdir)/grilo-@GRL_MAJORMINOR@-custom.vala $(top_builddir)/src/Grl-@GRL_MAJORMINOR@.gir
+ 
+-EXTRA_DIST += Grl-@GRL_MAJORMINOR@.metadata grilo-@GRL_MAJORMINOR@.deps grilo-@GRL_MAJORMINOR@-custom.vala
++EXTRA_DIST += grilo-@GRL_MAJORMINOR@.metadata grilo-@GRL_MAJORMINOR@.deps grilo-@GRL_MAJORMINOR@-custom.vala
+ 
+ grilo-net-@GRL_MAJORMINOR@.vapi:  $(top_builddir)/libs/net/GrlNet-@GRL_MAJORMINOR@.gir grilo-net-@GRL_MAJORMINOR@-custom.vala grilo-net-@GRL_MAJORMINOR@.deps GrlNet-@GRL_MAJORMINOR@.metadata
+ 
+@@ -25,8 +24,6 @@ EXTRA_DIST += GrlNet-@GRL_MAJORMINOR@.metadata grilo-net-@GRL_MAJORMINOR@.deps g
+ vapidir = $(datadir)/vala/vapi
+ vapi_DATA = $(VAPIGEN_VAPIS) $(VAPIGEN_VAPIS:.vapi=.deps)
+ 
+-CLEANFILES += $(vapi_DATA)
+-
+ endif
+ 
+ -include $(top_srcdir)/git.mk
+-- 
+2.4.0
+
+
+From d58512af408ad8e1de508b4c22a57a00f0d36bd7 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Mon, 4 May 2015 15:48:30 +0200
+Subject: [PATCH 3/7] Revert "build: Add vapigen.m4 file"
+
+This reverts commit 7a7ccfc43d558e5b6f425498fd8be9d2664eabd0.
+---
+ m4/vapigen.m4 | 101 ----------------------------------------------------------
+ 1 file changed, 101 deletions(-)
+ delete mode 100644 m4/vapigen.m4
+
+diff --git a/m4/vapigen.m4 b/m4/vapigen.m4
+deleted file mode 100644
+index 2c435e7..0000000
+--- a/m4/vapigen.m4
++++ /dev/null
+@@ -1,101 +0,0 @@
+-dnl vapigen.m4
+-dnl
+-dnl Copyright 2012 Evan Nemerson
+-dnl
+-dnl This library is free software; you can redistribute it and/or
+-dnl modify it under the terms of the GNU Lesser General Public
+-dnl License as published by the Free Software Foundation; either
+-dnl version 2.1 of the License, or (at your option) any later version.
+-dnl
+-dnl This library is distributed in the hope that it will be useful,
+-dnl but WITHOUT ANY WARRANTY; without even the implied warranty of
+-dnl MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+-dnl Lesser General Public License for more details.
+-dnl
+-dnl You should have received a copy of the GNU Lesser General Public
+-dnl License along with this library; if not, write to the Free Software
+-dnl Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+-
+-# VAPIGEN_CHECK([VERSION], [API_VERSION], [FOUND_INTROSPECTION], [DEFAULT])
+-# --------------------------------------
+-# Check vapigen existence and version
+-#
+-# See http://live.gnome.org/Vala/UpstreamGuide for detailed documentation
+-AC_DEFUN([VAPIGEN_CHECK],
+-[
+-  AS_IF([test "x$3" != "xyes"], [
+-      m4_provide_if([GOBJECT_INTROSPECTION_CHECK], [], [
+-          m4_provide_if([GOBJECT_INTROSPECTION_REQUIRE], [], [
+-              AC_MSG_ERROR([[You must call GOBJECT_INTROSPECTION_CHECK or GOBJECT_INTROSPECTION_REQUIRE before using VAPIGEN_CHECK unless using the FOUND_INTROSPECTION argument is "yes"]])
+-            ])
+-        ])
+-    ])
+-
+-  AC_ARG_ENABLE([vala],
+-    [AS_HELP_STRING([--enable-vala[=@<:@no/auto/yes@:>@]],[build Vala bindings @<:@default=]ifelse($4,,auto,$4)[@:>@])],,[
+-      AS_IF([test "x$4" = "x"], [
+-          enable_vala=auto
+-        ], [
+-          enable_vala=$4
+-        ])
+-    ])
+-
+-  AS_CASE([$enable_vala], [no], [enable_vala=no],
+-      [yes], [
+-        AS_IF([test "x$3" != "xyes" -a "x$found_introspection" != "xyes"], [
+-            AC_MSG_ERROR([Vala bindings require GObject Introspection])
+-          ])
+-      ], [auto], [
+-        AS_IF([test "x$3" != "xyes" -a "x$found_introspection" != "xyes"], [
+-            enable_vala=no
+-          ])
+-      ], [
+-        AC_MSG_ERROR([Invalid argument passed to --enable-vala, should be one of @<:@no/auto/yes@:>@])
+-      ])
+-
+-  AS_IF([test "x$2" = "x"], [
+-      vapigen_pkg_name=vapigen
+-    ], [
+-      vapigen_pkg_name=vapigen-$2
+-    ])
+-  AS_IF([test "x$1" = "x"], [
+-      vapigen_pkg="$vapigen_pkg_name"
+-    ], [
+-      vapigen_pkg="$vapigen_pkg_name >= $1"
+-    ])
+-
+-  PKG_PROG_PKG_CONFIG
+-
+-  PKG_CHECK_EXISTS([$vapigen_pkg], [
+-      AS_IF([test "$enable_vala" = "auto"], [
+-          enable_vala=yes
+-        ])
+-    ], [
+-      AS_CASE([$enable_vala], [yes], [
+-          AC_MSG_ERROR([$vapigen_pkg not found])
+-        ], [auto], [
+-          enable_vala=no
+-        ])
+-    ])
+-
+-  AC_MSG_CHECKING([for vapigen])
+-
+-  AS_CASE([$enable_vala],
+-    [yes], [
+-      VAPIGEN=`$PKG_CONFIG --variable=vapigen $vapigen_pkg_name`
+-      VAPIGEN_MAKEFILE=`$PKG_CONFIG --variable=datadir $vapigen_pkg_name`/vala/Makefile.vapigen
+-      AS_IF([test "x$2" = "x"], [
+-          VAPIGEN_VAPIDIR=`$PKG_CONFIG --variable=vapidir $vapigen_pkg_name`
+-        ], [
+-          VAPIGEN_VAPIDIR=`$PKG_CONFIG --variable=vapidir_versioned $vapigen_pkg_name`
+-        ])
+-    ])
+-
+-  AC_MSG_RESULT([$enable_vala])
+-
+-  AC_SUBST([VAPIGEN])
+-  AC_SUBST([VAPIGEN_VAPIDIR])
+-  AC_SUBST([VAPIGEN_MAKEFILE])
+-
+-  AM_CONDITIONAL(ENABLE_VAPIGEN, test "x$enable_vala" = "xyes")
+-])
+-- 
+2.4.0
+
+
+From 010af674f7e32d22aed070e78fe84c5f7f4c5510 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Mon, 4 May 2015 15:49:21 +0200
+Subject: [PATCH 4/7] Revert "build-sys: fix out-of-tree build of vapi"
+
+This reverts commit 8a583607a59395958169dbd2230ab39b90d59e81.
+---
+ bindings/vala/Makefile.am | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/bindings/vala/Makefile.am b/bindings/vala/Makefile.am
+index bb494be..abcef6b 100644
+--- a/bindings/vala/Makefile.am
++++ b/bindings/vala/Makefile.am
+@@ -9,7 +9,7 @@ grilo-@GRL_MAJORMINOR@.vapi: $(top_builddir)/src/Grl-@GRL_MAJORMINOR@.gir grilo-
+ 
+ grilo_@GRL_MAJORMINOR_NORM@_vapi_DEPS = gio-2.0
+ grilo_@GRL_MAJORMINOR_NORM@_vapi_METADATADIRS = $(srcdir)
+-grilo_@GRL_MAJORMINOR_NORM@_vapi_FILES = $(srcdir)/grilo-@GRL_MAJORMINOR@-custom.vala $(top_builddir)/src/Grl-@GRL_MAJORMINOR@.gir
++grilo_@GRL_MAJORMINOR_NORM@_vapi_FILES = grilo-@GRL_MAJORMINOR@-custom.vala $(top_builddir)/src/Grl-@GRL_MAJORMINOR@.gir
+ 
+ EXTRA_DIST += grilo-@GRL_MAJORMINOR@.metadata grilo-@GRL_MAJORMINOR@.deps grilo-@GRL_MAJORMINOR@-custom.vala
+ 
+@@ -17,7 +17,7 @@ grilo-net-@GRL_MAJORMINOR@.vapi:  $(top_builddir)/libs/net/GrlNet-@GRL_MAJORMINO
+ 
+ grilo_net_@GRL_MAJORMINOR_NORM@_vapi_DEPS = gio-2.0
+ grilo_net_@GRL_MAJORMINOR_NORM@_vapi_METADATADIRS = $(srcdir)
+-grilo_net_@GRL_MAJORMINOR_NORM@_vapi_FILES = $(srcdir)/grilo-net-@GRL_MAJORMINOR@-custom.vala $(top_builddir)/libs/net/GrlNet-@GRL_MAJORMINOR@.gir
++grilo_net_@GRL_MAJORMINOR_NORM@_vapi_FILES = grilo-net-@GRL_MAJORMINOR@-custom.vala $(top_builddir)/libs/net/GrlNet-@GRL_MAJORMINOR@.gir
+ 
+ EXTRA_DIST += GrlNet-@GRL_MAJORMINOR@.metadata grilo-net-@GRL_MAJORMINOR@.deps grilo-net-@GRL_MAJORMINOR@-custom.vala
+ 
+-- 
+2.4.0
+
+
+From f5375ed920981265477b6034b7fcdda43846c9f3 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Mon, 4 May 2015 15:50:58 +0200
+Subject: [PATCH 5/7] Revert "build-sys: fix gio-2.0 gir bindings errors"
+
+This reverts commit c760d284acad86bb6f60af711af7d079052832f7.
+---
+ bindings/vala/Makefile.am | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/bindings/vala/Makefile.am b/bindings/vala/Makefile.am
+index abcef6b..77947ac 100644
+--- a/bindings/vala/Makefile.am
++++ b/bindings/vala/Makefile.am
+@@ -7,7 +7,7 @@ VAPIGEN_VAPIS = grilo-@GRL_MAJORMINOR@.vapi grilo-net-@GRL_MAJORMINOR@.vapi
+ 
+ grilo-@GRL_MAJORMINOR@.vapi: $(top_builddir)/src/Grl-@GRL_MAJORMINOR@.gir grilo-@GRL_MAJORMINOR@-custom.vala grilo-@GRL_MAJORMINOR@.deps Grl-@GRL_MAJORMINOR@.metadata
+ 
+-grilo_@GRL_MAJORMINOR_NORM@_vapi_DEPS = gio-2.0
++grilo_@GRL_MAJORMINOR_NORM@_vapi_DEPS =
+ grilo_@GRL_MAJORMINOR_NORM@_vapi_METADATADIRS = $(srcdir)
+ grilo_@GRL_MAJORMINOR_NORM@_vapi_FILES = grilo-@GRL_MAJORMINOR@-custom.vala $(top_builddir)/src/Grl-@GRL_MAJORMINOR@.gir
+ 
+@@ -15,7 +15,7 @@ EXTRA_DIST += grilo-@GRL_MAJORMINOR@.metadata grilo-@GRL_MAJORMINOR@.deps grilo-
+ 
+ grilo-net-@GRL_MAJORMINOR@.vapi:  $(top_builddir)/libs/net/GrlNet-@GRL_MAJORMINOR@.gir grilo-net-@GRL_MAJORMINOR@-custom.vala grilo-net-@GRL_MAJORMINOR@.deps GrlNet-@GRL_MAJORMINOR@.metadata
+ 
+-grilo_net_@GRL_MAJORMINOR_NORM@_vapi_DEPS = gio-2.0
++grilo_net_@GRL_MAJORMINOR_NORM@_vapi_DEPS =
+ grilo_net_@GRL_MAJORMINOR_NORM@_vapi_METADATADIRS = $(srcdir)
+ grilo_net_@GRL_MAJORMINOR_NORM@_vapi_FILES = grilo-net-@GRL_MAJORMINOR@-custom.vala $(top_builddir)/libs/net/GrlNet-@GRL_MAJORMINOR@.gir
+ 
+-- 
+2.4.0
+
+
+From 7d34bd88a20b90a6eca14743eddae3ff9f689625 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Mon, 4 May 2015 16:18:21 +0200
+Subject: [PATCH 6/7] Revert "build: Require vala 0.27"
+
+This reverts commit f48941d8e38cace3f709c78a2609c30d2693d998.
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index a7e45a1..7c845e0 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -258,7 +258,7 @@ GOBJECT_INTROSPECTION_CHECK([0.9])
+ # VALA BINDINGS
+ # ----------------------------------------------------------
+ 
+-VAPIGEN_CHECK([0.27])
++VAPIGEN_CHECK([0.26])
+ 
+ # ----------------------------------------------------------
+ # GETTEXT/INTLTOOL
+-- 
+2.4.0
+
+
+From 98b94d97697bc63bdb16a64ed74da0d1f95bfc26 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Mon, 4 May 2015 16:18:29 +0200
+Subject: [PATCH 7/7] Revert "vala: modernize bindings generation"
+
+This reverts commit 689bf702cb3d264cca9b1a689d6237f611ad3407.
+---
+ bindings/Makefile.am                             |  6 +-
+ bindings/vala/Grl-0.2.metadata                   | 15 -----
+ bindings/vala/GrlNet-0.2.metadata                |  3 -
+ bindings/vala/Makefile.am                        | 83 +++++++++++++++++++-----
+ bindings/vala/grilo-0.2-custom.vala              | 17 ++++-
+ bindings/vala/grilo-0.2.metadata                 | 58 +++++++++++++++++
+ bindings/vala/grilo-net-0.2.metadata             |  6 ++
+ bindings/vala/grilo-net-uninstalled.files.in     |  2 +
+ bindings/vala/grilo-net-uninstalled.namespace.in |  1 +
+ bindings/vala/grilo-uninstalled.defines          |  1 +
+ bindings/vala/grilo-uninstalled.files.in         | 13 ++++
+ bindings/vala/grilo-uninstalled.namespace.in     |  1 +
+ configure.ac                                     | 49 ++++++++++++--
+ 13 files changed, 211 insertions(+), 44 deletions(-)
+ delete mode 100644 bindings/vala/Grl-0.2.metadata
+ delete mode 100644 bindings/vala/GrlNet-0.2.metadata
+ create mode 100644 bindings/vala/grilo-0.2.metadata
+ create mode 100644 bindings/vala/grilo-net-0.2.metadata
+ create mode 100644 bindings/vala/grilo-net-uninstalled.files.in
+ create mode 100644 bindings/vala/grilo-net-uninstalled.namespace.in
+ create mode 100644 bindings/vala/grilo-uninstalled.defines
+ create mode 100644 bindings/vala/grilo-uninstalled.files.in
+ create mode 100644 bindings/vala/grilo-uninstalled.namespace.in
+
+diff --git a/bindings/Makefile.am b/bindings/Makefile.am
+index 86de8f0..50c92aa 100644
+--- a/bindings/Makefile.am
++++ b/bindings/Makefile.am
+@@ -1,3 +1,7 @@
+-SUBDIRS = vala
++SUBDIRS =
++
++if HAVE_VALA
++SUBDIRS += vala
++endif
+ 
+ -include $(top_srcdir)/git.mk
+diff --git a/bindings/vala/Grl-0.2.metadata b/bindings/vala/Grl-0.2.metadata
+deleted file mode 100644
+index c59ffd8..0000000
+--- a/bindings/vala/Grl-0.2.metadata
++++ /dev/null
+@@ -1,15 +0,0 @@
+-// vapigen has issues with the callbacks
+-PluginDescriptor skip=true
+-
+-Source.browse#method name="do_browse"
+-Source.query#method name="do_query"
+-Source.remove#method name="do_remove"
+-Source.resolve#method name="do_resolve"
+-Source.search#method name="do_search"
+-Source.store#method name="do_store"
+-Source.store_metadata#method name="do_store_metadata"
+-Source.supported_operations#method name="get_supported_operations"
+-*.callback delegate_target_cname="user_data"
+-
+-
+-SourceStoreSpec.user_data type="string"
+\ No newline at end of file
+diff --git a/bindings/vala/GrlNet-0.2.metadata b/bindings/vala/GrlNet-0.2.metadata
+deleted file mode 100644
+index 73465ad..0000000
+--- a/bindings/vala/GrlNet-0.2.metadata
++++ /dev/null
+@@ -1,3 +0,0 @@
+-Wc.request_with_headers_hash_async finish_name="grl_net_wc_request_finish"
+-Wc.request_with_headers_async skip=false
+-Wc.request_with_headers_async finish_name="grl_net_wc_request_finish"
+diff --git a/bindings/vala/Makefile.am b/bindings/vala/Makefile.am
+index 77947ac..8c0fffe 100644
+--- a/bindings/vala/Makefile.am
++++ b/bindings/vala/Makefile.am
+@@ -1,29 +1,78 @@
+-EXTRA_DIST =
++# This Makefile is a tad convoluted. I've tried to make it so that the vapi
++# can be built at the same time as the library in the hope that this will make
++# it easier to keep it up-to-date.
++#
++# The vapi is generated in 2 steps:
++#
++#   vala-gen-introspect looks at headers and libs and generates a gidl for the
++#   library. It takes a .files file containing paths to these. It also takes a
++#   .namespace file containing the Vala namespace corresponding to this
++#   library. Both these files are expected to be in the directory where you run
++#   vala-gen-introspect.
++#
++#   vapigen takes the gidl, a .deps file containing the list of libs needed
++#   to link this library, and a .metadata file containing annotations to the
++#   gidl (e.g. foo() is the free function for object X).
++#
++# vala-gen-introspect runs with the -uninstalled .pc file. The .files is
++# generated so that it has links to the headers and libraries from the source
++# and build trees. The .namespace file is generated, though it doesn't need
++# to be, so that it exists in the build tree where vala-gen-introspect is run
++# (because this may not be the same as the source tree). Since we're working
++# with the -uninstalled files, and vala-gen-introspect assumes filenames are
++# named as <package>.<extension>, all the associated file names have an
++# -uninstalled suffix.
++#
++# Running vapigen is simpler. It generates a the .vapi file using the gidl
++# file from vala-gen-introspect. Since we want the final files to be in the
++# form <libname>-<version>.*, we use the same convention for naming the files
++# associated with this step (contrast with the -uninstalled suffix for the
++# vala-gen-introspect step). The only file implicitly used by vapigen is the
++# .deps file, so to make the build independent of a split source/build tree,
++# I've put the deps on the vapigen command-line (it's redundant, but helps
++# with distcheck).
++#
+ 
+-if ENABLE_VAPIGEN
+--include $(VAPIGEN_MAKEFILE)
++targets = grilo-@GRL_MAJORMINOR@
+ 
+-VAPIGEN_VAPIS = grilo-@GRL_MAJORMINOR@.vapi grilo-net-@GRL_MAJORMINOR@.vapi
++if BUILD_GRILO_NET
++targets += grilo-net-@GRL_MAJORMINOR@
++endif
++
++targets_u = $(foreach target,$(targets),$(subst @GRL_MAJORMINOR@,uninstalled,$(target)))
+ 
+-grilo-@GRL_MAJORMINOR@.vapi: $(top_builddir)/src/Grl-@GRL_MAJORMINOR@.gir grilo-@GRL_MAJORMINOR@-custom.vala grilo-@GRL_MAJORMINOR@.deps Grl-@GRL_MAJORMINOR@.metadata
++# "source" files for vala-gen-introspect
++filesfiles_src = $(foreach target,$(targets_u),$(target).files.in)
++filesfiles = $(foreach target,$(targets_u),$(target).files)
++nsfiles_src = $(foreach target,$(targets_u),$(target).namespace.in)
++nsfiles = $(foreach target,$(targets_u),$(target).namespace)
+ 
+-grilo_@GRL_MAJORMINOR_NORM@_vapi_DEPS =
+-grilo_@GRL_MAJORMINOR_NORM@_vapi_METADATADIRS = $(srcdir)
+-grilo_@GRL_MAJORMINOR_NORM@_vapi_FILES = grilo-@GRL_MAJORMINOR@-custom.vala $(top_builddir)/src/Grl-@GRL_MAJORMINOR@.gir
++# "source" files for vapigen
++depsfiles = $(foreach target,$(targets),$(target).deps)
++gifiles = $(foreach target,$(targets),$(target).gi)
++metadatafiles = $(foreach target,$(targets),$(target).metadata)
+ 
+-EXTRA_DIST += grilo-@GRL_MAJORMINOR@.metadata grilo-@GRL_MAJORMINOR@.deps grilo-@GRL_MAJORMINOR@-custom.vala
++vapidir = $(datadir)/vala/vapi
+ 
+-grilo-net-@GRL_MAJORMINOR@.vapi:  $(top_builddir)/libs/net/GrlNet-@GRL_MAJORMINOR@.gir grilo-net-@GRL_MAJORMINOR@-custom.vala grilo-net-@GRL_MAJORMINOR@.deps GrlNet-@GRL_MAJORMINOR@.metadata
++if HAVE_VALA
++vapifiles = $(foreach target,$(targets),$(target).vapi)
++vapi_DATA = $(depsfiles) $(vapifiles)
++endif
+ 
+-grilo_net_@GRL_MAJORMINOR_NORM@_vapi_DEPS =
+-grilo_net_@GRL_MAJORMINOR_NORM@_vapi_METADATADIRS = $(srcdir)
+-grilo_net_@GRL_MAJORMINOR_NORM@_vapi_FILES = grilo-net-@GRL_MAJORMINOR@-custom.vala $(top_builddir)/libs/net/GrlNet-@GRL_MAJORMINOR@.gir
++%-@GRL_MAJORMINOR@.gi: %-uninstalled.files %-uninstalled.namespace
++	PKG_CONFIG_PATH=$(top_builddir)/:${PKG_CONFIG_PATH} \
++		$(VALA_GEN_INTROSPECT) $*-uninstalled .
++	@mv $*-uninstalled.gi $*-@GRL_MAJORMINOR@.gi
+ 
+-EXTRA_DIST += GrlNet-@GRL_MAJORMINOR@.metadata grilo-net-@GRL_MAJORMINOR@.deps grilo-net-@GRL_MAJORMINOR@-custom.vala
++%.vapi: %.gi %.metadata %-custom.vala
++	$(VAPIGEN) --library $* \
++		$(top_srcdir)/bindings/vala/$*.metadata $*.gi \
++		$*-custom.vala
+ 
+-vapidir = $(datadir)/vala/vapi
+-vapi_DATA = $(VAPIGEN_VAPIS) $(VAPIGEN_VAPIS:.vapi=.deps)
++all: $(vapifiles)
+ 
+-endif
++EXTRA_DIST = $(depsfiles) $(filesfiles_src) $(nsfiles_src) $(metadatafiles) $(vapifiles)
++CLEANFILES = $(gifiles)
++DISTCLEANFILES = $(vapifiles) $(filesfiles) $(nsfiles)
+ 
+ -include $(top_srcdir)/git.mk
+diff --git a/bindings/vala/grilo-0.2-custom.vala b/bindings/vala/grilo-0.2-custom.vala
+index 4e075e9..1d13da3 100644
+--- a/bindings/vala/grilo-0.2-custom.vala
++++ b/bindings/vala/grilo-0.2-custom.vala
+@@ -1,6 +1,19 @@
+ namespace Grl {
++	[CCode (instance_pos = 3.1)]
++	public delegate void SourceResolveCb (Grl.Source source, uint operation_id, Grl.Media? media, GLib.Error error);
++	[CCode (instance_pos = 2.1)]
++	public delegate void SourceRemoveCb (Grl.Source source, Grl.Media? media, GLib.Error error);
++	[CCode (instance_pos = 4.1)]
++	public delegate void SourceResultCb (Grl.Source source, uint operation_id, Grl.Media? media, uint remaining, GLib.Error? error);
++	[CCode (instance_pos = 3.1)]
++	public delegate void SourceStoreCb (Grl.Source source, Grl.MediaBox? parent, Grl.Media? media, GLib.Error? error);
+ 
+-	public struct MetadataKey {
++	[SimpleType]
++	public struct KeyID {
++	}
++
++	[Compact]
++	public class MetadataKey {
+ 		[CCode (cname ="GRL_METADATA_KEY_INVALID")]
+ 		public static Grl.KeyID INVALID;
+ 		[CCode (cname ="GRL_METADATA_KEY_ALBUM")]
+@@ -112,6 +125,6 @@ namespace Grl {
+ 		[CCode (cname ="GRL_METADATA_KEY_AUDIO_TRACK")]
+ 		public static Grl.KeyID AUDIO_TRACK;
+ 
+-		public static GLib.List list_new (Grl.KeyID p, ...);
++		public static unowned GLib.List list_new (Grl.KeyID p, ...);
+ 	}
+ }
+diff --git a/bindings/vala/grilo-0.2.metadata b/bindings/vala/grilo-0.2.metadata
+new file mode 100644
+index 0000000..98ef88a
+--- /dev/null
++++ b/bindings/vala/grilo-0.2.metadata
+@@ -0,0 +1,58 @@
++# Grilo library
++Grl cprefix="Grl" lower_case_cprefix="grl_" cheader_filename="grilo.h"
++
++# GrlConfig
++grl_config_new.source nullable="1"
++
++# GrlRegistry
++grl_registry_add_config.config transfer_ownership="1"
++grl_registry_get_metadata_keys type_arguments="unowned KeyID" transfer_ownership="1"
++grl_registry_get_sources type_arguments="unowned Plugin" transfer_ownership="1"
++grl_registry_get_sources_by_operations type_arguments="unowned Plugin" transfer_ownership="1"
++
++# GrlPlugin
++grl_plugin_get_info_keys type_arguments="unowned string" transfer_ownership="1"
++
++# GrlSource
++grl_source_slow_keys type_arguments="unowned KeyID" transfer_ownership="0"
++grl_source_supported_keys type_arguments="unowned KeyID" transfer_ownership="0"
++grl_source_writable_keys type_arguments="unowned KeyID" transfer_ownership="0"
++grl_source_browse.container nullable="1"
++grl_source_browse.keys type_arguments="KeyID"
++grl_source_browse_sync type_arguments="Media" transfer_ownership="1"
++grl_source_browse_sync.keys type_arguments="KeyID"
++grl_source_query.keys type_arguments="KeyID"
++grl_source_query_sync type_arguments="Media" transfer_ownership="1"
++grl_source_query_sync.keys type_arguments="KeyID"
++grl_source_search.keys type_arguments="KeyID"
++grl_source_search_sync type_arguments="Media" transfer_ownership="1"
++grl_source_search_sync.keys type_arguments="KeyID"
++grl_source_may_resolve.missing_keys type_arguments="unowned KeyID" is_out="1" transfer_ownership="1"
++grl_source_resolve.keys type_arguments="KeyID"
++grl_source_resolve_sync.keys type_arguments="KeyID"
++grl_source_store_metadata.keys type_arguments="KeyID"
++grl_source_set_metadata_sync.keys type_arguments="KeyID"
++grl_source_key_depends type_arguments="unowned KeyID" transfer_ownership="0"
++
++# GrlOperationOptions
++grl_operation_options_new.caps nullable="1"
++
++# GrlData
++grl_data_get_keys type_arguments="unowned KeyID" transfer_ownership="1"
++
++# Error domain
++GrlCoreError errordomain="1"
++
++# Callbacks
++GrlSourceRemoveCb hidden="1"
++GrlSourceResultCb hidden="1"
++GrlSourceStoreCb hidden="1"
++GrlSourceStoreMetadataCb hidden="1"
++GrlSourceResolveCb hidden="1"
++
++# Util
++grl_list_from_va ellipsis="1"
++
++# Grilo
++grl_init.argc hidden="1"
++grl_init.argv is_array="1" is_ref="1" array_length_pos="0.9"
+diff --git a/bindings/vala/grilo-net-0.2.metadata b/bindings/vala/grilo-net-0.2.metadata
+new file mode 100644
+index 0000000..3552012
+--- /dev/null
++++ b/bindings/vala/grilo-net-0.2.metadata
+@@ -0,0 +1,6 @@
++# Grilo Net library
++GrlNet cprefix="GrlNet" lower_case_cprefix="grl_net_" cheader_filename="net/grl-net.h"
++
++# GrlNetWc
++grl_net_wc_request_*.content transfer_ownership="0" is_out="1"
++grl_net_wc_request_*.length nullable="1" is_out="1" default_value="null"
+diff --git a/bindings/vala/grilo-net-uninstalled.files.in b/bindings/vala/grilo-net-uninstalled.files.in
+new file mode 100644
+index 0000000..b857dbe
+--- /dev/null
++++ b/bindings/vala/grilo-net-uninstalled.files.in
+@@ -0,0 +1,2 @@
++@top_builddir@/libs/net/grl-net.h
++@top_builddir@/libs/net/.libs/libgrlnet-0.2.so
+diff --git a/bindings/vala/grilo-net-uninstalled.namespace.in b/bindings/vala/grilo-net-uninstalled.namespace.in
+new file mode 100644
+index 0000000..6430318
+--- /dev/null
++++ b/bindings/vala/grilo-net-uninstalled.namespace.in
+@@ -0,0 +1 @@
++GrlNet
+diff --git a/bindings/vala/grilo-uninstalled.defines b/bindings/vala/grilo-uninstalled.defines
+new file mode 100644
+index 0000000..3bb8068
+--- /dev/null
++++ b/bindings/vala/grilo-uninstalled.defines
+@@ -0,0 +1 @@
++-DGRILO_COMPILATION
+diff --git a/bindings/vala/grilo-uninstalled.files.in b/bindings/vala/grilo-uninstalled.files.in
+new file mode 100644
+index 0000000..7c8a334
+--- /dev/null
++++ b/bindings/vala/grilo-uninstalled.files.in
+@@ -0,0 +1,13 @@
++@top_builddir@/src/grilo.h
++@top_builddir@/src/grl-error.h
++@top_builddir@/src/grl-log.h
++@top_builddir@/src/grl-plugin.h
++@top_builddir@/src/grl-source.h
++
++@top_builddir@/src/grl-caps.h
++@top_builddir@/src/grl-operation-options.h
++@top_builddir@/src/grl-multiple.h
++@top_builddir@/src/grl-registry.h
++@top_builddir@/src/grl-util.h
++@top_builddir@/src/data/
++@top_builddir@/src/.libs/libgrilo-0.2.so
+diff --git a/bindings/vala/grilo-uninstalled.namespace.in b/bindings/vala/grilo-uninstalled.namespace.in
+new file mode 100644
+index 0000000..a83f898
+--- /dev/null
++++ b/bindings/vala/grilo-uninstalled.namespace.in
+@@ -0,0 +1 @@
++Grl
+diff --git a/configure.ac b/configure.ac
+index 7c845e0..c3e2ae5 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -243,22 +243,55 @@ AC_ARG_ENABLE([tests],
+ AM_CONDITIONAL(ENABLE_TESTS, test "enable_tests" = "xyes")
+ 
+ # ----------------------------------------------------------
+-# GTK-DOC
++# VALA BINDINGS
+ # ----------------------------------------------------------
+ 
+-GTK_DOC_CHECK([1.10],[--flavour no-tmpl])
++AC_PATH_PROG([VALAC], [valac])
++AC_PATH_PROG([VALA_GEN_INTROSPECT], [vala-gen-introspect])
++AC_PATH_PROG([VAPIGEN], [vapigen])
++
++AC_ARG_ENABLE([vala],
++        AS_HELP_STRING([--enable-vala],
++                [Enable Vala plugin support (default: auto)]),
++        [
++                case "$enableval" in
++                     yes)
++                        if test "x$VALAC" = "x"; then
++                           AC_MSG_ERROR([valac not found, install it or use --disable-vala])
++                        fi
++                        if test "x$VALA_GEN_INTROSPECT" = "x"; then
++                           AC_MSG_ERROR([vala-gen-introspect not found, install it or use --disable-vala])
++                        fi
++                        if test "x$VAPIGEN" = "x"; then
++                           AC_MSG_ERROR([vapigen not found, install it or use --disable-vala])
++                        fi
++                        ;;
++                     no)
++                        enable_vala=no
++                        ;;
++                esac
++        ],
++        [
++                if test "x$VALAC" != "x" -a "x$VALA_GEN_INTROSPECT" != "x" -a "x$VAPIGEN" != "x"; then
++                   enable_vala=yes
++                else
++                   enable_vala=no
++                fi
++        ])
++
++AM_CONDITIONAL([HAVE_VALA], [test "x$enable_vala" = "xyes"])
+ 
+ # ----------------------------------------------------------
+-# GOBJECT-INTROSPECTION
++# GTK-DOC
+ # ----------------------------------------------------------
+ 
+-GOBJECT_INTROSPECTION_CHECK([0.9])
++GTK_DOC_CHECK([1.10],[--flavour no-tmpl])
+ 
+ # ----------------------------------------------------------
+-# VALA BINDINGS
++# GOBJECT-INTROSPECTION
+ # ----------------------------------------------------------
+ 
+-VAPIGEN_CHECK([0.26])
++GOBJECT_INTROSPECTION_CHECK([0.9])
+ 
+ # ----------------------------------------------------------
+ # GETTEXT/INTLTOOL
+@@ -307,6 +340,10 @@ AC_CONFIG_FILES([
+   tools/grilo-launch/Makefile
+   bindings/Makefile
+   bindings/vala/Makefile
++  bindings/vala/grilo-uninstalled.files
++  bindings/vala/grilo-uninstalled.namespace
++  bindings/vala/grilo-net-uninstalled.files
++  bindings/vala/grilo-net-uninstalled.namespace
+   doc/Makefile
+   doc/grilo/Makefile
+   examples/Makefile
+-- 
+2.4.0
+

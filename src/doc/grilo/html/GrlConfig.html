@@ -1,0 +1,1507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlConfig: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="configure.html" title="Configuring plug-ins">
+<link rel="prev" href="configure.html" title="Configuring plug-ins">
+<link rel="next" href="data.html" title="Media data">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GrlConfig.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GrlConfig.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="configure.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="configure.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="data.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GrlConfig"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GrlConfig.top_of_page"></a>GrlConfig</span></h2>
+<p>GrlConfig — Configuration data storage</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GrlConfig.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlConfig.html" title="GrlConfig"><span class="returnvalue">GrlConfig</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-new" title="grl_config_new ()">grl_config_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-api-key" title="grl_config_get_api_key ()">grl_config_get_api_key</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint8</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-api-key-blob" title="grl_config_get_api_key_blob ()">grl_config_get_api_key_blob</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-api-secret" title="grl_config_get_api_secret ()">grl_config_get_api_secret</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-api-token" title="grl_config_get_api_token ()">grl_config_get_api_token</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-api-token-secret" title="grl_config_get_api_token_secret ()">grl_config_get_api_token_secret</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint8</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-binary" title="grl_config_get_binary ()">grl_config_get_binary</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-boolean" title="grl_config_get_boolean ()">grl_config_get_boolean</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gfloat</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-float" title="grl_config_get_float ()">grl_config_get_float</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-int" title="grl_config_get_int ()">grl_config_get_int</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-password" title="grl_config_get_password ()">grl_config_get_password</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-plugin" title="grl_config_get_plugin ()">grl_config_get_plugin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-source" title="grl_config_get_source ()">grl_config_get_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-string" title="grl_config_get_string ()">grl_config_get_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-get-username" title="grl_config_get_username ()">grl_config_get_username</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-has-param" title="grl_config_has_param ()">grl_config_has_param</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set" title="grl_config_set ()">grl_config_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-api-key" title="grl_config_set_api_key ()">grl_config_set_api_key</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-api-key-blob" title="grl_config_set_api_key_blob ()">grl_config_set_api_key_blob</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-api-secret" title="grl_config_set_api_secret ()">grl_config_set_api_secret</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-api-token" title="grl_config_set_api_token ()">grl_config_set_api_token</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-api-token-secret" title="grl_config_set_api_token_secret ()">grl_config_set_api_token_secret</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-binary" title="grl_config_set_binary ()">grl_config_set_binary</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-boolean" title="grl_config_set_boolean ()">grl_config_set_boolean</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-float" title="grl_config_set_float ()">grl_config_set_float</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-int" title="grl_config_set_int ()">grl_config_set_int</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-password" title="grl_config_set_password ()">grl_config_set_password</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-plugin" title="grl_config_set_plugin ()">grl_config_set_plugin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-source" title="grl_config_set_source ()">grl_config_set_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-string" title="grl_config_set_string ()">grl_config_set_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlConfig.html#grl-config-set-username" title="grl_config_set_username ()">grl_config_set_username</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlConfig.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlConfig.html#GrlConfig-struct" title="struct GrlConfig">GrlConfig</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlConfig.html#GrlConfigClass" title="struct GrlConfigClass">GrlConfigClass</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlConfig.html#GRL-CONFIG-KEY-APIKEY:CAPS" title="GRL_CONFIG_KEY_APIKEY">GRL_CONFIG_KEY_APIKEY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlConfig.html#GRL-CONFIG-KEY-APIKEY-BLOB:CAPS" title="GRL_CONFIG_KEY_APIKEY_BLOB">GRL_CONFIG_KEY_APIKEY_BLOB</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlConfig.html#GRL-CONFIG-KEY-APISECRET:CAPS" title="GRL_CONFIG_KEY_APISECRET">GRL_CONFIG_KEY_APISECRET</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlConfig.html#GRL-CONFIG-KEY-APITOKEN:CAPS" title="GRL_CONFIG_KEY_APITOKEN">GRL_CONFIG_KEY_APITOKEN</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlConfig.html#GRL-CONFIG-KEY-APITOKEN-SECRET:CAPS" title="GRL_CONFIG_KEY_APITOKEN_SECRET">GRL_CONFIG_KEY_APITOKEN_SECRET</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlConfig.html#GRL-CONFIG-KEY-PASSWORD:CAPS" title="GRL_CONFIG_KEY_PASSWORD">GRL_CONFIG_KEY_PASSWORD</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlConfig.html#GRL-CONFIG-KEY-PLUGIN:CAPS" title="GRL_CONFIG_KEY_PLUGIN">GRL_CONFIG_KEY_PLUGIN</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlConfig.html#GRL-CONFIG-KEY-SOURCE:CAPS" title="GRL_CONFIG_KEY_SOURCE">GRL_CONFIG_KEY_SOURCE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GrlConfig.html#GRL-CONFIG-KEY-USERNAME:CAPS" title="GRL_CONFIG_KEY_USERNAME">GRL_CONFIG_KEY_USERNAME</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlConfig.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GrlConfig
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlConfig.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlConfig.description"></a><h2>Description</h2>
+<p>This class is used to configure plugins during a session.</p>
+<p>Pre-defined settings are read from plugin specific configuration files.
+The settings can be changed to properly setup the session, but are not
+persistent. Changes are local to each <a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> instance.</p>
+</div>
+<div class="refsect1">
+<a name="GrlConfig.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="grl-config-new"></a><h3>grl_config_new ()</h3>
+<pre class="programlisting"><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="returnvalue">GrlConfig</span></a> *
+grl_config_new (<em class="parameter"><code>const <span class="type">gchar</span> *plugin</code></em>,
+                <em class="parameter"><code>const <span class="type">gchar</span> *source</code></em>);</pre>
+<p>Creates a new data config object that will be associated with a plugin
+(if <em class="parameter"><code>source</code></em>
+ is NULL), or a specific source spawned from a plugin (if
+<em class="parameter"><code>source</code></em>
+ is not NULL). The latter may be useful for plugins
+spawning various sources, each one needing a different configuration.</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>plugin id for this configuration</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p> source id for this configuration. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.2.6"></a><h4>Returns</h4>
+<p> a newly-allocated data config. The data
+config associated with the plugin should not be freed until the plugin
+has been unloaded. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-api-key"></a><h3>grl_config_get_api_key ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+grl_config_get_api_key (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.3.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.3.5"></a><h4>Returns</h4>
+<p> the webservice API key</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-api-key-blob"></a><h3>grl_config_get_api_key_blob ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint8</span> *
+grl_config_get_api_key_blob (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                             <em class="parameter"><code><span class="type">gsize</span> *size</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.4.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>pointer to size of data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.4.5"></a><h4>Returns</h4>
+<p> the binary API key, size will reflect the size of the buffer</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.9</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-api-secret"></a><h3>grl_config_get_api_secret ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+grl_config_get_api_secret (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.5.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.5.5"></a><h4>Returns</h4>
+<p> the webservice API passphrase</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-api-token"></a><h3>grl_config_get_api_token ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+grl_config_get_api_token (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.6.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.6.5"></a><h4>Returns</h4>
+<p> the webservice API token</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-api-token-secret"></a><h3>grl_config_get_api_token_secret ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+grl_config_get_api_token_secret (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.7.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.7.5"></a><h4>Returns</h4>
+<p> the webservice API token secret
+(Needed by OAuth)</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-binary"></a><h3>grl_config_get_binary ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint8</span> *
+grl_config_get_binary (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                       <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>,
+                       <em class="parameter"><code><span class="type">gsize</span> *size</code></em>);</pre>
+<p>Gets the value of <em class="parameter"><code>param</code></em>
+ encoded as base64. If <em class="parameter"><code>size</code></em>
+ is not <code class="literal">NULL</code>, it puts
+there the size of the value.</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>a binary type parameter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p> place for size of value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.8.6"></a><h4>Returns</h4>
+<p> <em class="parameter"><code>param</code></em>
+value</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.9</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-boolean"></a><h3>grl_config_get_boolean ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_config_get_boolean (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                        <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.9.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>a boolean type parameter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.9.5"></a><h4>Returns</h4>
+<p> <em class="parameter"><code>param</code></em>
+value</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-float"></a><h3>grl_config_get_float ()</h3>
+<pre class="programlisting"><span class="returnvalue">gfloat</span>
+grl_config_get_float (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                      <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.10.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>a float type parameter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.10.5"></a><h4>Returns</h4>
+<p> <em class="parameter"><code>param</code></em>
+value</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-int"></a><h3>grl_config_get_int ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_config_get_int (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                    <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.11.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>an integer type parameter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.11.5"></a><h4>Returns</h4>
+<p> <em class="parameter"><code>param</code></em>
+value</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-password"></a><h3>grl_config_get_password ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+grl_config_get_password (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.12.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.12.5"></a><h4>Returns</h4>
+<p> the password</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-plugin"></a><h3>grl_config_get_plugin ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+grl_config_get_plugin (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.13.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.13.5"></a><h4>Returns</h4>
+<p> the plugin id</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-source"></a><h3>grl_config_get_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+grl_config_get_source (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.14.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.14.5"></a><h4>Returns</h4>
+<p> the source id</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-string"></a><h3>grl_config_get_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+grl_config_get_string (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                       <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.15.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>a string type paramter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.15.5"></a><h4>Returns</h4>
+<p> <em class="parameter"><code>param</code></em>
+value</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-get-username"></a><h3>grl_config_get_username ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+grl_config_get_username (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.16.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.16.5"></a><h4>Returns</h4>
+<p> the username</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-has-param"></a><h3>grl_config_has_param ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_config_has_param (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                      <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.17.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>the param</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.17.5"></a><h4>Returns</h4>
+<p> TRUE if <em class="parameter"><code>params</code></em>
+has a defined value within <em class="parameter"><code>config</code></em>
+, FALSE
+otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set"></a><h3>grl_config_set ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>,
+                <em class="parameter"><code>const <span class="type">GValue</span> *value</code></em>);</pre>
+<p>Set <em class="parameter"><code>param</code></em>
+ <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>a parameter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-api-key"></a><h3>grl_config_set_api_key ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_api_key (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                        <em class="parameter"><code>const <span class="type">gchar</span> *key</code></em>);</pre>
+<p>Set the webservice API key in the configuration</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>the API key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-api-key-blob"></a><h3>grl_config_set_api_key_blob ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_api_key_blob (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                             <em class="parameter"><code>const <span class="type">guint8</span> *blob</code></em>,
+                             <em class="parameter"><code><span class="type">gsize</span> size</code></em>);</pre>
+<p>Set the binary API key in the configuration</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>blob</p></td>
+<td class="parameter_description"><p>the binary API key blob</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>the size of the blob</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.9</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-api-secret"></a><h3>grl_config_set_api_secret ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_api_secret (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                           <em class="parameter"><code>const <span class="type">gchar</span> *secret</code></em>);</pre>
+<p>Set the webservice passphrase in the configuration</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the webservice passphrase</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-api-token"></a><h3>grl_config_set_api_token ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_api_token (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                          <em class="parameter"><code>const <span class="type">gchar</span> *token</code></em>);</pre>
+<p>Set the webservice API token in the configuration</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>token</p></td>
+<td class="parameter_description"><p>the API token</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-api-token-secret"></a><h3>grl_config_set_api_token_secret ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_api_token_secret (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                                 <em class="parameter"><code>const <span class="type">gchar</span> *secret</code></em>);</pre>
+<p>Set the webservice API token secret in the configuration
+(Needed by OAuth)</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the API token</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-binary"></a><h3>grl_config_set_binary ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_binary (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                       <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>,
+                       <em class="parameter"><code>const <span class="type">guint8</span> *blob</code></em>,
+                       <em class="parameter"><code><span class="type">gsize</span> size</code></em>);</pre>
+<p>Set <em class="parameter"><code>param</code></em>
+ value.</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>a binary type parameter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>blob</p></td>
+<td class="parameter_description"><p>a base64 encoded binary value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>size of <em class="parameter"><code>value</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.9</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-boolean"></a><h3>grl_config_set_boolean ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_boolean (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                        <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>,
+                        <em class="parameter"><code><span class="type">gboolean</span> value</code></em>);</pre>
+<p>Set <em class="parameter"><code>param</code></em>
+ <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>a boolean type parameter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-float"></a><h3>grl_config_set_float ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_float (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                      <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>,
+                      <em class="parameter"><code><span class="type">gfloat</span> value</code></em>);</pre>
+<p>Set <em class="parameter"><code>param</code></em>
+ <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>a float type parameter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-int"></a><h3>grl_config_set_int ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_int (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                    <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>,
+                    <em class="parameter"><code><span class="type">gint</span> value</code></em>);</pre>
+<p>Set <em class="parameter"><code>param</code></em>
+ <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>an integer type parameter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-password"></a><h3>grl_config_set_password ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_password (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                         <em class="parameter"><code>const <span class="type">gchar</span> *password</code></em>);</pre>
+<p>Set the password in the configuration</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>password</p></td>
+<td class="parameter_description"><p>the password</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-plugin"></a><h3>grl_config_set_plugin ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_plugin (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                       <em class="parameter"><code>const <span class="type">gchar</span> *plugin</code></em>);</pre>
+<p>Set the plugin key in the configuration</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.29.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>the plugin id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-source"></a><h3>grl_config_set_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_source (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                       <em class="parameter"><code>const <span class="type">gchar</span> *source</code></em>);</pre>
+<p>Set the source key in the configuration</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>the source id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-string"></a><h3>grl_config_set_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_string (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                       <em class="parameter"><code>const <span class="type">gchar</span> *param</code></em>,
+                       <em class="parameter"><code>const <span class="type">gchar</span> *value</code></em>);</pre>
+<p>Set <em class="parameter"><code>param</code></em>
+ <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.31.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>a string type parameter</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-config-set-username"></a><h3>grl_config_set_username ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_config_set_username (<em class="parameter"><code><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a> *config</code></em>,
+                         <em class="parameter"><code>const <span class="type">gchar</span> *username</code></em>);</pre>
+<p>Set the username in the configuration</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.8.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>the config instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>username</p></td>
+<td class="parameter_description"><p>the username</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.8</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlConfig.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlConfig-struct"></a><h3>struct GrlConfig</h3>
+<pre class="programlisting">struct GrlConfig;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlConfigClass"></a><h3>struct GrlConfigClass</h3>
+<pre class="programlisting">struct GrlConfigClass {
+  GObjectClass parent_class;
+};
+</pre>
+<p>Grilo Config Class</p>
+<div class="refsect3">
+<a name="id-1.5.7.2.9.3.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">GObjectClass</span> <em class="structfield"><code><a name="GrlConfigClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent class structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-CONFIG-KEY-APIKEY:CAPS"></a><h3>GRL_CONFIG_KEY_APIKEY</h3>
+<pre class="programlisting">#define GRL_CONFIG_KEY_APIKEY            "api-key"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-CONFIG-KEY-APIKEY-BLOB:CAPS"></a><h3>GRL_CONFIG_KEY_APIKEY_BLOB</h3>
+<pre class="programlisting">#define GRL_CONFIG_KEY_APIKEY_BLOB       "api-key-blob"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-CONFIG-KEY-APISECRET:CAPS"></a><h3>GRL_CONFIG_KEY_APISECRET</h3>
+<pre class="programlisting">#define GRL_CONFIG_KEY_APISECRET         "api-secret"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-CONFIG-KEY-APITOKEN:CAPS"></a><h3>GRL_CONFIG_KEY_APITOKEN</h3>
+<pre class="programlisting">#define GRL_CONFIG_KEY_APITOKEN          "api-token"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-CONFIG-KEY-APITOKEN-SECRET:CAPS"></a><h3>GRL_CONFIG_KEY_APITOKEN_SECRET</h3>
+<pre class="programlisting">#define GRL_CONFIG_KEY_APITOKEN_SECRET   "api-token-secret"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-CONFIG-KEY-PASSWORD:CAPS"></a><h3>GRL_CONFIG_KEY_PASSWORD</h3>
+<pre class="programlisting">#define GRL_CONFIG_KEY_PASSWORD          "password"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-CONFIG-KEY-PLUGIN:CAPS"></a><h3>GRL_CONFIG_KEY_PLUGIN</h3>
+<pre class="programlisting">#define GRL_CONFIG_KEY_PLUGIN            "target-plugin"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-CONFIG-KEY-SOURCE:CAPS"></a><h3>GRL_CONFIG_KEY_SOURCE</h3>
+<pre class="programlisting">#define GRL_CONFIG_KEY_SOURCE            "target-source"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-CONFIG-KEY-USERNAME:CAPS"></a><h3>GRL_CONFIG_KEY_USERNAME</h3>
+<pre class="programlisting">#define GRL_CONFIG_KEY_USERNAME          "username"
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

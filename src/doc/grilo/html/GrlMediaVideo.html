@@ -1,0 +1,1505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlMediaVideo: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="data.html" title="Media data">
+<link rel="prev" href="GrlMediaBox.html" title="GrlMediaBox">
+<link rel="next" href="GrlMediaAudio.html" title="GrlMediaAudio">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GrlMediaVideo.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GrlMediaVideo.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="data.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="GrlMediaBox.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="GrlMediaAudio.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GrlMediaVideo"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GrlMediaVideo.top_of_page"></a>GrlMediaVideo</span></h2>
+<p>GrlMediaVideo — A multimedia data for video</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GrlMediaVideo.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-new" title="grl_media_video_new ()">grl_media_video_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-add-director" title="grl_media_video_add_director ()">grl_media_video_add_director</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-add-performer" title="grl_media_video_add_performer ()">grl_media_video_add_performer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-add-producer" title="grl_media_video_add_producer ()">grl_media_video_add_producer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-add-url-data" title="grl_media_video_add_url_data ()">grl_media_video_add_url_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-director" title="grl_media_video_get_director ()">grl_media_video_get_director</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-director-nth" title="grl_media_video_get_director_nth ()">grl_media_video_get_director_nth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-episode" title="grl_media_video_get_episode ()">grl_media_video_get_episode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-episode-title" title="grl_media_video_get_episode_title ()">grl_media_video_get_episode_title</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gfloat</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-framerate" title="grl_media_video_get_framerate ()">grl_media_video_get_framerate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-height" title="grl_media_video_get_height ()">grl_media_video_get_height</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-original-title" title="grl_media_video_get_original_title ()">grl_media_video_get_original_title</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-performer" title="grl_media_video_get_performer ()">grl_media_video_get_performer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-performer-nth" title="grl_media_video_get_performer_nth ()">grl_media_video_get_performer_nth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-producer" title="grl_media_video_get_producer ()">grl_media_video_get_producer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-producer-nth" title="grl_media_video_get_producer_nth ()">grl_media_video_get_producer_nth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-season" title="grl_media_video_get_season ()">grl_media_video_get_season</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-show" title="grl_media_video_get_show ()">grl_media_video_get_show</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-url-data" title="grl_media_video_get_url_data ()">grl_media_video_get_url_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-url-data-nth" title="grl_media_video_get_url_data_nth ()">grl_media_video_get_url_data_nth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-get-width" title="grl_media_video_get_width ()">grl_media_video_get_width</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-director" title="grl_media_video_set_director ()">grl_media_video_set_director</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-episode" title="grl_media_video_set_episode ()">grl_media_video_set_episode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-episode-title" title="grl_media_video_set_episode_title ()">grl_media_video_set_episode_title</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-framerate" title="grl_media_video_set_framerate ()">grl_media_video_set_framerate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-height" title="grl_media_video_set_height ()">grl_media_video_set_height</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-original-title" title="grl_media_video_set_original_title ()">grl_media_video_set_original_title</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-performer" title="grl_media_video_set_performer ()">grl_media_video_set_performer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-producer" title="grl_media_video_set_producer ()">grl_media_video_set_producer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-season" title="grl_media_video_set_season ()">grl_media_video_set_season</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-show" title="grl_media_video_set_show ()">grl_media_video_set_show</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-size" title="grl_media_video_set_size ()">grl_media_video_set_size</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-url-data" title="grl_media_video_set_url_data ()">grl_media_video_set_url_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaVideo.html#grl-media-video-set-width" title="grl_media_video_set_width ()">grl_media_video_set_width</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaVideo.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlMediaVideo.html#GrlMediaVideo-struct" title="struct GrlMediaVideo">GrlMediaVideo</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlMediaVideo.html#GrlMediaVideoClass" title="struct GrlMediaVideoClass">GrlMediaVideoClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaVideo.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> <a class="link" href="GrlData.html" title="GrlData">GrlData</a>
+        <span class="lineart">╰──</span> <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a>
+            <span class="lineart">╰──</span> GrlMediaVideo
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlMediaVideo.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlMediaVideo.description"></a><h2>Description</h2>
+<p>This high level class represents an video multimedia item. It has methods to
+set and get properties like framerate, width, height, and so on.</p>
+</div>
+<div class="refsect1">
+<a name="GrlMediaVideo.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="grl-media-video-new"></a><h3>grl_media_video_new ()</h3>
+<pre class="programlisting"><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+grl_media_video_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new data video object.</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.2.5"></a><h4>Returns</h4>
+<p> a newly-allocated data video.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-add-director"></a><h3>grl_media_video_add_director ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_add_director (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *director</code></em>);</pre>
+<p>Adds the director of the movie.</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>director</p></td>
+<td class="parameter_description"><p>director of the movie</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-add-performer"></a><h3>grl_media_video_add_performer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_add_performer (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                               <em class="parameter"><code>const <span class="type">gchar</span> *performer</code></em>);</pre>
+<p>Adds the actor performing in the movie.</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>performer</p></td>
+<td class="parameter_description"><p>an actor performing in the movie</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-add-producer"></a><h3>grl_media_video_add_producer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_add_producer (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *producer</code></em>);</pre>
+<p>Adds the producer of the movie.</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>producer</p></td>
+<td class="parameter_description"><p>producer of the movie</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-add-url-data"></a><h3>grl_media_video_add_url_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_add_url_data (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *url</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *mime</code></em>,
+                              <em class="parameter"><code><span class="type">gfloat</span> framerate</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> width</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> height</code></em>);</pre>
+<p>Sets all the keys related with the URL of a media resource and adds it to
+<em class="parameter"><code>video</code></em>
+ (useful for resources with more than one URL).</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>url</p></td>
+<td class="parameter_description"><p>a video's url</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p>video mime-type</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>framerate</p></td>
+<td class="parameter_description"><p>video framerate, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>video width, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>video height, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-director"></a><h3>grl_media_video_get_director ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_video_get_director (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.7.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.7.5"></a><h4>Returns</h4>
+<p> the director of the movie (owned by <em class="parameter"><code>video</code></em>
+). </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-director-nth"></a><h3>grl_media_video_get_director_nth ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_video_get_director_nth (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                                  <em class="parameter"><code><span class="type">guint</span> index</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.8.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.8.5"></a><h4>Returns</h4>
+<p> the director of the movie (owned by <em class="parameter"><code>video</code></em>
+). </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-episode"></a><h3>grl_media_video_get_episode ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_media_video_get_episode (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.9.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.9.5"></a><h4>Returns</h4>
+<p> the episode number of the video</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-episode-title"></a><h3>grl_media_video_get_episode_title ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_video_get_episode_title (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.10.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.10.5"></a><h4>Returns</h4>
+<p> the title of the episode</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-framerate"></a><h3>grl_media_video_get_framerate ()</h3>
+<pre class="programlisting"><span class="returnvalue">gfloat</span>
+grl_media_video_get_framerate (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.11.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.11.5"></a><h4>Returns</h4>
+<p> the framerate of the video</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-height"></a><h3>grl_media_video_get_height ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_media_video_get_height (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.12.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.12.5"></a><h4>Returns</h4>
+<p> the height of the video</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-original-title"></a><h3>grl_media_video_get_original_title ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_video_get_original_title (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.13.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.13.5"></a><h4>Returns</h4>
+<p> the original, untranslated title of the movie (owned by <em class="parameter"><code>video</code></em>
+). </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-performer"></a><h3>grl_media_video_get_performer ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_video_get_performer (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.14.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.14.5"></a><h4>Returns</h4>
+<p> the actor performing in the movie (owned by <em class="parameter"><code>video</code></em>
+). </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-performer-nth"></a><h3>grl_media_video_get_performer_nth ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_video_get_performer_nth (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                                   <em class="parameter"><code><span class="type">guint</span> index</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.15.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.15.5"></a><h4>Returns</h4>
+<p> the actor performing in the movie (owned by <em class="parameter"><code>video</code></em>
+). </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-producer"></a><h3>grl_media_video_get_producer ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_video_get_producer (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.16.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.16.5"></a><h4>Returns</h4>
+<p> the producer of the movie (owned by <em class="parameter"><code>video</code></em>
+). </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-producer-nth"></a><h3>grl_media_video_get_producer_nth ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_video_get_producer_nth (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                                  <em class="parameter"><code><span class="type">guint</span> index</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.17.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.17.5"></a><h4>Returns</h4>
+<p> the producer of the movie (owned by <em class="parameter"><code>video</code></em>
+). </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-season"></a><h3>grl_media_video_get_season ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_media_video_get_season (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.18.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.18.5"></a><h4>Returns</h4>
+<p> the season number of the video</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-show"></a><h3>grl_media_video_get_show ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_video_get_show (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.19.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.19.5"></a><h4>Returns</h4>
+<p> the show title of the video</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-url-data"></a><h3>grl_media_video_get_url_data ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_video_get_url_data (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                              <em class="parameter"><code><span class="type">gchar</span> **mime</code></em>,
+                              <em class="parameter"><code><span class="type">gfloat</span> *framerate</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> *width</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> *height</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.20.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p> the url mime-type, or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>framerate</p></td>
+<td class="parameter_description"><p>the url framerate, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the url width, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the url height, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.20.5"></a><h4>Returns</h4>
+<p> all the keys related with the URL of a video resource in one go.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-url-data-nth"></a><h3>grl_media_video_get_url_data_nth ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_video_get_url_data_nth (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                                  <em class="parameter"><code><span class="type">guint</span> index</code></em>,
+                                  <em class="parameter"><code><span class="type">gchar</span> **mime</code></em>,
+                                  <em class="parameter"><code><span class="type">gfloat</span> *framerate</code></em>,
+                                  <em class="parameter"><code><span class="type">gint</span> *width</code></em>,
+                                  <em class="parameter"><code><span class="type">gint</span> *height</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.21.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p> the url mime-type, or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>framerate</p></td>
+<td class="parameter_description"><p>the url framerate, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the url width, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the url height, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.21.5"></a><h4>Returns</h4>
+<p> all the keys related with the URL number <em class="parameter"><code>index</code></em>
+of a video resource
+in one go.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-get-width"></a><h3>grl_media_video_get_width ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_media_video_get_width (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.22.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.22.5"></a><h4>Returns</h4>
+<p> the width of the video</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-director"></a><h3>grl_media_video_set_director ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_director (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *director</code></em>);</pre>
+<p>Sets the director of the movie.</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>director</p></td>
+<td class="parameter_description"><p>director of the movie</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-episode"></a><h3>grl_media_video_set_episode ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_episode (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                             <em class="parameter"><code><span class="type">gint</span> episode</code></em>);</pre>
+<p>Sets the episode number of the video</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>episode</p></td>
+<td class="parameter_description"><p>the video's episode</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-episode-title"></a><h3>grl_media_video_set_episode_title ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_episode_title (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                                   <em class="parameter"><code>const <span class="type">gchar</span> *episode_title</code></em>);</pre>
+<p>Sets the title of an episode</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>episode_title</p></td>
+<td class="parameter_description"><p>the title of the episode</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-framerate"></a><h3>grl_media_video_set_framerate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_framerate (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                               <em class="parameter"><code><span class="type">gfloat</span> framerate</code></em>);</pre>
+<p>Set the framerate of the video</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>framerate</p></td>
+<td class="parameter_description"><p>the video's framerate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-height"></a><h3>grl_media_video_set_height ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_height (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                            <em class="parameter"><code><span class="type">gint</span> height</code></em>);</pre>
+<p>Set the height of the video</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the video's height</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-original-title"></a><h3>grl_media_video_set_original_title ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_original_title (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                                    <em class="parameter"><code>const <span class="type">gchar</span> *original_title</code></em>);</pre>
+<p>Sets the original, untranslated title of the movie.</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>original_title</p></td>
+<td class="parameter_description"><p>original, untranslated title of the movie</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-performer"></a><h3>grl_media_video_set_performer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_performer (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                               <em class="parameter"><code>const <span class="type">gchar</span> *performer</code></em>);</pre>
+<p>Sets the actor performing in the movie.</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.29.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>performer</p></td>
+<td class="parameter_description"><p>an actor performing in the movie</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-producer"></a><h3>grl_media_video_set_producer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_producer (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *producer</code></em>);</pre>
+<p>Sets the producer of the movie.</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>producer</p></td>
+<td class="parameter_description"><p>producer of the movie</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-season"></a><h3>grl_media_video_set_season ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_season (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                            <em class="parameter"><code><span class="type">gint</span> season</code></em>);</pre>
+<p>Sets the season number of the video</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.31.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>season</p></td>
+<td class="parameter_description"><p>the video's season</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-show"></a><h3>grl_media_video_set_show ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_show (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                          <em class="parameter"><code>const <span class="type">gchar</span> *show</code></em>);</pre>
+<p>Sets the show title of the video</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>show</p></td>
+<td class="parameter_description"><p>the video's show name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-size"></a><h3>grl_media_video_set_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_size (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                          <em class="parameter"><code><span class="type">gint</span> width</code></em>,
+                          <em class="parameter"><code><span class="type">gint</span> height</code></em>);</pre>
+<p>Set the width and the height of the video</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.33.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the video's width</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the video's height</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-url-data"></a><h3>grl_media_video_set_url_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_url_data (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *url</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *mime</code></em>,
+                              <em class="parameter"><code><span class="type">gfloat</span> framerate</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> width</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> height</code></em>);</pre>
+<p>Sets all the keys related with the URL of a video resource in one go.</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.34.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>url</p></td>
+<td class="parameter_description"><p>the video's url</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p>video mime-type</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>framerate</p></td>
+<td class="parameter_description"><p>video framerate, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>video width, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>video height, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-video-set-width"></a><h3>grl_media_video_set_width ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_video_set_width (<em class="parameter"><code><a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a> *video</code></em>,
+                           <em class="parameter"><code><span class="type">gint</span> width</code></em>);</pre>
+<p>Set the width of the video</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.8.35.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>video</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the video's width</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaVideo.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlMediaVideo-struct"></a><h3>struct GrlMediaVideo</h3>
+<pre class="programlisting">struct GrlMediaVideo;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlMediaVideoClass"></a><h3>struct GrlMediaVideoClass</h3>
+<pre class="programlisting">struct GrlMediaVideoClass {
+  GrlMediaClass parent_class;
+};
+</pre>
+<p>Grilo Media video Class</p>
+<div class="refsect3">
+<a name="id-1.5.8.6.9.3.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><a class="link" href="GrlMedia.html#GrlMediaClass" title="struct GrlMediaClass"><span class="type">GrlMediaClass</span></a> <em class="structfield"><code><a name="GrlMediaVideoClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent class structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaVideo.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a>, <a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a>, <a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a>, <a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

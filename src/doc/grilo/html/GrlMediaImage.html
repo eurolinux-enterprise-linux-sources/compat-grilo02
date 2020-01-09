@@ -1,0 +1,869 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlMediaImage: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="data.html" title="Media data">
+<link rel="prev" href="GrlMediaAudio.html" title="GrlMediaAudio">
+<link rel="next" href="misc.html" title="Misc">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GrlMediaImage.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GrlMediaImage.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="data.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="GrlMediaAudio.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="misc.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GrlMediaImage"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GrlMediaImage.top_of_page"></a>GrlMediaImage</span></h2>
+<p>GrlMediaImage — A multimedia data for image</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GrlMediaImage.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-new" title="grl_media_image_new ()">grl_media_image_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-add-url-data" title="grl_media_image_add_url_data ()">grl_media_image_add_url_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-get-camera-model" title="grl_media_image_get_camera_model ()">grl_media_image_get_camera_model</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gfloat</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-get-exposure-time" title="grl_media_image_get_exposure_time ()">grl_media_image_get_exposure_time</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-get-flash-used" title="grl_media_image_get_flash_used ()">grl_media_image_get_flash_used</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-get-height" title="grl_media_image_get_height ()">grl_media_image_get_height</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gfloat</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-get-iso-speed" title="grl_media_image_get_iso_speed ()">grl_media_image_get_iso_speed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-get-orientation" title="grl_media_image_get_orientation ()">grl_media_image_get_orientation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-get-url-data" title="grl_media_image_get_url_data ()">grl_media_image_get_url_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-get-url-data-nth" title="grl_media_image_get_url_data_nth ()">grl_media_image_get_url_data_nth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-get-width" title="grl_media_image_get_width ()">grl_media_image_get_width</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-set-camera-model" title="grl_media_image_set_camera_model ()">grl_media_image_set_camera_model</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-set-exposure-time" title="grl_media_image_set_exposure_time ()">grl_media_image_set_exposure_time</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-set-flash-used" title="grl_media_image_set_flash_used ()">grl_media_image_set_flash_used</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-set-height" title="grl_media_image_set_height ()">grl_media_image_set_height</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-set-iso-speed" title="grl_media_image_set_iso_speed ()">grl_media_image_set_iso_speed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-set-orientation" title="grl_media_image_set_orientation ()">grl_media_image_set_orientation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-set-size" title="grl_media_image_set_size ()">grl_media_image_set_size</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-set-url-data" title="grl_media_image_set_url_data ()">grl_media_image_set_url_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlMediaImage.html#grl-media-image-set-width" title="grl_media_image_set_width ()">grl_media_image_set_width</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaImage.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlMediaImage.html#GrlMediaImage-struct" title="struct GrlMediaImage">GrlMediaImage</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlMediaImage.html#GrlMediaImageClass" title="struct GrlMediaImageClass">GrlMediaImageClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaImage.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> <a class="link" href="GrlData.html" title="GrlData">GrlData</a>
+        <span class="lineart">╰──</span> <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a>
+            <span class="lineart">╰──</span> GrlMediaImage
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlMediaImage.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlMediaImage.description"></a><h2>Description</h2>
+<p>This high level class represents an image multimedia item. It has methods to
+set and get the size, width and height properties</p>
+</div>
+<div class="refsect1">
+<a name="GrlMediaImage.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="grl-media-image-new"></a><h3>grl_media_image_new ()</h3>
+<pre class="programlisting"><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+grl_media_image_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new data image object.</p>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.2.5"></a><h4>Returns</h4>
+<p> a newly-allocated data image.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-add-url-data"></a><h3>grl_media_image_add_url_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_image_add_url_data (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *url</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *mime</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> width</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> height</code></em>);</pre>
+<p>Sets all the keys related with the URL of a media resource and adds it to
+<em class="parameter"><code>image</code></em>
+ (useful for resources with more than one URL).</p>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>url</p></td>
+<td class="parameter_description"><p>a image's url</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p>image mime-type</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>image width, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>image height, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-get-camera-model"></a><h3>grl_media_image_get_camera_model ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_image_get_camera_model (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.4.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.4.5"></a><h4>Returns</h4>
+<p> model of camera used to take picture</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-get-exposure-time"></a><h3>grl_media_image_get_exposure_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">gfloat</span>
+grl_media_image_get_exposure_time (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.5.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.5.5"></a><h4>Returns</h4>
+<p> picture's exposure time</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-get-flash-used"></a><h3>grl_media_image_get_flash_used ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_image_get_flash_used (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.6.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.6.5"></a><h4>Returns</h4>
+<p> whether the flash was used
+See
+http://library.gnome.org/devel/ontology/unstable/nmm-classes.html<span class="type">nmm-Flash</span></p>
+<p></p>
+</div>
+<p class="since">Since 0.1.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-get-height"></a><h3>grl_media_image_get_height ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_media_image_get_height (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.7.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.7.5"></a><h4>Returns</h4>
+<p> the height of the image</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-get-iso-speed"></a><h3>grl_media_image_get_iso_speed ()</h3>
+<pre class="programlisting"><span class="returnvalue">gfloat</span>
+grl_media_image_get_iso_speed (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.8.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.8.5"></a><h4>Returns</h4>
+<p> picture's iso speed</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-get-orientation"></a><h3>grl_media_image_get_orientation ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_media_image_get_orientation (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.9.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.9.5"></a><h4>Returns</h4>
+<p> degrees clockwise orientation of the picture</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-get-url-data"></a><h3>grl_media_image_get_url_data ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_image_get_url_data (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                              <em class="parameter"><code><span class="type">gchar</span> **mime</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> *width</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> *height</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.10.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p> the url mime-type, or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the width, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the height, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.10.5"></a><h4>Returns</h4>
+<p> all the keys related with the URL of an image resource in one go.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-get-url-data-nth"></a><h3>grl_media_image_get_url_data_nth ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_media_image_get_url_data_nth (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                                  <em class="parameter"><code><span class="type">guint</span> index</code></em>,
+                                  <em class="parameter"><code><span class="type">gchar</span> **mime</code></em>,
+                                  <em class="parameter"><code><span class="type">gint</span> *width</code></em>,
+                                  <em class="parameter"><code><span class="type">gint</span> *height</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.11.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p> the url mime-type, or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the width, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the height, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.11.5"></a><h4>Returns</h4>
+<p> all the keys related with the URL number <em class="parameter"><code>index</code></em>
+of an image resource
+in one go.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-get-width"></a><h3>grl_media_image_get_width ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_media_image_get_width (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.12.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>The image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.12.5"></a><h4>Returns</h4>
+<p> the width of the image</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-set-camera-model"></a><h3>grl_media_image_set_camera_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_image_set_camera_model (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gchar</span> *camera_model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-set-exposure-time"></a><h3>grl_media_image_set_exposure_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_image_set_exposure_time (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                                   <em class="parameter"><code><span class="type">gfloat</span> exposure_time</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-set-flash-used"></a><h3>grl_media_image_set_flash_used ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_image_set_flash_used (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *flash_used</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-set-height"></a><h3>grl_media_image_set_height ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_image_set_height (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                            <em class="parameter"><code><span class="type">gint</span> height</code></em>);</pre>
+<p>Set the height of the image</p>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the image's height</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-set-iso-speed"></a><h3>grl_media_image_set_iso_speed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_image_set_iso_speed (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                               <em class="parameter"><code><span class="type">gfloat</span> iso_speed</code></em>);</pre>
+<p>Set the iso_speed of the image</p>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>iso_speed</p></td>
+<td class="parameter_description"><p>picture's iso speed</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-set-orientation"></a><h3>grl_media_image_set_orientation ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_image_set_orientation (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                                 <em class="parameter"><code><span class="type">gint</span> orientation</code></em>);</pre>
+<p>Set the orientation of the image</p>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>orientation</p></td>
+<td class="parameter_description"><p>degrees clockwise orientation of the picture</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-set-size"></a><h3>grl_media_image_set_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_image_set_size (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                          <em class="parameter"><code><span class="type">gint</span> width</code></em>,
+                          <em class="parameter"><code><span class="type">gint</span> height</code></em>);</pre>
+<p>Set the size of the image</p>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the image's width</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the image's height</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-set-url-data"></a><h3>grl_media_image_set_url_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_image_set_url_data (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *url</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *mime</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> width</code></em>,
+                              <em class="parameter"><code><span class="type">gint</span> height</code></em>);</pre>
+<p>Sets all the keys related with the URL of an image resource in one go.</p>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the media instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>url</p></td>
+<td class="parameter_description"><p>the image's url</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mime</p></td>
+<td class="parameter_description"><p>image mime-type</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>image width, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>image height, or -1 to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-media-image-set-width"></a><h3>grl_media_image_set_width ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_media_image_set_width (<em class="parameter"><code><a class="link" href="GrlMediaImage.html" title="GrlMediaImage"><span class="type">GrlMediaImage</span></a> *image</code></em>,
+                           <em class="parameter"><code><span class="type">gint</span> width</code></em>);</pre>
+<p>Set the width of the image</p>
+<div class="refsect3">
+<a name="id-1.5.8.8.8.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>the image instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the image's width</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.4</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaImage.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlMediaImage-struct"></a><h3>struct GrlMediaImage</h3>
+<pre class="programlisting">struct GrlMediaImage;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlMediaImageClass"></a><h3>struct GrlMediaImageClass</h3>
+<pre class="programlisting">struct GrlMediaImageClass {
+  GrlMediaClass parent_class;
+};
+</pre>
+<p>Grilo Media image Class</p>
+<div class="refsect3">
+<a name="id-1.5.8.8.9.3.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><a class="link" href="GrlMedia.html#GrlMediaClass" title="struct GrlMediaClass"><span class="type">GrlMediaClass</span></a> <em class="structfield"><code><a name="GrlMediaImageClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent class structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlMediaImage.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GrlConfig.html" title="GrlConfig"><span class="type">GrlConfig</span></a>, <a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a>, <a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio"><span class="type">GrlMediaAudio</span></a>, <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo"><span class="type">GrlMediaVideo</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

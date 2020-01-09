@@ -1,0 +1,1229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Writing applications with Grilo: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="rn01.html" title="Tutorial">
+<link rel="prev" href="ch02.html" title="Environment Setup">
+<link rel="next" href="ch04.html" title="Writing plugins for Grilo">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="rn01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch02.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ch04.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="id-1.3.4"></a>Writing applications with Grilo</h2></div></div></div>
+<div class="toc"><dl class="toc">
+<dt><span class="section"><a href="ch03.html#writing-apps"></a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch03.html#programming-with-grilo-concepts">Basic concepts</a></span></dt>
+<dt><span class="section"><a href="ch03.html#programming-with-grilo-use-cases-explained">Typical use cases explained</a></span></dt>
+</dl></dd>
+</dl></div>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+    This section intends to be a starting point for developers interested
+    in getting started with Grilo, and as such it does not try to be
+    a comprehensive tutorial covering all topics and features of Grilo,
+    instead, this is intends to focus on typical use case scenarios
+    and code examples to put the developer on the right track.
+  </p>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="programming-with-grilo-concepts"></a>Basic concepts</h3></div></div></div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="programming-with-grilo-concepts-understanding"></a>Understanding Grilo</h4></div></div></div>
+<p>
+        Grilo provides a high-level API that application developers
+        can use to interact with heterogeneous media providers using 
+        an homogeneous language, reducing remarkably the effort required
+        to integrate media content from multiple sources.
+      </p>
+<p>
+        This high-level, provider-independent API is then implemented
+        for all the providers supported by Grilo by means of plugins.
+        These plugins encapsulate all the provider-specific details,
+        effectively hiding all the technical tidbits and particularities
+        of specific media providers from application developers.
+      </p>
+<p>
+        There are two kinds of plugins in Grilo:
+        </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">Media Sources, which provide access to media content
+            that can be browsed or searched.</li>
+<li class="listitem">Metadata Sources, which provide additional metadata
+            about media content obtained through media sources.</li>
+</ul></div>
+<p>
+      </p>
+<p>
+        Management of available plugins is done through the 
+        <a class="link" href="GrlRegistry.html" title="GrlRegistry">Plugin Registry</a>.
+        This object exposes API to load plugins and retrieve
+        available media source and metadata source objects.
+      </p>
+<p>
+        Some plugins may require certain configuration information
+        in order to work properly. Examples of configuration information
+        that may be needed include API keys, service credentials,
+        etc. Please check the section 
+        <a class="link" href="ch03.html#programming-with-grilo-configuring-plugins" title="Configuring your plugins">
+          Configuring you plugins
+        </a>
+        for more details on this subject.
+      </p>
+<p>
+        You can instruct Grilo to load all available plugins via
+        <a class="link" href="GrlRegistry.html#grl-registry-load-all-plugins" title="grl_registry_load_all_plugins ()">grl_registry_load_all_plugins()</a>.
+        This will look into the default
+        installation directory for the plugins and also the paths
+        included via the environment variable GRL_PLUGIN_PATH.
+        Please check section 
+        <a class="link" href="ch02.html#running-grilo-programs-detailed" title="Running Grilo based programs">
+          Running Grilo based programs
+        </a>
+        for more details on this subject.
+      </p>
+<p>
+        Users can also load plugins using their plugin
+        identifiers. These plugin identifier strings
+        can be obtained by running the tool 'grl-inspect'.
+      </p>
+<p>
+        Users have two options to gain access to the media source and
+        metadata source objects loaded by the plugin registry:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+          Call
+          <a class="link" href="GrlRegistry.html#grl-registry-get-sources" title="grl_registry_get_sources ()">
+            grl_registry_get_sources*
+          </a> or
+          <a class="link" href="GrlRegistry.html#grl-registry-lookup-source" title="grl_registry_lookup_source ()">
+            grl_registry_lookup_source
+          </a>. These should be used
+          when plugins have already been loaded.
+        </li>
+<li class="listitem">
+          By connecting to the
+          <a class="link" href="GrlRegistry.html#GrlRegistry-source-added" title="The “source-added” signal">source-added</a>
+          signal, that is emitted whenever a new media source or metadata
+          source object is found.
+        </li>
+</ul></div>
+<p>
+        For more information on how to use the plugin registry, please
+        check <a class="link" href="GrlRegistry.html" title="GrlRegistry">its API reference</a>
+        or any of the code examples below.
+      </p>
+<p>
+        Media source and metadata source objects are the objects 
+        application developers will be interacting with for most
+        of their Grilo work. These objects provide developers
+        with a well known interface (API) to interact with
+        media content that is provider-independent. Typically,
+        each media source object provides access to content
+        delivered by one particular media provider.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="programming-with-grilo-media-sources"></a>Media Sources</h4></div></div></div>
+<p>
+        Media Source objects provide access to media content. Application
+        developers would usually interact  with these objects issuing
+        Browse, Search or Query operations on them. The purpose of
+        these operations is explained below:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<span class="emphasis"><em>Search.</em></span>
+          Instructs the media source to look for media matching
+          specific keywords. Example: YouTube search.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>Browse:.</em></span>
+          Navigates through a hierarchy of content exposed by the
+          media provider. Example: Filesystem browsing.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>Query:</em></span>
+          An advanced search mode that uses service-specific
+          commands to exploit features specific to a particular
+          media provider.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>Metadata</em></span>
+          Obtain (more) metadata information for a particular media resource.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>Store and Remove</em></span>
+          Push and remove content from the media provider.
+        </li>
+</ul></div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="programming-with-grilo-metadata-sources"></a>Metadata Sources</h4></div></div></div>
+<p>
+        Metadata Source objects provide means to acquire additional
+        metadata that was not provided by the original media source
+        that delivered the media. Application developers would usually
+        interact with metadata sources via Resolve or SetMetadata
+        operations, which are described below:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<span class="emphasis"><em>Resolve:</em></span>
+          Acquire additional metadata for a particular media resource.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>SetMetadata:</em></span>
+          Update metadata information available for a particular media resource.
+        </li>
+</ul></div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="programming-with-grilo-async-apis"></a>Asynchronous APIs</h4></div></div></div>
+<p>
+        Most of the APIs exposed by Media Source and Metadata Source
+        objects are asynchronous. The reason for this is that 
+        these operations usually involve I/O  which
+        would block the user interface if executed synchronously,
+        specially for the more heavy operations like Browse or
+        Search, leading to unresponsive GUIs and bad user
+        experience.
+      </p>
+<p>
+        For this reason, most of the APIs in Grilo accept a 
+        user callback and user data parameters that are used
+        to hand over the result of the operation to the
+        client asynchronously.
+      </p>
+<p>
+        In cases where asynchrony is not needed, for example
+        for programs that do not have a graphical user
+        interface and are designed to run in the background,
+        Grilo also provides synchronous versions of some of
+        the APIs, but for situations other than this, use of
+        the asynchronous APIs is <span class="emphasis"><em>strongly</em></span>
+        encouraged.
+      </p>
+<p>
+        For operations that can produce multiple results,
+        like Browse, Search or Query, callbacks are
+        invoked once per matching result. For operations
+        that are expected to produce a single result, like
+        Metadata or Resolve, callbacks are invoked just
+        once.
+      </p>
+<p>
+        In any case, clients should always expect the result
+        callback to be invoked at least once after an
+        asynchronous operation has been issued, even if the
+        operation fails or is cancelled (in which case the 
+        error parameter of the callback will be set to a
+        non-NULL value).
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="programming-with-grilo-operation-identifiers"></a>Operation identifiers</h4></div></div></div>
+<p>
+        Some Media Source and Metadata Source operations will return
+        an operation identifier that serves various purposes:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">Identify the operation within the framework.</li>
+<li class="listitem">Match asynchronously results with the issuing operations.</li>
+<li class="listitem">Provide an operation identifier that can be used to cancel the operation.</li>
+</ul></div>
+<p>
+        For example, issuing an asynchronous Search operation on a Media
+        Source object would synchronously return an operation identifier.
+        The developer can store this identifier and use it to cancel.
+      </p>
+<p>
+        Also, if the operation was not cancelled, the results callback
+        will be invoked at least once (actually, for the case
+        of a Browse operation is will be invoked once per matching
+        result) handing the results of the operation to the application.
+        Each time the results callback is invoked, the operation identifier
+        will be provided so that the callback can identify the operation
+        that triggered the result (there can be multiple operations
+        ongoing simultaneously).
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="programmaing-with-grilo-media-objects"></a>Media objects</h4></div></div></div>
+<p>
+        As discussed before, Media Source objects provide means
+        to access  media content exposed by  media providers through
+        operations like Search, Browse or Query. Media content is
+        represented in Grilo via
+        <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a>
+        objects that contain metadata information related with
+        a particular media resource.
+      </p>
+<p>
+        There are various subclasses of GrlMedia, which provide
+        specific APIs to get and set metadata associated with
+        specific media types, like video, audio or image
+        resources.
+      </p>
+<p>
+        Typically, these GrlMedia objects will be obtained by
+        issuing Search, Browse or Query operations on Media
+        Source objects, which produce these objects
+        as results. Upon reception, clients would
+        usually use the API exposed by these objects to
+        collect the information of interest.
+      </p>
+<p>
+        Grilo also supports the concept of media container,
+        represented by the  GrlMediaBox subclass. These objects
+        represent categories or folders that contain other
+        media objects (including maybe more GrlMediaBox objects),
+        allowing tree-like hierarchies of content, like the ones
+        would usually traverse during Browse operations.
+      </p>
+<p>
+        Please, check the <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a>
+        API reference for more information on this subject.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="id-1.3.4.2.2.8"></a>Metadata keys</h4></div></div></div>
+<p>
+        Metadata keys identify pieces of information (metadata).
+        They are often an input parameter for many operations
+        in Grilo, with the purpose of specifying what pieces of
+        information are relevant for a particular operations.
+      </p>
+<p>
+        Grilo has a list of predefined supported keys. For each
+        of these keys, Grilo provides definitions
+        (identifiers) that clients can use to refer to
+        specific pieces of information. Some
+        examples are GRL_METADATA_KEY_TITLE or
+        GRL_METADATA_KEY_ARTIST.
+      </p>
+<p>
+        For a complete list of all System Keys, please check
+        <a class="link" href="grilo-grl-metadata-key.html" title="grl-metadata-key">grl-metadata-key.h</a>.
+      </p>
+<p>
+        Some plugins can also introduce additional metadata
+        keys known as User Keys. The difference with the System
+        Keys is that these do not have definitions available, and
+        hence clients must query the plugin registry to know
+        their identifiers first using
+        <a class="link" href="GrlRegistry.html#grl-registry-lookup-metadata-key" title="grl_registry_lookup_metadata_key ()">
+          grl_registry_lookup_metadata_key
+        </a>.
+      </p>
+</div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="programming-with-grilo-use-cases-explained"></a>Typical use cases explained</h3></div></div></div>
+<p>
+      The following sections will guide the reader through some
+      of the typical use cases of Grilo, using code examples
+      to make the ideas even more clear.
+    </p>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="programming-with-grilo-configuring-plugins"></a>Configuring your plugins</h4></div></div></div>
+<p>For some plugins to work properly, it is required that the user (or
+        application developer) provides certain configuration. For example,
+        some plugins may require a username and a password, others may
+        require an API token to gain access to the underlying media provider.
+      </p>
+<p>
+        These configuration options could be mandatory (without them
+        the plugin cannot operate and will fail to load), or
+        optional, in which case they are intended to allow users to tweak
+        certain aspects of how a particular plugin should work.
+      </p>
+<p>
+        An example of a mandatory configuration is in the Youtube plugin: in order
+        for it to work a valid API key must be provided. It is the responsibility
+        of the user (or the application developer) to get that key (usually
+        registering in Youtube and applying for an application key) and provide
+        it to the plugin.
+      </p>
+<p>
+        In order to know what configuration options are available for a certain
+        plugin, users/developers must check the plugin documentation.
+      </p>
+<p>
+        Here is a small program illustrating how to configure a plugin form your
+        application:
+      </p>
+<pre class="programlisting">
+        
+/*
+ * Configuring plugins in Grilo.
+ * Shows how to configure the Youtube plugin.
+ */
+
+#include &lt;grilo.h&gt;
+
+#define GRL_LOG_DOMAIN_DEFAULT  example_log_domain
+GRL_LOG_DOMAIN_STATIC(example_log_domain);
+
+static void
+source_added_cb (GrlRegistry *registry, GrlSource *source, gpointer user_data)
+{
+  /* If the Youtube plugin is installed, you should see it here now! */
+  g_debug ("Detected new source available: '%s'",
+           grl_source_get_name (source));
+}
+
+static void
+load_plugins (void)
+{
+  GrlRegistry *registry;
+  GError *error = NULL;
+
+  registry = grl_registry_get_default ();
+
+  g_signal_connect (registry, "source-added",
+                    G_CALLBACK (source_added_cb), NULL);
+
+  if (!grl_registry_load_all_plugins (registry, &amp;error)) {
+    g_error ("Failed to load plugins: %s", error-&gt;message);
+  }
+}
+
+static void
+configure_plugins (void)
+{
+  GrlConfig *config;
+  GrlRegistry *registry;
+
+  /* Let's configure only the Youtube plugin (only requires an API key) */
+  config = grl_config_new ("grl-youtube", NULL);
+  grl_config_set_api_key (config,
+                          "AI39si4EfscPllSfUy1IwexMf__kntTL_G5dfSr2iUEVN45RHG"
+                          "q92Aq0lX25OlnOkG6KTN-4soVAkAf67fWYXuHfVADZYr7S1A");
+  registry = grl_registry_get_default ();
+  grl_registry_add_config (registry, config, NULL);
+
+  /* When the plugin is loaded, the framework will provide
+     this configuration for it */
+}
+
+gint
+main (int argc, gchar *argv[])
+{
+  GMainLoop *loop;
+
+  grl_init (&amp;argc, &amp;argv);
+  GRL_LOG_DOMAIN_INIT (example_log_domain, "example");
+  configure_plugins ();       /* Configure plugins */
+  load_plugins ();            /* Load Grilo plugins */
+
+  /* Run the main loop */
+  loop = g_main_loop_new (NULL, FALSE);
+  g_main_loop_run (loop);
+
+  grl_deinit ();
+
+  return 0;
+}
+
+      </pre>
+<p>
+        For more information on how to configure plugins
+        please check the
+        <a class="link" href="GrlConfig.html" title="GrlConfig">GrlConfig</a>
+        API reference.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="programming-with-grilo-browsing"></a>Browsing media content</h4></div></div></div>
+<p>Here is a small program illustrating how you can browse
+        content from a particular media source (a similar approach
+        can be used for searching content instead of browsing):</p>
+<pre class="programlisting">
+        
+/*
+ * Browsing in Grilo.
+ * Shows the first 5 elements of each browsable source
+ */
+
+#include &lt;grilo.h&gt;
+
+#define GRL_LOG_DOMAIN_DEFAULT  example_log_domain
+GRL_LOG_DOMAIN_STATIC(example_log_domain);
+
+/* This callback is invoked for each result that matches our
+   browse operation. The arguments are:
+   1) The source we obtained the content from.
+   2) The operation identifier this result relates to.
+   3) A media object representing content that matched the browse operation.
+   4) Estimation of the number of remaining media objects that will be sent
+   after this one as part of the same resultset (0 means that the browse
+   operation is finished).
+   5) User data passed to the grl_media_source_browse method.
+   6) A GError if an error happened, NULL otherwise */
+static void
+browse_cb (GrlSource *source,
+	   guint browse_id,
+	   GrlMedia *media,
+	   guint remaining,
+	   gpointer user_data,
+	   const GError *error)
+{
+  /* First we check if the operation failed for some reason */
+  if (error) {
+    g_error ("Browse operation failed. Reason: %s", error-&gt;message);
+  }
+
+  /* Check if we received a valid media object as some plugins may call the callback
+     with a NULL media under certain circumstances (for example when they
+     cannot estimate the number of remaining results and they find suddenly they
+     don't have any more results to send) */
+  if (media) {
+    /* Get the metadata we are interested in */
+    const gchar *title = grl_media_get_title (media);
+
+    /* If the media is a container (box) that means we could
+       browse it again (that is, we could use it as the second parameter
+       of the grl_media_source_browse method) */
+    if (GRL_IS_MEDIA_BOX (media)) {
+      guint childcount = grl_media_box_get_childcount (GRL_MEDIA_BOX (media));
+      g_debug ("\t Got '%s' (container with %d elements)", title, childcount);
+    } else {
+      guint seconds = grl_media_get_duration (media);
+      const gchar *url = grl_media_get_url (media);
+      g_debug ("\t Got '%s' (media - length: %d seconds)", title, seconds);
+      g_debug ("\t\t URL: %s", url);
+    }
+    g_object_unref (media);
+  }
+
+  /* Check if this was the last result */
+  if (remaining == 0) {
+    g_debug ("Browse operation finished!");
+  }
+}
+
+static void
+source_added_cb (GrlRegistry *registry, GrlSource *source, gpointer user_data)
+{
+  static gboolean first = TRUE;
+  GList * keys = grl_metadata_key_list_new (GRL_METADATA_KEY_TITLE,
+					    GRL_METADATA_KEY_DURATION,
+					    GRL_METADATA_KEY_URL,
+					    GRL_METADATA_KEY_CHILDCOUNT,
+					    GRL_METADATA_KEY_INVALID);
+  g_debug ("Detected new source available: '%s'",
+           grl_source_get_name (source));
+
+  /* We will just issue a browse operation on the first browseble
+     source we find */
+  if (first &amp;&amp;
+      grl_source_supported_operations (source) &amp; GRL_OP_BROWSE) {
+    GrlOperationOptions *options;
+    GrlCaps *caps;
+    first = FALSE;
+    g_debug ("Browsing source: %s", grl_source_get_name (source));
+    /* Here is how you can browse a source, you have to provide:
+       1) The source you want to browse contents from.
+       2) The container object you want to browse (NULL for the root container)
+       3) A list of metadata keys we are interested in.
+       4) Options to control certain aspects of the browse operation.
+       5) A callback that the framework will invoke for each available result
+       6) User data for the callback
+       It returns an operation identifier that you can use to match results
+       with the corresponding request (we ignore it here) */
+
+    caps = grl_source_get_caps (source, GRL_OP_BROWSE);
+    options = grl_operation_options_new (caps);
+    grl_operation_options_set_count (options, 5);
+    grl_operation_options_set_resolution_flags (options, GRL_RESOLVE_IDLE_RELAY);
+
+    grl_source_browse (source,
+                       NULL,
+                       keys,
+                       options,
+                       browse_cb,
+                       NULL);
+    g_object_unref (caps);
+    g_object_unref (options);
+  }
+
+  g_list_free (keys);
+}
+
+static void
+load_plugins (void)
+{
+  GrlRegistry *registry;
+  GError *error = NULL;
+
+  registry = grl_registry_get_default ();
+  g_signal_connect (registry, "source-added",
+		    G_CALLBACK (source_added_cb), NULL);
+  if (!grl_registry_load_all_plugins (registry, &amp;error)) {
+    g_error ("Failed to load plugins: %s", error-&gt;message);
+  }
+}
+
+gint
+main (int argc, gchar *argv[])
+{
+  GMainLoop *loop;
+  grl_init (&amp;argc, &amp;argv);
+  GRL_LOG_DOMAIN_INIT (example_log_domain, "example");
+  load_plugins ();
+  loop = g_main_loop_new (NULL, FALSE);
+  g_main_loop_run (loop);
+  grl_deinit ();
+  return 0;
+}
+
+      </pre>
+<p>
+        Please notice:
+        </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+            Finalization of the Browse operation is always
+            indicated by setting the 'remaining' parameter to 0.
+          </li>
+<li class="listitem">
+            The user callback used to receive the results is
+            guaranteed to be invoked at least once (with remaining
+            set to 0), even if the operation fails or is cancelled
+            (in these cases the error parameter will be set to a
+            non-NULL value).
+          </li>
+<li class="listitem">
+            Received GrlMedia objects are owned by the application
+            and must be freed when no longer needed.
+          </li>
+<li class="listitem">
+            If an error occurs, the GError parameter is set in the
+            callback, but this error parameter is owned by Grilo
+            and will be freed immediately after the callback.
+            If you want to keep the error beyond the scope of
+            the callback you must add a reference to it in the
+            callback code.
+          </li>
+<li class="listitem">
+            When the media source cannot estimate the number
+            of remaining items, remaining is set to 
+            GRL_SOURCE_REMAINING_UNKNOWN.
+          </li>
+</ul></div>
+<p>
+      </p>
+<p>
+        For more information on how to operate media sources
+        please check the
+        GrlMediaSource
+        API reference.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="programming-with-grilo-searching"></a>Searching media content</h4></div></div></div>
+<p>Here is a small program illustrating how you can search
+        content by text from a particular media source (Jamendo
+        in this example):</p>
+<pre class="programlisting">
+        
+/*
+ * Searching in Grilo.
+ * Search all media in Jamendo with the word 'rock'.
+ */
+
+#include &lt;grilo.h&gt;
+#include &lt;string.h&gt;
+
+#define GRL_LOG_DOMAIN_DEFAULT  example_log_domain
+GRL_LOG_DOMAIN_STATIC(example_log_domain);
+
+static void
+search_cb (GrlSource *source,
+	   guint browse_id,
+	   GrlMedia *media,
+	   guint remaining,
+	   gpointer user_data,
+	   const GError *error)
+{
+  if (error) {
+    g_error ("Search operation failed. Reason: %s", error-&gt;message);
+  }
+
+  if (media) {
+    const gchar *title = grl_media_get_title (media);
+    if (GRL_IS_MEDIA_BOX (media)) {
+      guint childcount = grl_media_box_get_childcount (GRL_MEDIA_BOX (media));
+      g_debug ("\t Got '%s' (container with %d elements)", title, childcount);
+    } else {
+      guint seconds = grl_media_get_duration (media);
+      const gchar *url = grl_media_get_url (media);
+      g_debug ("\t Got '%s' (media - length: %d seconds)", title, seconds);
+      g_debug ("\t\t URL: %s", url);
+    }
+  }
+
+  if (remaining == 0) {
+    g_debug ("Search operation finished!");
+  } else {
+    g_debug ("\t%d results remaining!", remaining);
+  }
+
+  g_object_unref (media);
+}
+
+static void
+source_added_cb (GrlRegistry *registry, GrlSource *source, gpointer user_data)
+{
+  const gchar *id;
+  GrlCaps *caps;
+  GrlOperationOptions *options;
+  GList * keys = grl_metadata_key_list_new (GRL_METADATA_KEY_TITLE,
+					    GRL_METADATA_KEY_DURATION,
+					    GRL_METADATA_KEY_CHILDCOUNT,
+					    GRL_METADATA_KEY_INVALID);
+
+  /* Not interested if not searchable */
+  if (!(grl_source_supported_operations (source) &amp; GRL_OP_SEARCH))
+    return;
+
+  g_debug ("Detected new searchable source available: '%s'",
+	   grl_source_get_name (source));
+
+  /* Only interested in Jamendo */
+  id = grl_source_get_id (source);
+  if (strcmp (id, "grl-jamendo"))
+    return;
+
+  caps = grl_source_get_caps (source, GRL_OP_SEARCH);
+  options = grl_operation_options_new (caps);
+  grl_operation_options_set_count (options, 5);
+  grl_operation_options_set_resolution_flags (options, GRL_RESOLVE_IDLE_RELAY);
+
+  g_debug ("Searching \"rock\" in Jamendo");
+  grl_source_search (source,
+			   "rock",
+			   keys,
+			   options,
+			   search_cb,
+			   NULL);
+
+  g_list_free (keys);
+}
+
+static void
+load_plugins (void)
+{
+  GrlRegistry *registry;
+  GError *error = NULL;
+
+  registry = grl_registry_get_default ();
+  g_signal_connect (registry, "source-added",
+		    G_CALLBACK (source_added_cb), NULL);
+  if (!grl_registry_load_all_plugins (registry, &amp;error)) {
+    g_error ("Failed to load plugins: %s", error-&gt;message);
+  }
+}
+
+gint
+main (int argc, gchar *argv[])
+{
+  GMainLoop *loop;
+  grl_init (&amp;argc, &amp;argv);
+  GRL_LOG_DOMAIN_INIT (example_log_domain, "example");
+  load_plugins ();
+  loop = g_main_loop_new (NULL, FALSE);
+  g_main_loop_run (loop);
+  grl_deinit ();
+  return 0;
+}
+
+      </pre>
+<p>
+        Please notice that all the considerations remarked for the
+        Browse operations above  apply also to Search operations.
+      </p>
+<p>
+        For more information on how to operate media sources
+        please check the
+        GrlMediaSource
+        API reference.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="programming-with-grilo-multivalued-data"></a>Handling multi-valued metadata</h4></div></div></div>
+<p>When working with multimedia content, it can happen that certain
+        attributes of a particular media resource are multi-valued. For example,
+        a particular video resource may have multiple URIs associated, considering
+        different resolutions, streaming protocols and/or formats.
+      </p>
+<p>
+        Grilo provides plugin and application developers with means
+        to handle multi-valued properties.
+      </p>
+<p>
+        One issue concerning multi-valued properties are their relations with
+        other properties. Following the example of the video resource with
+        multiple URIs, each of these URIs should have its own mime-type associated,
+        as well as its own width and height values. When dealing with multi-valued
+        properties it is necessary to make this relations among keys more explicit.
+      </p>
+<p>
+        Grilo provides application and plugin developers with a high-level APIs to
+        handle certain relations among keys consistently. Continuing with the example
+        of the video resource with multiple URIs, there is
+        <a class="link" href="GrlMediaVideo.html#grl-media-video-add-url-data" title="grl_media_video_add_url_data ()">
+          grl_media_video_add_url_data
+        </a> and
+        <GTKDOCLINK HREF="grl-media-video-add-url-data-nth">
+          grl_media_video_get_url_data_nth
+        </GTKDOCLINK> to add and retrieve all the metadata
+        associated with a particular instance of the video resource (URI, mime-type,
+        framerate, width and height, etc) in one go.
+      </p>
+<p>
+        Grilo allows plugin developers to define their own metadata keys.
+        In this case, the plugin developer must also provide information
+        on the relations that these keys hold with others. In this scenario
+        plugin developers must use GrlRelatedKeys objects to group related keys
+        together.
+      </p>
+<p>
+        Here is a small program illustrating how get all available URLs from
+        a video resource, as well the corresponding MIME value for each one.
+        We use GrlRelatedKeys instead of the high-level API from GrlMediaVideo
+        to illustrate how to use it:
+      </p>
+<pre class="programlisting">
+        
+/*
+ * Handling multivalued elements in Grilo.
+ * Search all 'rock' content in Youtube, and for each one prints the available
+ * URLs.
+ */
+
+#include &lt;grilo.h&gt;
+#include &lt;string.h&gt;
+
+#define GRL_LOG_DOMAIN_DEFAULT  example_log_domain
+GRL_LOG_DOMAIN_STATIC(example_log_domain);
+
+static void
+search_cb (GrlSource *source,
+	   guint browse_id,
+	   GrlMedia *media,
+	   guint remaining,
+	   gpointer user_data,
+	   const GError *error)
+{
+  guint i;
+  GrlRelatedKeys *url_info;
+
+  if (error) {
+    g_error ("Search operation failed. Reason: %s", error-&gt;message);
+  }
+
+  if (media) {
+    /* Look through all available URLs for this video resource */
+    for (i = 0; i &lt; grl_data_length (GRL_DATA (media), GRL_METADATA_KEY_URL); i++) {
+      /* Here we use the low-level GrlRelatedKeys API for demonstration purposes only,
+         but we could have just used the more convenient
+         grl_media_video_get_url_data_nth() API instead in this case */
+      url_info = grl_data_get_related_keys (GRL_DATA (media), GRL_METADATA_KEY_URL, i);
+      g_debug ("\t [%s] Got url '%s' and mime-type '%s'",
+               grl_media_get_id (media),
+               grl_related_keys_get_string (url_info, GRL_METADATA_KEY_URL),
+               grl_related_keys_get_string (url_info, GRL_METADATA_KEY_MIME));
+    }
+  }
+
+  if (remaining == 0) {
+    g_debug ("Search operation finished!");
+  }
+
+  g_object_unref (media);
+}
+
+static void
+source_added_cb (GrlRegistry *registry, GrlSource *source, gpointer user_data)
+{
+  const gchar *id;
+  GrlCaps *caps;
+  GrlOperationOptions *options;
+  GList * keys = grl_metadata_key_list_new (GRL_METADATA_KEY_TITLE,
+					    GRL_METADATA_KEY_URL,
+                                            GRL_METADATA_KEY_MIME,
+					    GRL_METADATA_KEY_INVALID);
+
+  /* Not interested if not searchable */
+  if (!(grl_source_supported_operations (source) &amp; GRL_OP_SEARCH))
+    return;
+
+  g_debug ("Detected new searchable source available: '%s'",
+	   grl_source_get_name (source));
+
+  /* Only interested in Youtube */
+  id = grl_source_get_id (source);
+  if (strcmp (id, "grl-youtube"))
+    return;
+
+  caps = grl_source_get_caps (source, GRL_OP_SEARCH);
+  options = grl_operation_options_new (caps);
+  grl_operation_options_set_skip (options, 0);
+  grl_operation_options_set_count (options, 5);
+  grl_operation_options_set_resolution_flags (options, GRL_RESOLVE_IDLE_RELAY);
+
+  g_debug ("Searching \"rock\" in Youtube");
+  grl_source_search (source,
+			   "rock",
+			   keys,
+			   options,
+			   search_cb,
+			   NULL);
+
+  g_object_unref (options);
+  g_object_unref (caps);
+
+  g_list_free (keys);
+}
+
+static void
+load_plugins (void)
+{
+  GrlRegistry *registry;
+  GError *error = NULL;
+
+  registry = grl_registry_get_default ();
+  g_signal_connect (registry, "source-added",
+		    G_CALLBACK (source_added_cb), NULL);
+  if (!grl_registry_load_all_plugins (registry, &amp;error)) {
+    g_error ("Failed to load plugins: %s", error-&gt;message);
+  }
+}
+
+static void
+configure_plugins (void)
+{
+  GrlConfig *config;
+  GrlRegistry *registry;
+
+  config = grl_config_new ("grl-youtube", NULL);
+  grl_config_set_api_key (config,
+                          "AI39si4EfscPllSfUy1IwexMf__kntTL_G5dfSr2iUEVN45RHG"
+                          "q92Aq0lX25OlnOkG6KTN-4soVAkAf67fWYXuHfVADZYr7S1A");
+  registry = grl_registry_get_default ();
+  grl_registry_add_config (registry, config, NULL);
+}
+
+gint
+main (int argc, gchar *argv[])
+{
+  GMainLoop *loop;
+  grl_init (&amp;argc, &amp;argv);
+  GRL_LOG_DOMAIN_INIT (example_log_domain, "example");
+  configure_plugins ();
+  load_plugins ();
+  loop = g_main_loop_new (NULL, FALSE);
+  g_main_loop_run (loop);
+  grl_deinit ();
+  return 0;
+}
+
+      </pre>
+<p>
+        For more information on how to operate with media objects
+        please check the
+        <a class="link" href="GrlData.html" title="GrlData">GrlData</a> hierarchy
+        API reference.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="programming-with-grilo-efficient-metadata-resolution"></a>Efficient metadata resolution</h4></div></div></div>
+<p>When executing operations that return lists of media items (like
+        Browse or Search) it is convenient to ensure that we do not
+        request metadata that could slow down the operation unless it
+        is really necessary.
+      </p>
+<p>
+        A clear example of this situation is the way Youtube video
+        URLs are resolved: a browse operation on Youtube can usually
+        be resolved in a single HTTP query, however, if one wants to
+        obtain the URLs of the videos then for each video in the result
+        set another HTTP request is needed. This would slow down
+        the browse operation remarkably and would spam Youtube
+        with requests to obtain URLs that may not be ever needed.
+        Indeed, a normal player would browse a list of videos and show
+        information useful for the user to select the one he/she is
+        interested in (title, duration, artist, etc), the URL is not
+        interesting at this stage, it is only interesting when the user
+        selected a video to play, and we would be interested only
+        in that single URL and not in all the URLs of the videos
+        we are displaying.
+      </p>
+<p>
+        Grilo provides methods to application developers to query
+        the keys (if any) that may have an impact on the performance
+        for a particular source (like the URL in the case of Youtube),
+        but it is usually easier to just use the GRL_RESOLVE_FAST_ONLY
+        flag when issuing Search, Browse or Query operations.
+      </p>
+<p>
+        By using this flag, Grilo will resolve only the keys
+        that do not have an impact on performance. If you browse
+        Youtube with this flag Grilo won't request the URL key
+        to the Youtube source. However, if the source could resolve
+        the URL without performance penalties, it would do so
+        normally.
+      </p>
+<p>
+        Usually, for operations like Browse or Search that operate
+        with large result sets it is recommended to use
+        GRL_RESOLVE_FAST_ONLY. If you really need to get the metadata
+        you requested for a specific item (for example if you want to
+        play a video from Youtube you really need the URL), then
+        you can safely use the Metadata operation without the
+        GRL_RESOLVE_FAST_ONLY flag, which would only operate on this
+        particular item, reducing the performance penalty and providing
+        a more efficient solution.
+      </p>
+<p>
+        The program below demonstrates how this works, it accepts as
+        argument the id of the source we want to operate with, when the
+        source is registered it will issue a search operation requesting
+        only fast keys. When the search callback is invoked we will print
+        both the title information and the URL of the first media
+        that matched the search text.
+      </p>
+<p>
+        If we run the program using grl-jamendo as target source, we will
+        see that it retrieves both the title and the URL of the media
+        immediately, however, if we use grl-youtube, it won't and in order
+        to obtain the URL we issue a new Metadata operation, this time
+        without the GRL_RESOLVE_FAST_ONLY flag.
+      </p>
+<p>
+        Of course this is a very simple example, in a real application the way
+        this would work is that we would request the URL in a
+        Browse/Search that could return hundreds of results
+        and we may or may not get the URLs depending on the source
+        we are operating with, but in any case we will ensure the operation
+        will run as fast as possible: the user will see the results
+        of the search fast. Then, when the user selects
+        a media item to be played from that result set we would check if
+        we have the URL already (and we will have the URL ready if the source
+        could resolve it fast) in which case we can play the media right away (no
+        time penalty at all from the user point of view). If the URL could not
+        be resolved because it was slow for the source (like in the case of Youtube)
+        then we just have to issue a Metadata operation requesting the URL,
+        but that won't be too bad because we are requesting it only
+        for the item that the user selected, so from the user's perspective
+        the playback will take slightly more to start but would still
+        be an acceptable delay.
+      </p>
+<pre class="programlisting">
+        
+/*
+ * Shows how to get content in an efficient way.
+ * Search 'rock' content in all searchable sources.
+ */
+
+#include &lt;grilo.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define GRL_LOG_DOMAIN_DEFAULT  example_log_domain
+GRL_LOG_DOMAIN_STATIC(example_log_domain);
+
+const gchar *target_source_id = NULL;
+
+static void
+resolve_cb (GrlSource *source,
+            guint operation_id,
+            GrlMedia *media,
+            gpointer user_data,
+            const GError *error)
+{
+  if (error)
+    g_error ("Resolve operation failed. Reason: %s", error-&gt;message);
+
+  const gchar *url = grl_media_get_url (media);
+  g_debug ("\tURL: %s", url);
+  g_object_unref (media);
+  exit (0);
+}
+
+static void
+search_cb (GrlSource *source,
+	   guint browse_id,
+	   GrlMedia *media,
+	   guint remaining,
+	   gpointer user_data,
+	   const GError *error)
+{
+  if (error)
+    g_error ("Search operation failed. Reason: %s", error-&gt;message);
+
+  if (!media) {
+    g_error ("No media items found matching the text \"rock\"!");
+    return;
+  }
+
+  g_debug ("Got matching media from %s. Details:", target_source_id);
+  const gchar *title = grl_media_get_title (media);
+  g_debug ("\tTitle: %s", title);
+  const gchar *url = grl_media_get_url (media);
+  if (url) {
+    g_debug ("\tURL: %s:", url);
+    g_object_unref (media);
+    exit (0);
+  } else {
+    g_debug ("URL no available, trying with slow keys now");
+    GrlOperationOptions *options;
+    GrlCaps *caps;
+    GList *keys = grl_metadata_key_list_new (GRL_METADATA_KEY_URL, GRL_METADATA_KEY_INVALID);
+
+    caps = grl_source_get_caps (source, GRL_OP_RESOLVE);
+    options = grl_operation_options_new (caps);
+    grl_operation_options_set_resolution_flags (options, GRL_RESOLVE_IDLE_RELAY);
+    grl_source_resolve (source,
+			       media,
+			       keys,
+			       options,
+			       resolve_cb,
+			       NULL);
+    g_object_unref (caps);
+    g_object_unref (options);
+    g_list_free (keys);
+  }
+}
+
+static void
+source_added_cb (GrlRegistry *registry, GrlSource *source, gpointer user_data)
+{
+  const gchar *source_id = grl_source_get_id (source);
+  GrlCaps *caps;
+  GrlOperationOptions *options;
+
+  /* We are looking for one source in particular */
+  if (strcmp (source_id, target_source_id))
+    return;
+
+  GList *keys = grl_metadata_key_list_new (GRL_METADATA_KEY_TITLE,
+					   GRL_METADATA_KEY_URL,
+					   GRL_METADATA_KEY_INVALID);
+
+  /* The source must be searchable */
+  if (!(grl_source_supported_operations (source) &amp; GRL_OP_SEARCH))
+    g_error ("Source %s is not searchable!", source_id);
+
+  caps = grl_source_get_caps (source, GRL_OP_SEARCH);
+  options = grl_operation_options_new (caps);
+  grl_operation_options_set_count (options, 5);
+  grl_operation_options_set_resolution_flags (options,
+                                   GRL_RESOLVE_IDLE_RELAY
+                                   | GRL_RESOLVE_FAST_ONLY);
+
+  /* Retrieve the first media from the source matching the text "rock" */
+  g_debug ("Searching \"rock\" in \"%s\"", source_id);
+  grl_source_search (source,
+			   "rock",
+			   keys,
+			   options,
+			   search_cb,
+			   NULL);
+  g_object_unref (caps);
+  g_object_unref (options);
+  g_list_free (keys);
+}
+
+static void
+configure_plugins (void)
+{
+  GrlConfig *config;
+  GrlRegistry *registry;
+
+  /* Let's configure only the Youtube plugin (only requires an API key) */
+  config = grl_config_new ("grl-youtube", NULL);
+  grl_config_set_api_key (config,
+                          "AI39si4EfscPllSfUy1IwexMf__kntTL_G5dfSr2iUEVN45RHG"
+                          "q92Aq0lX25OlnOkG6KTN-4soVAkAf67fWYXuHfVADZYr7S1A");
+  registry = grl_registry_get_default ();
+  grl_registry_add_config (registry, config, NULL);
+}
+
+static void
+load_plugins (void)
+{
+  GrlRegistry *registry;
+  GError *error = NULL;
+
+  registry = grl_registry_get_default ();
+  g_signal_connect (registry, "source-added",
+		    G_CALLBACK (source_added_cb), NULL);
+  if (!grl_registry_load_all_plugins (registry, &amp;error)) {
+    g_error ("Failed to load plugins: %s", error-&gt;message);
+  }
+}
+
+gint
+main (int argc, gchar *argv[])
+{
+  GMainLoop *loop;
+  grl_init (&amp;argc, &amp;argv);
+
+  if (argc != 2) {
+    g_print ("Please specify id of the source to search " \
+	     "(example: grl-youtube)\n");
+    exit (1);
+  } else {
+    target_source_id = argv[1];
+  }
+
+  GRL_LOG_DOMAIN_INIT (example_log_domain, "example");
+  configure_plugins ();
+  load_plugins ();
+  loop = g_main_loop_new (NULL, FALSE);
+  g_main_loop_run (loop);
+  grl_deinit ();
+
+  return 0;
+}
+
+      </pre>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

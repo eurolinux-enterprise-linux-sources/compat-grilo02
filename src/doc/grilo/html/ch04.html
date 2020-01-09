@@ -1,0 +1,1537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Writing plugins for Grilo: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="rn01.html" title="Tutorial">
+<link rel="prev" href="ch03.html" title="Writing applications with Grilo">
+<link rel="next" href="rn02.html" title="Object Index">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="rn01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch03.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="rn02.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="id-1.3.5"></a>Writing plugins for Grilo</h2></div></div></div>
+<div class="toc"><dl class="toc">
+<dt><span class="section"><a href="ch04.html#writing-plugins"></a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch04.html#media-source-plugins">Source plugins</a></span></dt>
+<dt><span class="section"><a href="ch04.html#testing-plugins">Testing your plugins</a></span></dt>
+</dl></dd>
+</dl></div>
+<div class="section">
+<div class="titlepage"></div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="media-source-plugins"></a>Source plugins</h3></div></div></div>
+<div class="section">
+<div class="titlepage"></div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-intro"></a>Introduction</h5></div></div></div>
+<p>
+      Sources provide access to media content. Examples of them are sources
+      providing content from Jamendo or UPnP. Sources can also provide other
+      information that complements already existent media content. Thus, there
+      can be sources providing content and others adding more informationover
+      that content.
+    </p>
+<p>
+      Sources are provided by plugins. A plugin usually provides one source, but
+      it can provide more than one. For instance, the UPnP plugin is able to
+      provide several sources, one source per each UPnP server found in the
+      network.
+    </p>
+<p>
+      Usually, clients interact with these sources in various ways:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<span class="emphasis"><em>Search.</em></span>
+          Users can instruct the source to search for
+          content that matches certain keywords. This is how people
+          typically interact with services like YouTube, for example.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>Browse.</em></span>
+          Users navigate through a fixed hierarchy of
+          categorized content interactively. This is how people
+          typically interact with UPnP services, for example.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>Query.</em></span>
+          Some times services provide features that
+          are too specific to be transported to a generic,
+          cross-service API. An example of this could be certain
+          search filtering options. Queries allow users to
+          interact with services using service-specific language
+          that can be used to exploit these features.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>Resolve.</em></span>
+          Users can request additional information (metadata)
+          for a specific media item served by a source through
+          a previous browse, search or query operation that was configured
+          to retrieve only partial metadata (typically for optimization
+          purposes). Resolve operations are usually used when showing
+          detailed information about specific media items.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>Store.</em></span>
+          Some sources allow (or even require) users
+          to push content to them. This is how people interact with
+          Podcasts for example, they "store" the feeds they are
+          interested in following first. A source can store either the
+          full media or just a subset of their properties.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>Remove.</em></span>
+          The opposite to the Store operation, used to remove
+          content from the source.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>Media from URL.</em></span>
+          This allows to build a media just knowing the URL.
+          For instance, giving a YouTube URL, the proper source
+          is able to build and return the corresponding Grilo
+          media content.
+        </li>
+</ul></div>
+<p>
+    </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-basics"></a>Registering Plugins</h5></div></div></div>
+<p>
+      Grilo plugins must use the macro GRL_PLUGIN_REGISTER(), which defines the
+      entry and exit points of the plugin (called when the plugin is loaded and
+      unloaded respectively) as well as its plugin identifier (a string
+      identifying the plugin).
+    </p>
+<p>
+      The plugin identifier will be used by clients to identify the plugin when
+      interacting with the plugin registry API. See the <a class="link" href="GrlRegistry.html" title="GrlRegistry">GrlRegistry</a> API reference for
+      more details.
+    </p>
+<p>
+      The plugin initialization function is mandatory.
+      The plugin deinitialization function is optional.
+    </p>
+<p>
+      Usually the plugin initialization function will create at least one <a class="link" href="GrlSource.html" title="GrlSource">GrlSource</a> instance and register it using <a class="link" href="GrlRegistry.html#grl-registry-register-source" title="grl_registry_register_source ()">grl_registry_register_source()</a>.
+    </p>
+<p>
+      A <a class="link" href="GrlSource.html" title="GrlSource">GrlSource</a> instance represents a
+      particular source of media/attributes. Usually each plugin would spawn
+      just one media source, but some plugins may spawn multiple sources. For
+      example, a UPnP plugin spawning one media source object for each UPnP
+      server discovered.
+    </p>
+<p>
+      Users can query the registry for available sources and then use the <a class="link" href="GrlSource.html" title="GrlSource">GrlSource</a> API to interact with them.
+    </p>
+<p>
+      If the plugin requires configuration this should be processed during the
+      plugin initialization function, which should return TRUE upon successful
+      initialization or FALSE otherwise.
+    </p>
+<p>
+      The parameter "configs" of the plugin initialization function provides
+      available configuration information provided by the user for this plugin,
+      if any. This parameter is a list of <a class="link" href="GrlConfig.html" title="GrlConfig">GrlConfig</a> objects. Usually there would be only
+      one <a class="link" href="GrlConfig.html" title="GrlConfig">GrlConfig</a> object in the list, but
+      there might be more in the cases of plugins spawning multiple media
+      sources that require different configuration options.
+    </p>
+<pre class="programlisting">
+      
+gboolean
+grl_foo_plugin_init (GrlRegistry *registry,
+                     GrlPlugin *plugin,
+                     GList *configs)
+{
+  gchar *api_key;
+  GrlConfig *config;
+
+  config = GRL_CONFIG (configs-&gt;data);
+
+  api_key = grl_config_get_api_key (config);
+  if (!api_key) {
+    GRL_INFO ("Missing API Key, cannot load plugin");
+    return FALSE;
+  }
+
+  GrlFooSource *source = grl_foo_source_new (api_key);
+  grl_registry_register_source (registry,
+                                plugin,
+                                GRL_SOURCE (source),
+                                NULL);
+  g_free (api_key);
+  return TRUE;
+}
+
+GRL_PLUGIN_REGISTER (grl_foo_plugin_init, NULL, "grl-foo");
+      
+    </pre>
+<p>
+      The next step is to implement the source code, for that sources must
+      extend the <a class="link" href="GrlSource.html" title="GrlSource">GrlSource</a> class.
+    </p>
+<p>
+      In typical GObject fashion, developers should use the G_DEFINE_TYPE macro,
+      and then provide the class initialization function
+      (grl_foo_source_class_init() in the example below) and the instance
+      initialization function (grl_foo_source_init() in the example below). A
+      constructor function, although not mandatory, is usually nice to have
+      (grl_foo_source_new() in the example below).
+    </p>
+<p>
+      When creating a new <a class="link" href="GrlSource.html" title="GrlSource">GrlSource</a> instance, a
+      few properties should be provided:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<span class="emphasis"><em>source-id:</em></span> An identifier for the source object.
+          This is not the same as the plugin identifier (remember that a plugin
+          can spawn multiple media source objects). This identifier can be used
+          by clients when interacting with available media sources through the
+          plugin registry API. See the <a class="link" href="GrlRegistry.html" title="GrlRegistry">GrlRegistry</a> API reference for
+          more details.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>source-name:</em></span> A name for the source object
+          (typically the name that clients would show in the user interface).
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>source-desc</em></span>: A description of the media source.
+        </li>
+</ul></div>
+<p>
+    </p>
+<p>
+      In the class initialization function the plugin developer should provide
+      implementations for the operations that the plugin will support. Almost all
+      operations are optional, but for typically Search or Browse are expected in
+      sources providing media content, and Resolve for sources providing
+      information for existent content.
+    </p>
+<pre class="programlisting">
+      
+/* Foo class initialization code */
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+
+  source_class-&gt;supported_keys = grl_foo_source_supported_keys;
+  source_class-&gt;slow_keys = grl_foo_source_slow_keys;
+  source_class-&gt;browse = grl_foo_source_browse;
+  source_class-&gt;search = grl_foo_source_search;
+  source_class-&gt;query = grl_foo_source_query;
+  source_class-&gt;store = grl_foo_source_store;
+  source_class-&gt;remove = grl_foo_source_remove;
+  source_class-&gt;resolve = grl_foo_source_resolve;
+}
+
+/* Foo instance initialization code */
+static void
+grl_foo_source_init (GrlFooSource *source)
+{
+  /* Here you would initialize 'source', which is an instance
+     of this class type. */
+  source-&gt;api_key = NULL;
+}
+
+/* GrlFooSource constructor */
+static GrlFooSource *
+grl_foo_source_new (const gchar *api_key)
+{
+  GrlFooSource *source;
+
+  source = GRL_FOO_SOURCE (g_object_new (GRL_FOO_SOURCE_TYPE,
+                                         "source-id", "grl-foo",
+                                         "source-name", "Foo",
+                                         "source-desc", "Foo media provider",
+                                         NULL));
+  source-&gt;api_key = g_strdup (api_key);
+  return source;
+}
+
+G_DEFINE_TYPE (GrlFooSource, grl_foo_source, GRL_TYPE_SOURCE);
+      
+    </pre>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-supported-keys"></a>Implementing Supported Keys</h5></div></div></div>
+<p>
+      Sources should implement "supported_keys" method to define what metadata
+      keys the source is able to handle.
+    </p>
+<p>
+      This method is declarative, and it only has to return a list of metadata
+      keys that the plugin supports, that is, it is a declaration of the
+      metadata that the plugin can provide for the media content that it
+      exposes.
+    </p>
+<pre class="programlisting">
+      
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+  source_class-&gt;supported_keys = grl_foo_source_supported_keys;
+}
+
+static const GList *
+grl_foo_source_supported_keys (GrlSource *source)
+{
+  static GList *keys = NULL;
+  if (!keys) {
+    keys = grl_metadata_key_list_new (GRL_METADATA_KEY_ID,
+                                      GRL_METADATA_KEY_TITLE,
+                                      GRL_METADATA_KEY_URL,
+                                      GRL_METADATA_KEY_THUMBNAIL,
+                                      GRL_METADATA_KEY_MIME,
+                                      GRL_METADATA_KEY_ARTIST,
+                                      GRL_METADATA_KEY_DURATION,
+                                      GRL_METADATA_KEY_INVALID);
+  }
+  return keys;
+}
+      
+    </pre>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-slow-keys"></a>Implementing Slow Keys</h5></div></div></div>
+<p>
+      This method is similar to "supported_keys", and in fact it returns a
+      subset of the keys returned by "supported_keys".
+    </p>
+<p>
+      This method is intended to provide the framework with information on
+      metadata that is particularly expensive for the framework to retrieve. The
+      framework (or the plugin users) can then use this information to remove
+      this metadata from their requests when performance is important. This is,
+      again, a declarative interface providing a list of keys.
+    </p>
+<p>
+      If the plugin does not provide an implementation for "slow_keys" the
+      framework assumes that all keys are equally expensive to retrieve and will
+      not perform optimizations in any case.
+    </p>
+<pre class="programlisting">
+      
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+  source_class-&gt;slow_keys = grl_foo_source_slow_keys;
+}
+
+static const GList *
+grl_foo_source_slow_keys (GrlSource *source)
+{
+  static GList *keys = NULL;
+  if (!keys) {
+    keys = grl_metadata_key_list_new (GRL_METADATA_KEY_URL,
+                                      NULL);
+  }
+  return keys;
+}
+      
+    </pre>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-search"></a>Implementing Search</h5></div></div></div>
+<p>
+      This method implements free-text based searches, retrieving media
+    that matches the text provided by the user.
+    </p>
+<p>
+      Typically, the way this method operates is like this:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">Plugin receives the text to search, as well as other
+        parameters like the metadata keys to retrieve, how many elements, and so
+        on.</li>
+<li class="listitem">With all this information the plugin executes the search on
+        the backend, and waits for the results.</li>
+<li class="listitem">Plugin receives the results from the service provider, and
+        encodes them in different <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a>
+        objects.</li>
+<li class="listitem">Plugin sends eatch <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a>
+        object back to the client, one by one, invoking the user provided
+        callback.</li>
+</ul></div>
+<p>
+    </p>
+<p>
+      Below you can see some source code that illustrates this process:
+    </p>
+<pre class="programlisting">
+      
+/* In this example we assume a media provider that can be
+   queried over http, and that provides its results in xml format */
+
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+  source_class-&gt;search = grl_foo_source_search;
+}
+
+static void
+foo_execute_search_async_cb (gchar *xml, GrlSourceSearchSpec *ss)
+{
+  GrlMedia *media;
+  gint count;
+
+  count = count_results (xml);
+
+  if (count == 0) {
+    /* Signal "no results" */
+    ss-&gt;callback (ss-&gt;source, ss-&gt;operation_id,
+                  NULL, 0, ss-&gt;user_data, NULL);
+  } else {
+    /* parse_next parses the next media item in the XML
+       and creates a GrlMedia instance with the data extracted */
+    while (media = parse_next (xml))
+      ss-&gt;callback (ss-&gt;source,       /* Source emitting the data */
+                    ss-&gt;operation_id, /* Operation identifier */
+                    media,            /* Media that matched the query */
+                    --count,          /* Remaining count */
+                    ss-&gt;user_data,    /* User data for the callback */
+                    NULL);            /* GError instance (if an error occurred) */
+  }
+}
+
+static void
+grl_foo_source_search (GrlSource *source, GrlSourceSearchSpec *ss)
+{
+  gchar *foo_http_search:
+
+  foo_http_search =
+    g_strdup_printf("http://media.foo.com?text=%s&amp;offset=%d&amp;count=%d",
+                    ss-&gt;text,
+                    grl_operation_options_get_skip (ss-&gt;options),
+                    grl_operation_options_get_count (ss-&gt;options));
+
+  /* This executes an async http query and then invokes
+     foo_execute_search_async_cb with the response */
+  foo_execute_search_async (foo_http_search, ss);
+}
+      
+    </pre>
+<p>
+      Please, check <a class="link" href="ch04.html#source-plugins-common-considerations" title="Common considerations for Search, Browse and Query implementations"> Common
+      considerations for Search, Browse and Query implementations</a> for
+      more information on how to implement Search operations properly.
+    </p>
+<p>
+      Examples of plugins implementing Search functionality are grl-jamendo,
+      grl-youtube or grl-vimeo among others.
+    </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-browse"></a>Implementing Browse</h5></div></div></div>
+<p>
+      Browsing is an interactive process, where users navigate by exploring
+      these boxes exposed by the media source in hierarchical form. The idea of
+      browsing a media source is the same as browsing a file system.
+    </p>
+<p>
+      The signature and way of operation of the Browse operation is the same as
+      in the Search operation with one difference: instead of a text parameter
+      with the search keywords, it receives a <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> object representing the container (box)
+      the user wants to browse.
+    </p>
+<p>
+      For the most part, plugin developers that write Browse implementations
+      should consider the same rules and guidelines explained for Search
+      operations.
+    </p>
+<p>
+      Below you can see some source code that illustrates this process:
+    </p>
+<pre class="programlisting">
+      
+/* In this example we assume a media provider that can be queried over
+   http, providing results in XML format. The media provider organizes
+   content according to a list of categories. */
+
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+  source_class-&gt;browse = grl_foo_source_browse;
+}
+
+static void
+foo_execute_categories_async_cb (gchar *xml, GrlSourceBrowseSpec *bs)
+{
+  GrlMedia *media;
+  gint count;
+
+  count = count_results (xml);
+
+  if (count == 0) {
+    /* Signal "no results" */
+    bs-&gt;callback (bs-&gt;source, bs-&gt;operation_id,
+                  NULL, 0, bs-&gt;user_data, NULL);
+  } else {
+    /* parse_next parses the next category item in the XML
+       and creates a GrlMedia instance with the data extracted,
+       which should be of type GrlMediaBox */
+    while (media = parse_next_cat (xml))
+      bs-&gt;callback (bs-&gt;source,       /* Source emitting the data */
+                    bs-&gt;operation_id, /* Operation identifier */
+                    media,            /* The category (box)  */
+                    --count,          /* Remaining count */
+                    bs-&gt;user_data,    /* User data for the callback */
+                    NULL);            /* GError instance (if an error occurred) */
+  }
+}
+
+static void
+foo_execute_media_async_cb (gchar *xml, GrlSourceBrowseSpec *os)
+{
+  GrlMedia *media;
+  gint count;
+
+  count = count_results (xml);
+
+  if (count == 0) {
+    /* Signal "no results" */
+    bs-&gt;callback (bs-&gt;source, bs-&gt;operation_id,
+                  NULL, 0, bs-&gt;user_data, NULL);
+  } else {
+    /* parse_next parses the next media item in the XML
+       and creates a GrlMedia instance with the data extracted,
+       which should be of type GrlMediaImage, GrlMediaAudio or
+       GrlMediaVideo */
+    while (media = parse_next_media (xml))
+      os-&gt;callback (os-&gt;source,       /* Source emitting the data */
+                    os-&gt;operation_id, /* Operation identifier */
+                    media,            /* Media that matched the query */
+                    --count,          /* Remaining count */
+                    os-&gt;user_data,    /* User data for the callback */
+                    NULL);            /* GError instance (if an error occurred) */
+  }
+}
+
+static void
+grl_foo_source_browse (GrlSource *source, GrlSourceBrowseSpec *bs)
+{
+  gchar *foo_http_browse:
+
+  /* We use the names of the categories as their media identifiers */
+  box_id = grl_media_get_id (bs-&gt;container);
+
+  if (!box_id) {
+    /* Browsing the root box, the result must be the list of
+       categories provided by the service */
+    foo_http_browse =
+      g_strdup_printf("http://media.foo.com/category_list",
+                      grl_operation_options_get_skip (bs),
+                      grl_operation_options_get_count (bs));
+     /* This executes an async http query and then invokes
+        foo_execute_categories_async_cb with the response */
+     foo_execute_categories_async (foo_http_browse, bs);
+  } else {
+    /* Browsing a specific category */
+    foo_http_browse =
+      g_strdup_printf("http://media.foo.com/content/%s?offset=%d&amp;count=%d",
+                      box_id,
+                      grl_operation_options_get_skip (bs),
+                      grl_operation_options_get_count (bs));
+     /* This executes an async http query and then invokes
+        foo_execute_browse_async_cb with the response */
+     foo_execute_media_async (foo_http_browse, bs);
+  }
+}
+      
+    </pre>
+<p>
+      Some considerations that plugin developers should take into account:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+          In the example we are assuming that the content hierarchy only has two
+          levels, the first level exposes a list of categories (each one exposed
+          as a <a class="link" href="GrlMediaBox.html" title="GrlMediaBox">GrlMediaBox</a> object so the user
+          knows they can be browsed again), and then a second level with the
+          contents within these categories, that we assume are all media items,
+          although in real life they could very well be more <a class="link" href="GrlMediaBox.html" title="GrlMediaBox">GrlMediaBox</a> objects, leading to more
+          complex hierarchies.
+        </li>
+<li class="listitem">
+<a class="link" href="GrlMediaBox.html" title="GrlMediaBox">GrlMediaBox</a> objects returned by a
+          browse operation can be browsed by clients in future Browse
+          operations.
+        </li>
+<li class="listitem">
+          The input parameter that informs the plugin about the box that should
+          be browsed (bs-&gt;container) is of type <a class="link" href="GrlMediaBox.html" title="GrlMediaBox">GrlMediaBox</a>. The plugin developer must
+          map that to something the media provider understands. Typically, when
+          <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> objects are returned from a
+          plugin to the client, they are created so their "id" property (<a class="link" href="GrlMedia.html#grl-media-set-id" title="grl_media_set_id ()">grl_media_set_id()</a>) can be used for
+          this purpose, identifying these media resources uniquely in the
+          context of the media provider.
+        </li>
+<li class="listitem">
+          A <a class="link" href="GrlMediaBox.html" title="GrlMediaBox">GrlMediaBox</a> object with NULL id
+          always represents the root box/category in the content hierarchy
+          exposed by the plugin.
+        </li>
+</ul></div>
+<p>
+    </p>
+<p>
+      Please, check <a class="link" href="ch04.html#source-plugins-common-considerations" title="Common considerations for Search, Browse and Query implementations"> Common
+      considerations for Search, Browse and Query implementations</a> for
+      more information on how to implement Browse operations properly.
+    </p>
+<p>
+      Examples of plugins implementing browse functionality are grl-jamendo,
+      grl-filesystem or grl-upnp among others.
+    </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-query"></a>Implementing Query</h5></div></div></div>
+<p>
+      This method provides plugin developers with means to expose
+      service-specific functionality that cannot be achieved through regular
+      Browse and Search operations.
+    </p>
+<p>
+      This method operates just like the Search method, but the text parameter
+      does not represent a list of keywords to search for, instead, its meaning
+      is plugin specific and defined by the plugin developer. Plugin
+      documentation should explain what is the syntax of this query text, and
+      what it allows.
+    </p>
+<p>
+      Normally, Query implementations involve parsing and decoding this input
+      string into something meaningful for the media provider (a specific
+      operation with its parameters).
+    </p>
+<p>
+      Usually, Query implementations are intended to provide advanced filtering
+      capabilities and similar features that make use of specific features of
+      the service that cannot be exposed through more service agnostic APIs,
+      like Search or Browse. For example, a plugin that provides media content
+      stored in a database can implement Query to give users the possibility to
+      execute SQL queries directly, by encoding the SQL commands in this input
+      string, giving a lot of flexibility in how they access the content stored
+      in the database in exchange for writing plugin-specific code in the
+      application.
+    </p>
+<p>
+      The example below shows the case of a plugin implementing Query to let the
+      user specify filters directly in SQL format for additional flexibility.
+    </p>
+<pre class="programlisting">
+      
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+  source_class-&gt;query = grl_foo_source_query;
+}
+
+static void
+grl_foo_source_query (GrlSource *source, GrlSourceQuerySpec *qs)
+{
+  const gchar *sql_filter;
+  GList *results;
+  GrlMedia *media;
+  gint count;
+
+  /* In this example, we are assuming qs-&gt;query is expected to contain a
+  suitable SQL filter */
+  sql_query = prepare_sql_with_custom_filter (qs-&gt;query,
+                                              grl_operation_options_get_skip (qs-&gt;options),
+                                              grl_operation_options_get_skip (qs-&gt;options));
+  /* Execute the resulting SQL query, which incorporates
+     the filter provided by the user */
+  results = execute_sql (sql_query);
+
+  /* For each result obtained, invoke the user callback as usual */
+  count = g_list_length (results);
+
+  if (count == 0) {
+    /* Signal "no results" */
+    qs-&gt;callback (qs-&gt;source, qs-&gt;operation_id,
+                  NULL, 0, qs-&gt;user_data, NULL);
+  } else {
+    while (media = next_result (&amp;results))
+      qs-&gt;callback (qs-&gt;source,       /* Source emitting the data */
+                    qs-&gt;operation_id, /* Operation identifier */
+                    media,            /* Media that matched the query */
+                    --count,          /* Remaining count */
+                    qs-&gt;user_data,    /* User data for the callback */
+                    NULL);            /* GError instance (if an error occurred) */
+  }
+}
+      
+    </pre>
+<p>
+      Please, check <a class="link" href="ch04.html#source-plugins-common-considerations" title="Common considerations for Search, Browse and Query implementations"> Common
+      considerations for Search, Browse and Query implementations</a> for
+      more information on how to implement Query operations properly.
+    </p>
+<p>
+      Examples of plugins implementing Query are grl-jamendo, grl-upnp or
+      grl-bookmarks among others.
+    </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-common-considerations"></a>Common considerations for Search, Browse and Query implementations</h5></div></div></div>
+<p>
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+          Making operations synchronous would block the client application while
+          the operation is executed, so providing a non-blocking implementation
+          is mostly mandatory for most practical purposes.
+        </li>
+<li class="listitem">
+          Grilo invokes plugin operations in idle callbacks to ensure that
+          control is returned to the client as soon as possible. Still, plugin
+          developers are encouraged to write efficient code that avoids blocking
+          as much as possible, since this good practice will make applications
+          behave smoother, granting a much better user experience. Use of
+          threads in plugin code is not recommended, instead, splitting the work
+          to do in chunks using the idle loop is encouraged.
+        </li>
+<li class="listitem">
+          Creating <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> instances is
+          easy, depending on the type of media you should instantiate one of the
+          <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> subclasses (<a class="link" href="GrlMediaImage.html" title="GrlMediaImage">GrlMediaImage</a>, <a class="link" href="GrlMediaVideo.html" title="GrlMediaVideo">GrlMediaVideo</a>, <a class="link" href="GrlMediaAudio.html" title="GrlMediaAudio">GrlMediaAudio</a> or <a class="link" href="GrlMediaBox.html" title="GrlMediaBox">GrlMediaBox</a>), and then use the API to set the
+          corresponding data. Check the <a class="link" href="GrlData.html" title="GrlData">GrlData</a>
+          hierarchy in the API reference for more details.
+        </li>
+<li class="listitem">
+          The remaining count parameter present in the callbacks is intended to
+          provide the client with an <span class="emphasis"><em>estimation</em></span> of how many
+          more results will come after the current one as part of the same
+          operation.
+        </li>
+<li class="listitem">
+          Finalization of the operation must <span class="emphasis"><em>always</em></span>
+          be signaled by invoking the user callback with remaining count set to 0,
+          even on error conditions.
+        </li>
+<li class="listitem">
+          Plugin developers must ensure that all operations end by invoking the
+          user callback with the remaining count parameter set to 0, and that
+          this is done only once per operation. This behavior is expected and
+          must be guaranteed by the plugin developer.
+        </li>
+<li class="listitem">
+          Once the user callback has been invoked with the remaining count
+          parameter set to 0, the operations is considered finished and the
+          plugin developer must <span class="emphasis"><em>never</em></span>
+          invoke the user callback again for that operation again.
+        </li>
+<li class="listitem">
+          In case of error, the plugin developer must invoke the user
+          callback like this:
+          <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">Set the last parameter to a non-NULL GError instance.</li>
+<li class="listitem">Set the media parameter to NULL.</li>
+<li class="listitem">Set the remaining count parameter to 0.</li>
+</ul></div>
+          The plugin developer is responsible for releasing the error once
+          the user callback is invoked.
+        </li>
+<li class="listitem">
+          It is possible to finalize the operation with a NULL media and
+          remaining count set to 0 if that is convenient for the plugin
+          developer.
+        </li>
+<li class="listitem">
+          Returned <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> objects are owned by
+          the client and should not be freed by the plugin.
+        </li>
+<li class="listitem">
+          The list of metadata information requested by the client is available
+          in the "keys" field of the Spec structure. Typically plugin developers
+          don't have to care about the list of keys requested and would just
+          resolve all metadata available. The only situation in which the plugin
+          developer should check the specific list of keys requested is when
+          there are keys that are particularly expensive to resolve, in these
+          cases the plugin should only resolve these keys if the user has indeed
+          requested that information.
+        </li>
+</ul></div>
+<p>
+    </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-resolve"></a>Implementing Resolve</h5></div></div></div>
+<p>
+      Resolve operations are issued in order to grab additional information on a
+      given media (<a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a>).
+    </p>
+<p>
+      Typically, the use case for Resolve operations is applications obtaining a
+      list of <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> objects by executing a
+      Browse, Search or Query operation, requesting limited metadata (for
+      performance reasons), and then requesting additional metadata for specific
+      items selected by the user.
+    </p>
+<p>
+      This additional information can be provided by the same source that got
+      the <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> objects (if it implements the
+      Resolve operation), or by other sources able to provide the information
+      requested.
+    </p>
+<p>
+      Plugins implementing "resolve" operation should implement "may_resolve"
+      too. The purpose of this method is to analyze if the <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> contains the required metadata for the
+      source to provide the additional metadata requested. If not provided, the
+      default behaviour for sources implementing "resolve" but not "may_resolve"
+      is to resolve only supported keys in media objects coming from the source
+      itself.
+    </p>
+<pre class="programlisting">
+      
+/* In this example we assume a plugin that can resolve thumbnail
+   information for audio items given that we have artist and album
+   information available  */
+
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+  source_class-&gt;may_resolve = grl_foo_source_may_resolve;
+  source_class-&gt;resolve = grl_foo_source_resolve;
+}
+
+static gboolean
+grl_foo_source_may_resolve (GrlSource *source,
+                            GrlMedia *media,
+                            GrlKeyID key_id,
+                            GList **missing_keys)
+{
+  gboolean needs_artist = FALSE;
+  gboolean needs_album  = FALSE;
+
+  /* We only support thumbnail resolution */
+  if (key_id != GRL_METADATA_KEY_THUMBNAIL)
+    return FALSE;
+
+  /* We only support audio items */
+  if (media) {
+    if (!GRL_IS_MEDIA_AUDIO (media))
+      return FALSE;
+
+    /* We need artist information available */
+    if (grl_media_audio_get_artist (GRL_MEDIA_AUDIO (media)) == NULL) {
+      if (missing_keys)
+        *missing_keys = g_list_add (*missing_keys,
+                                    GRLKEYID_TO_POINTER (GRL_METADATA_KEY_ARTIST));
+      needs_artist = TRUE;
+    }
+
+    /* We need album information available */
+    if (grl_media_audio_get_album (GRL_MEDIA_AUDIO (media)) == NULL)) {
+      if (missing_keys)
+        *missing_keys = g_list_add (*missing_keys,
+                                    GRLKEYID_TO_POINTER (GRL_METADATA_KEY_ALBUM));
+      needs_album = TRUE;
+    }
+  }
+
+  if (needs_album || needs_artist)
+    return FALSE;
+
+  return TRUE;
+}
+
+static void
+grl_foo_source_resolve (GrlSource *source,
+                        GrlSourceResolveSpec *rs)
+{
+  const gchar *album;
+  const gchar *artist,
+  gchar *thumb_uri;
+  const GError *error = NULL;
+
+  if (contains_key (rs-&gt;keys, GRL_METADATA_KEY_THUMBNAIL) {
+    artist = grl_media_audio_get_artist (GRL_MEDIA_AUDIO (rs-&gt;media));
+    album = grl_media_audio_get_album (GRL_MEDIA_AUDIO (rs-&gt;media));
+    if (artist &amp;&amp; album) {
+      thumb_uri = resolve_thumb_uri (artist, album);
+      grl_media_set_thumbnail (rs-&gt;media, thumb_uri);
+    } else {
+      error = g_error_new (GRL_CORE_ERROR,
+                           GRL_CORE_ERROR_RESOLVE_FAILED,
+                           "Can't resolve thumbnail, artist and album not known");
+    }
+  } else {
+      error = g_error_new (GRL_CORE_ERROR,
+                           GRL_CORE_ERROR_RESOLVE_FAILED,
+                           "Can't resolve requested keys");
+  }
+
+  rs-&gt;callback (source, rs-&gt;operation_id, rs-&gt;media, rs-&gt;user_data, error);
+
+  if (error)
+    g_error_free (error);
+}
+      
+    </pre>
+<p>
+      Some considerations that plugin developers should take into account:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+          The method "may_resolve" is synchronous, should be fast and never
+          block. If the plugin cannot confirm if it can resolve the metadata
+          requested without doing blocking operations then it should return
+          TRUE. Then, when "resolve" is invoked further checking can be done.
+        </li>
+<li class="listitem">
+          Just like in other APIs, implementation of this method is expected
+          to be asynchronous to avoid blocking the user code.
+        </li>
+</ul></div>
+<p>
+    </p>
+<p>
+      Examples of plugins implementing Resolve are grl-youtube, grl-upnp or
+      grl-lastfm-albumart among others.
+    </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-store"></a>Implementing Store</h5></div></div></div>
+<p>
+      The Store method is used to push new content to the media source.
+    </p>
+<pre class="programlisting">
+      
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlMediaSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+  source_class-&gt;store = grl_foo_source_store;
+}
+
+static void
+grl_foo_source_store (GrlSource *source,
+                      GrlSourceStoreSpec *ss)
+{
+  const gchar *title;
+  const gchar *uri;
+  const gchar *parent_id;
+  guint row_id;
+
+  /* We get the id of the parent container where we want
+     to put the new content */
+  parent_id = grl_media_get_id (GRL_MEDIA (parent));
+
+  /* We get he metadata of the media we want to push, in this case
+     only URI and Title */
+  uri = grl_media_get_uri ();
+  title = grl_media_get_title ();
+
+  /* Push the data to the media provider (in this case a database) */
+  row_id = run_sql_insert (parent_id, uri, title);
+
+  /* Set the media id in the GrlMedia object */
+  grl_media_set_id (ss-&gt;media, row_id_to_media_id (row_id));
+
+  /* Inform the user that the operation is done (NULL error means everything was
+     ok), and all the keys were stored successfully (no list of failed keys) */
+  ss-&gt;callback (ss-&gt;source, ss-&gt;media, NULL, ss-&gt;user_data, NULL);
+}
+      
+    </pre>
+<p>
+      Some considerations that plugin developers should take into account:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+          After successfully storing the media, the method should assign a
+          proper media id to it before invoking the user callback.
+        </li></ul></div>
+<p>
+    </p>
+<p>
+      Examples of plugins implementing Store are grl-bookmarks or grl-podcasts.
+    </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-store-metadata"></a>Implementing Store Metadata</h5></div></div></div>
+<p>
+      Some plugins may provide users with the option of updating the metadata
+      available for specific media items. For example, a plugin may store user
+      metadata like the last time that a certain media resource was played
+      or its play count. These metadata properties do not make sense if
+      applications do not have means to change and update their values.
+    </p>
+<p>
+      Plugins that support this feature must implement two methods:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<span class="emphasis"><em>writable_keys:</em></span> just like "supported_keys"
+          or "slow_keys", it is a declarative method, intended to provide
+          information on what keys supported by the plugin are writable, that is,
+          their values can be changed by the user.
+        </li>
+<li class="listitem">
+<span class="emphasis"><em>store_metadata:</em></span> which is the method used
+          by clients to update metadata values for specific keys.
+        </li>
+</ul></div>
+<p>
+    </p>
+<pre class="programlisting">
+      
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+  source_class-&gt;writable_keys = grl_foo_source_writable_keys;
+  source_class-&gt;store_metadata = grl_foo_source_store_metadata;
+}
+
+static const GList *
+grl_foo_source_writable_keys (GrlSource *source)
+{
+  static GList *keys = NULL;
+  if (!keys) {
+    keys = grl_metadata_key_list_new (GRL_METADATA_KEY_RATING,
+                                      GRL_METADATA_KEY_PLAY_COUNT,
+                                      GRL_METADATA_KEY_LAST_PLAYED,
+                                      NULL);
+  }
+  return keys;
+}
+
+static void
+grl_foo_source_store_metadata (GrlSource *source,
+                               GrlSourceSetMetadataSpec *sms)
+{
+  GList *iter;
+  const gchar *media_id;
+  GList *failed_keys = NULL;
+
+  /* 'sms-&gt;media' contains the media with updated values */
+  media_id = grl_media_get_id (sms-&gt;media);
+
+  /* Go through all the keys that need update ('sms-&gt;keys'), take
+     the new values (from 'sms-&gt;media') and update them in the
+     media provider  */
+  iter = sms-&gt;keys;
+  while (iter) {
+    GrlKeyID key = GRLPOINTER_TO_KEYID (iter-&gt;data);
+    if (!foo_update_value_for_key (sms-&gt;media, key)) {
+      /* Save a list with keys that we failed to update */
+      failed_keys = g_list_prepend (failed_keys, iter-&gt;data);
+    }
+    iter = g_list_next (iter);
+  }
+
+  /* We are done, invoke user callback to signal client */
+  sms-&gt;callback (sms-&gt;source, sms-&gt;media, failed_keys, sms-&gt;user_data, NULL);
+  g_list_free (failed_keys);
+}
+      
+    </pre>
+<p>
+      Some considerations that plugin developers should take into account:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+          Typically, updating metadata keys in the media provider would involve
+          one or more blocking operations, so asynchronous implementations
+          of "store_metadata" should be considered.
+        </li>
+<li class="listitem">
+          Some media providers may allow for the possibility of updating
+          multiple keys in just one operation.
+        </li>
+<li class="listitem">
+          The user callback for "store_metadata" receives a list with all the keys
+          that failed to be updated, which the plugin should free after calling
+          the user callback.
+        </li>
+</ul></div>
+<p>
+    </p>
+<p>
+      Examples of plugins implementing "store_metadata" are grl-metadata-store
+      or grl-tracker.
+    </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-remove"></a>Implementing Remove</h5></div></div></div>
+<p>
+      The Remove method is used to remove content from the media source.
+    </p>
+<pre class="programlisting">
+      
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+  source_class-&gt;remove = grl_foo_source_remove;
+}
+
+static void
+grl_foo_source_remove (GrlSource *source,
+                       GrlSourceRemoveSpec *rs)
+{
+  /* Remove the data from the media provider (in this case a database) */
+  run_sql_delete (ss-&gt;media_id);
+
+  /* Inform the user that the operation is done (NULL error means everything
+     was ok */
+  rs-&gt;callback (rs-&gt;source, rs-&gt;media, rs-&gt;user_data, NULL);
+}
+      
+    </pre>
+<p>
+      Examples of plugins implementing Remove are grl-bookmarks or
+      grl-podcasts.
+    </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-media-from-uri"></a>Implementing Media from URI</h5></div></div></div>
+<p>
+      Some times clients have access to the URI of the media, and they want to
+      retrieve metadata for it. A couple of examples where this may come in
+      handy: A file system browser that needs to obtain additional metadata for
+      a particular media item located in the filesystem. A browser plugin that
+      can obtain additional metadata for a media item given its URL. In these
+      cases we know the URI of the media, but we need to create a <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> object representing it.
+    </p>
+<p>
+      Plugins that want to support URI to <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a>
+      conversions must implement the "test_media_from_uri" and "media_from_uri"
+      methods.
+    </p>
+<p>
+      The method "test_media_from_uri" should return TRUE if, upon inspection of
+      the media URI, the plugin decides that it can convert it to a <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> object. For example, a YouTube plugin
+      would check that the URI of the media is a valid YouTube URL. This method is
+      asynchronous and should not block.  If the plugin cannot decide if it can or
+      cannot convert the URI to a <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> object
+      by inspecting the URI without doing blocking operations, it should return
+      TRUE. This method is used to discard efficiently plugins that cannot resolve
+      the media.
+    </p>
+<p>
+      The method "media_from_uri" is used to do the actual conversion from the URI
+      to the <a class="link" href="GrlMedia.html" title="GrlMedia">GrlMedia</a> object.
+    </p>
+<pre class="programlisting">
+      
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+  source_class-&gt;test_media_from_uri = grl_foo_source_test_media_from_uri;
+  source_class-&gt;media_from_uri = grl_foo_source_media_from_uri;
+}
+
+static gboolean
+grl_filesystem_test_media_from_uri (GrlSource *source,
+                                    const gchar *uri)
+{
+  if (strstr (uri, "http://media.foo.com/media-info/") == uri) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+static void
+grl_filesystem_media_from_uri (GrlSource *source,
+                               GrlSourceMediaFromUriSpec *mfus)
+{
+  gchar *media_id;
+  GrlMedia *media;
+
+  media_id = get_media_id_from_uri (mfus-&gt;uri);
+  media = create_media_from_id (media_id);
+  mfus-&gt;callback (source, mfus-&gt;media_from_uri_id, media, mfus-&gt;user_data, NULL);
+  g_free (media_id);
+}
+      
+    </pre>
+<p>
+      Some considerations that plugin developers should take into account:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+          Typically "media_from_uri" involves a blocking operation, and hence
+          its implementation should be asynchronous.
+        </li></ul></div>
+<p>
+    </p>
+<p>
+      Examples of plugins implementing "media_from_uri" are grl-filesystem
+      or grl-youtube.
+    </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-change_notification"></a>Notifying changes</h5></div></div></div>
+<p>
+      Source can signal clients when available media content has been
+      changed. This is an optional feature.
+    </p>
+<p>
+      Plugins supporting content change notification must implement
+      "notify_change_start" and "notify_change_stop", which let the
+      user start or stop content change notification at will.
+    </p>
+<p>
+      Once users have activated notifications by invoking
+      "notify_change_start", media sources should communicate
+      any changes detected by calling <a class="link" href="GrlSource.html#grl-source-notify-change-list" title="grl_source_notify_change_list ()">grl_source_notify_change_list()</a>
+      with a list of the media items changed.
+    </p>
+<p>
+      Upon calling "notify_changes_stop" the plugin must stop
+      communicating changes until "notify_changes_start" is
+      called again.
+    </p>
+<pre class="programlisting">
+      
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+  source_class-&gt;notify_change_start = grl_foo_source_notify_change_start;
+  source_class-&gt;notify_change_stop = grl_foo_source_notify_change_stop;
+}
+
+static void
+content_changed_cb (GList *changes)
+{
+  GPtrArray *changed_medias;
+
+  changed_medias = g_ptr_array_sized_new (g_list_length (changes));
+  while (media = next_media_from_changes (&amp;changes)) {
+    g_ptr_array_add (changed_medias, media);
+  }
+
+  grl_source_notify_change_list (source,
+                                 changed_medias,
+                                 GRL_CONTENT_CHANGED,
+                                 FALSE);
+}
+
+static gboolean
+grl_foo_source_notify_change_start (GrlSource *source,
+                                    GError **error)
+{
+  GrlFooSource *foo_source;
+
+  /* Listen to changes in the media content provider */
+  foo_source = GRL_FOO_SOURCE (source);
+  foo_source-&gt;listener_id = foo_subscribe_listener_new (content_changed_cb);
+
+  return TRUE;
+}
+
+static gboolean
+grl_foo_source_notify_change_stop (GrlSource *source,
+                                   GError **error)
+{
+  GrlFooSource *foo_source;
+
+  /* Stop listening to changes in the media content provider */
+  foo_source = GRL_FOO_SOURCE (source);
+  foo_listener_destroy (foo_source-&gt;listener_id);
+
+  return TRUE;
+}
+      
+    </pre>
+<p>
+      Please check the <a class="link" href="GrlSource.html" title="GrlSource">GrlSource</a> API
+      reference for more details on how <a class="link" href="GrlSource.html#grl-source-notify-change-list" title="grl_source_notify_change_list ()">grl_source_notify_change_list()</a>
+      should be used.
+    </p>
+<p>
+      Examples of plugins implementing change notification are grl-upnp and
+      grl-tracker among others
+    </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="source-plugins-cancel"></a>Cancelling ongoing operations</h5></div></div></div>
+<p>
+      Implementing the "cancel" method is optional, as others. This method
+      provided means for application developers to cancel ongoing operations on
+      metadata sources (and hence, also in media sources).
+    </p>
+<p>
+      The "cancel" method receives the identifier of the operation to be
+      cancelled.
+    </p>
+<p>
+      Typically, plugin developers would implement cancellation support
+      by storing relevant information for the cancellation process
+      along with the operation data when this is started, and then
+      retrieving this information when a cancellation request is received.
+    </p>
+<p>
+      Grilo provides plugin developers with API to attach arbitrary data
+      to a certain operation given its identifier. These APIs are:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><a class="link" href="grilo-grl-operation.html#grl-operation-set-data" title="grl_operation_set_data ()">grl_operation_set_data()</a></li>
+<li class="listitem"><a class="link" href="grilo-grl-operation.html#grl-operation-get-data" title="grl_operation_get_data ()">grl_operation_get_data()</a></li>
+</ul></div>
+<p>
+      See the API reference documentation for <a class="link" href="grilo-grl-operation.html" title="grl-operation">grl-operation</a> for more details.
+    </p>
+<pre class="programlisting">
+      
+static void
+grl_foo_source_class_init (GrlFooSourceClass * klass)
+{
+  GrlSourceClass *source_class = GRL_SOURCE_CLASS (klass);
+
+  source_class-&gt;search = grl_foo_source_search;
+  source_class-&gt;cancel = grl_foo_source_cancel;
+}
+
+static void
+grl_foo_source_search (GrlSource *source,
+                       GrlSourceSearchSpec *ss)
+{
+  ...
+  gint op_handler = foo_service_search_start (ss-&gt;text, ...);
+  grl_operation_set_data (ss-&gt;operation_id,
+                          GINT_TO_POINTER (op_handler));
+  ...
+}
+
+static void
+grl_foo_source_cancel (GrlSource *source,
+                       guint operation_id)
+{
+  gint op_handler;
+
+  op_handler =
+    GPOINTER_TO_INT (grl_operation_get_data (operation_id));
+  if (op_handler &gt; 0) {
+    foo_service_search_cancel (op_handler);
+  }
+}
+      
+    </pre>
+<p>
+      Some examples of plugins implementing cancellation support are
+      grl-youtube, grl-jamendo or grl-filesystem, among others.
+    </p>
+<p>
+      Developers must free any data stored before the operation finishes.
+    </p>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="testing-plugins"></a>Testing your plugins</h3></div></div></div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="media-source-testing-plugins"></a>Testing your plugins</h4></div></div></div>
+<p>
+    Grilo ships a GTK+ test user interface called <span class="emphasis"><em>grilo-test-ui</em></span>
+    that can be used to test new plugins. This simple playground application can be
+    found in the 'grilo' core source code under tools/grilo-test-ui/. If you have
+    Grilo installed on your system, you may have this application installed as
+    well.
+  </p>
+<p>
+    This application loads plugins from the default plugin installation directory
+    in your system or, alternatively, by inspecting the GRL_PLUGIN_PATH environment
+    variable, which can be set to contain a list of directories where Grilo
+    should look for plugins.
+  </p>
+<p>
+    Once the plugin library is visible to Grilo one only has to start the
+    grilo-test-ui application and it will load it along with other Grilo
+    plugins available in the system.
+  </p>
+<p>
+    In case there is some problem with the initialization of the plugin it should
+    be logged on the console. Remember that you can control the amount of 
+    logging done by Grilo through the GRL_DEBUG environment variable. You
+    may want to set this variable to do full logging, in which case
+    you should type this in your console:
+  </p>
+<pre class="programlisting">   
+$ export GRL_DEBUG="*:*"
+  </pre>
+<p>
+    If you want to focus only on logging the plugin loading process, configure
+    Grilo to log full details from the plugin registry module alone
+    by doing this instead:
+  </p>
+<pre class="programlisting">   
+$ export GRL_DEBUG="registry:*"
+  </pre>
+<p>
+    In case your plugin has been loaded successfully you should see something like
+    this in the log:
+  </p>
+<pre class="programlisting"> 
+(lt-grilo-test-ui:14457): Grilo-DEBUG: [registry] grl-registry.c:188: Plugin rank [plugin-id]' : 0
+(lt-grilo-test-ui:14457): Grilo-DEBUG: [registry] grl-registry.c:476: New source available: [source-id]
+(lt-grilo-test-ui:14457): Grilo-DEBUG: [registry] grl-registry.c:683: Loaded plugin '[plugin-id]' from '[plugin-file-absolute-path.so]'
+  </pre>
+<p>
+    If your plugin is a Media Source (not a Metadata Source) you should be able
+    to see it in the user interface of grilo-test-ui like this:
+    </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+        If the plugin implements Browse you should see the media source objects
+        spawned by the plugin in the list shown in the main view. You can
+        browse the plugin by double-clicking on any of its sources.
+      </li>
+<li class="listitem">
+        If the plugin implements Search you should see the media source objects
+        spawned by the plugin in the combo box next to the "Search" button.
+        You can now search content by selecting the media source you want to test
+        in the combo, inputting a search text in the text entry right next to it
+        and clicking the Search button.
+      </li>
+<li class="listitem">
+        If the plugin implements query you should see the media source objects
+        spawned by the plugin in the combo box next to the "Query" button.
+        You can now query content by selecting the media source you want to test
+        in the combo, inputting the plugin-specific query string in the text 
+        entry right next to it and clicking the Query button.
+      </li>
+</ul></div>
+<p>
+  </p>
+<p>
+    If your plugin is a Metadata Source then you should test it by doing
+    a Browse, Search or Query operation in some other Media Source available
+    and then click on any of the media items showed as result. By doing this
+    grilo-test-ui will execute a Metadata operation which would use any
+    available metadata plugins to gather as much information as possible.
+    Available metadata obtained for the selected item will be shown in the
+    right pane for users to inspect.
+  </p>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="id-1.3.5.2.2.2.13"></a>Simulating Network Replies</h5></div></div></div>
+<p>
+      For offline testing of plug-ins, particularly in automated tests, it is
+      useful to simulate and return predefined network replies. Therefore, Grilo
+      provides a few facilities for mocking network replies.
+    </p>
+<p>
+      To enable mocking, set the environment variable GRL_NET_MOCKED. The value
+      of this variable is interpreted as the path of the mock configuration file to
+      use. This file is a simple .ini file, split
+      into a "default" section and one section per URL to mock.
+    </p>
+<pre class="programlisting">
+[default]
+version = 1
+ignored-parameters = field1[;field2[;...]] or "*"
+
+[http://www.example.com]
+data = content/of/response.txt
+timeout = 500
+    </pre>
+<p>
+      An easy way to capture the responses is to run your application with the
+      environment variable GRL_NET_CAPTURE_DIR. GrlNetWc will then write
+      each response into a file following the pattern "url-timestamp". If the
+      directory does not exist yet then it will be created.
+    </p>
+<div class="section">
+<div class="titlepage"><div><div><h6 class="title">
+<a name="id-1.3.5.2.2.2.13.6"></a>The Default Section</h6></div></div></div>
+<p>
+        This section needs to be present in any mock reply configuration file.
+
+        </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<code class="varname">version</code> needs to be "1".
+          </li>
+<li class="listitem">
+<code class="varname">ignored-parameters</code> is a semicolon separated list of
+            query parameter names that can be used to map URLs to sections
+            without paying attention to query parameters listed here.
+            By setting a value of "api_key" a request for
+            <code class="code">http://www.example.com?q=test+query&amp;api_key=dummy</code>
+            will be answered with the mock data for
+            <code class="code">http://www.example.com?q=test+query</code>.
+            Setting "api_key;q" or "*" will result in mock answer for
+            <code class="code">http://www.example.com</code>.
+          </li>
+</ul></div>
+<p>
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h6 class="title">
+<a name="id-1.3.5.2.2.2.13.7"></a>The URL Sections</h6></div></div></div>
+<p>
+        The section title is used to map URLs to response files.
+
+        </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<code class="varname">data</code> is a path to a text file containing the
+            raw response of the websserver. The path may be relative to this
+            configuration file or an absolute path.
+          </li>
+<li class="listitem">
+<code class="varname">timeout</code> may be used to delay the response in
+            seconds. The default is to not delay at all.
+          </li>
+</ul></div>
+<p>
+
+        Skip the <code class="varname">data</code> field to provoke a "not found" error.
+      </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

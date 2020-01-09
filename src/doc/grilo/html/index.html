@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Grilo Reference Manual: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="next" href="pr01.html" title="Overview">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="book">
+<div class="titlepage">
+<div>
+<div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">Grilo Reference Manual</p></th></tr></table></div>
+<div><p class="releaseinfo">
+      The latest version of this software can be found on-line at
+      <a class="ulink" href="http://git.gnome.org/browse/grilo" target="_top">http://git.gnome.org/browse/grilo</a>
+      and 
+      <a class="ulink" href="http://git.gnome.org/browse/grilo-plugins" target="_top">http://git.gnome.org/browse/grilo-plugins</a>.
+    </p></div>
+</div>
+<hr>
+</div>
+<div class="toc"><dl class="toc">
+<dt><span class="preface"><a href="pr01.html">Overview</a></span></dt>
+<dd><dl><dt><span class="section"><a href="pr01.html#overview"></a></span></dt></dl></dd>
+<dt><span class="reference"><a href="rn01.html">I. Tutorial</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="ch01.html">Quick start guide</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch01.html#quick-start"></a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch01.html#building-grilo">Building Grilo from sources</a></span></dt>
+<dt><span class="section"><a href="ch01.html#testing-grilo">Testing Grilo</a></span></dt>
+<dt><span class="section"><a href="ch01.html#compiling-grilo-programs">Compiling Grilo based programs</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch02.html">Environment Setup</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch02.html#environment-setup"></a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch02.html#building-grilo-detailed">Building Grilo </a></span></dt>
+<dt><span class="section"><a href="ch02.html#compiling-grilo-programs-detailed">Compiling Grilo based programs</a></span></dt>
+<dt><span class="section"><a href="ch02.html#running-grilo-programs-detailed">Running Grilo based programs</a></span></dt>
+<dt><span class="section"><a href="ch02.html#debugging-with-grilo">Debugging with Grilo</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch03.html">Writing applications with Grilo</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch03.html#writing-apps"></a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch03.html#programming-with-grilo-concepts">Basic concepts</a></span></dt>
+<dt><span class="section"><a href="ch03.html#programming-with-grilo-use-cases-explained">Typical use cases explained</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch04.html">Writing plugins for Grilo</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch04.html#writing-plugins"></a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch04.html#media-source-plugins">Source plugins</a></span></dt>
+<dt><span class="section"><a href="ch04.html#testing-plugins">Testing your plugins</a></span></dt>
+</dl></dd>
+</dl></dd>
+</dl></dd>
+<dt><span class="reference"><a href="rn02.html">II. Object Index</a></span></dt>
+<dt><span class="reference"><a href="rn03.html">III. API Reference</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="grilo-grilo.html">grilo</a></span><span class="refpurpose"> — Metadata library supporting several services</span>
+</dt>
+<dt><span class="chapter"><a href="plugin-management.html">Plug-in management</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="GrlRegistry.html">GrlRegistry</a></span><span class="refpurpose"> — Grilo plugins loader and manager</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="sources.html">Data sources</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GrlPlugin.html">GrlPlugin</a></span><span class="refpurpose"> — Base class for Grilo Plugins</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GrlSource.html">GrlSource</a></span><span class="refpurpose"> — Abstract base class for sources</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="caps-options.html">Capabilities and Options</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GrlCaps.html">GrlCaps</a></span><span class="refpurpose"> — Describes the capabilities of a source for a given
+operation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GrlOperationOptions.html">GrlOperationOptions</a></span><span class="refpurpose"> — Describes the options to be passed to an operation</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="multiple.html">Search in multiple sources</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="grilo-Multiple.html">Multiple</a></span><span class="refpurpose"> — Search in multiple loaded sources</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="configure.html">Configuring plug-ins</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="GrlConfig.html">GrlConfig</a></span><span class="refpurpose"> — Configuration data storage</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="data.html">Media data</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GrlData.html">GrlData</a></span><span class="refpurpose">Low-level class for storing metadata information about
+media resources provided by <span class="type">GrlSource</span> objects.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GrlRelatedKeys.html">GrlRelatedKeys</a></span><span class="refpurpose"> — A class where to store related metadata keys.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GrlMedia.html">GrlMedia</a></span><span class="refpurpose"> — A multimedia data transfer object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GrlMediaBox.html">GrlMediaBox</a></span><span class="refpurpose"> — A container for multiple medias</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GrlMediaVideo.html">GrlMediaVideo</a></span><span class="refpurpose"> — A multimedia data for video</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GrlMediaAudio.html">GrlMediaAudio</a></span><span class="refpurpose"> — A multimedia data for audio</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GrlMediaImage.html">GrlMediaImage</a></span><span class="refpurpose"> — A multimedia data for image</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="misc.html">Misc</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="grilo-grl-metadata-key.html">grl-metadata-key</a></span><span class="refpurpose"> — General media key definition</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="grilo-grl-log.html">grl-log</a></span><span class="refpurpose"> — Log system</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="grilo-grl-error.html">grl-error</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="grilo-grl-definitions.html">grl-definitions</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="grilo-grl-operation.html">grl-operation</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="grilo-grl-util.html">grl-util</a></span><span class="refpurpose"> — utility functions</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="reference"><a href="rn04.html">IV. Grilo Libraries</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="grilo-net.html">Grilo Net Classes</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="grilo-GrlNetWc.html">GrlNetWc</a></span><span class="refpurpose"> — small and simple HTTP client</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="grilo-pls.html">Grilo Playlist Functions</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="grilo-GrlPls.html">GrlPls</a></span><span class="refpurpose"> — playlist handling functions</span>
+</dt></dl></dd>
+</dl></dd>
+<dt><span class="index"><a href="api-index-full.html">API Index</a></span></dt>
+<dt><span class="index"><a href="deprecated-api-index.html">Index of deprecated API</a></span></dt>
+<dt><span class="glossary"><a href="annotation-glossary.html">Annotation Glossary</a></span></dt>
+</dl></div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

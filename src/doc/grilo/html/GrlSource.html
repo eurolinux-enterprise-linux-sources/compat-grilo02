@@ -1,0 +1,3502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlSource: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="sources.html" title="Data sources">
+<link rel="prev" href="GrlPlugin.html" title="GrlPlugin">
+<link rel="next" href="caps-options.html" title="Capabilities and Options">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GrlSource.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GrlSource.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#GrlSource.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#GrlSource.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="sources.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="GrlPlugin.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="caps-options.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GrlSource"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GrlSource.top_of_page"></a>GrlSource</span></h2>
+<p>GrlSource — Abstract base class for sources</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GrlSource.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="GrlSource.html#GrlSourceRemoveCb" title="GrlSourceRemoveCb ()">*GrlSourceRemoveCb</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="GrlSource.html#GrlSourceResolveCb" title="GrlSourceResolveCb ()">*GrlSourceResolveCb</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="GrlSource.html#GrlSourceResultCb" title="GrlSourceResultCb ()">*GrlSourceResultCb</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="GrlSource.html#GrlSourceStoreCb" title="GrlSourceStoreCb ()">*GrlSourceStoreCb</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-browse" title="grl_source_browse ()">grl_source_browse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-browse-sync" title="grl_source_browse_sync ()">grl_source_browse_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-auto-split-threshold" title="grl_source_get_auto_split_threshold ()">grl_source_get_auto_split_threshold</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlCaps.html" title="GrlCaps"><span class="returnvalue">GrlCaps</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-caps" title="grl_source_get_caps ()">grl_source_get_caps</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-description" title="grl_source_get_description ()">grl_source_get_description</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GIcon</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-icon" title="grl_source_get_icon ()">grl_source_get_icon</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-id" title="grl_source_get_id ()">grl_source_get_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-media-from-uri" title="grl_source_get_media_from_uri ()">grl_source_get_media_from_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-media-from-uri-sync" title="grl_source_get_media_from_uri_sync ()">grl_source_get_media_from_uri_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-name" title="grl_source_get_name ()">grl_source_get_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="returnvalue">GrlPlugin</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-plugin" title="grl_source_get_plugin ()">grl_source_get_plugin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-rank" title="grl_source_get_rank ()">grl_source_get_rank</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlMedia.html#GrlMediaType" title="enum GrlMediaType"><span class="returnvalue">GrlMediaType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-supported-media" title="grl_source_get_supported_media ()">grl_source_get_supported_media</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> **
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-get-tags" title="grl_source_get_tags ()">grl_source_get_tags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-may-resolve" title="grl_source_may_resolve ()">grl_source_may_resolve</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-notify-change" title="grl_source_notify_change ()">grl_source_notify_change</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-notify-change-list" title="grl_source_notify_change_list ()">grl_source_notify_change_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-notify-change-start" title="grl_source_notify_change_start ()">grl_source_notify_change_start</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-notify-change-stop" title="grl_source_notify_change_stop ()">grl_source_notify_change_stop</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-query" title="grl_source_query ()">grl_source_query</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-query-sync" title="grl_source_query_sync ()">grl_source_query_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-remove" title="grl_source_remove ()">grl_source_remove</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-remove-sync" title="grl_source_remove_sync ()">grl_source_remove_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-resolve" title="grl_source_resolve ()">grl_source_resolve</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-resolve-sync" title="grl_source_resolve_sync ()">grl_source_resolve_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-search" title="grl_source_search ()">grl_source_search</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-search-sync" title="grl_source_search_sync ()">grl_source_search_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-set-auto-split-threshold" title="grl_source_set_auto_split_threshold ()">grl_source_set_auto_split_threshold</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-slow-keys" title="grl_source_slow_keys ()">grl_source_slow_keys</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-store" title="grl_source_store ()">grl_source_store</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-store-metadata" title="grl_source_store_metadata ()">grl_source_store_metadata</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-store-metadata-sync" title="grl_source_store_metadata_sync ()">grl_source_store_metadata_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-store-sync" title="grl_source_store_sync ()">grl_source_store_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-supported-keys" title="grl_source_supported_keys ()">grl_source_supported_keys</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GrlSource.html#GrlSupportedOps" title="enum GrlSupportedOps"><span class="returnvalue">GrlSupportedOps</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-supported-operations" title="grl_source_supported_operations ()">grl_source_supported_operations</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-test-media-from-uri" title="grl_source_test_media_from_uri ()">grl_source_test_media_from_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="GrlSource.html#grl-source-writable-keys" title="grl_source_writable_keys ()">grl_source_writable_keys</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlSource.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><span class="type">guint</span></td>
+<td class="property_name"><a class="link" href="GrlSource.html#GrlSource--auto-split-threshold" title="The “auto-split-threshold” property">auto-split-threshold</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *</td>
+<td class="property_name"><a class="link" href="GrlSource.html#GrlSource--plugin" title="The “plugin” property">plugin</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">gint</span></td>
+<td class="property_name"><a class="link" href="GrlSource.html#GrlSource--rank" title="The “rank” property">rank</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">gchar</span> *</td>
+<td class="property_name"><a class="link" href="GrlSource.html#GrlSource--source-desc" title="The “source-desc” property">source-desc</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">GIcon</span> *</td>
+<td class="property_name"><a class="link" href="GrlSource.html#GrlSource--source-icon" title="The “source-icon” property">source-icon</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">gchar</span> *</td>
+<td class="property_name"><a class="link" href="GrlSource.html#GrlSource--source-id" title="The “source-id” property">source-id</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">gchar</span> *</td>
+<td class="property_name"><a class="link" href="GrlSource.html#GrlSource--source-name" title="The “source-name” property">source-name</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">GStrv</span></td>
+<td class="property_name"><a class="link" href="GrlSource.html#GrlSource--source-tags" title="The “source-tags” property">source-tags</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="GrlMedia.html#GrlMediaType" title="enum GrlMediaType"><span class="type">GrlMediaType</span></a></td>
+<td class="property_name"><a class="link" href="GrlSource.html#GrlSource--supported-media" title="The “supported-media” property">supported-media</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlSource.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="signals_return">
+<col width="300px" class="signals_name">
+<col width="200px" class="signals_flags">
+</colgroup>
+<tbody><tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GrlSource.html#GrlSource-content-changed" title="The “content-changed” signal">content-changed</a></td>
+<td class="signal_flags">Action</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlSource.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSource-struct" title="struct GrlSource">GrlSource</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSourceClass" title="struct GrlSourceClass">GrlSourceClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlResolutionFlags" title="enum GrlResolutionFlags">GrlResolutionFlags</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSourceBrowseSpec" title="GrlSourceBrowseSpec">GrlSourceBrowseSpec</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSourceChangeType" title="enum GrlSourceChangeType">GrlSourceChangeType</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSourceMediaFromUriSpec" title="GrlSourceMediaFromUriSpec">GrlSourceMediaFromUriSpec</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSourceQuerySpec" title="GrlSourceQuerySpec">GrlSourceQuerySpec</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSourceRemoveSpec" title="GrlSourceRemoveSpec">GrlSourceRemoveSpec</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSourceResolveSpec" title="GrlSourceResolveSpec">GrlSourceResolveSpec</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSourceSearchSpec" title="GrlSourceSearchSpec">GrlSourceSearchSpec</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSourceStoreMetadataSpec" title="GrlSourceStoreMetadataSpec">GrlSourceStoreMetadataSpec</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSourceStoreSpec" title="GrlSourceStoreSpec">GrlSourceStoreSpec</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlSupportedOps" title="enum GrlSupportedOps">GrlSupportedOps</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GrlSource.html#GrlWriteFlags" title="enum GrlWriteFlags">GrlWriteFlags</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GrlSource.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GrlSource
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlSource.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GrlSource.description"></a><h2>Description</h2>
+<p>GrlSource is the abstract base class needed to construct a source providing
+multimedia information that can be used in a Grilo application.</p>
+<p>The sources fetch information from different online or local
+databases and store them in the <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a>.</p>
+</div>
+<div class="refsect1">
+<a name="GrlSource.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="GrlSourceRemoveCb"></a><h3>GrlSourceRemoveCb ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*GrlSourceRemoveCb<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                      <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                      <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
+                      <em class="parameter"><code>const <span class="type">GError</span> *error</code></em>);</pre>
+<p>Prototype for the callback passed to <a class="link" href="GrlSource.html#grl-source-remove" title="grl_source_remove ()"><code class="function">grl_source_remove()</code></a></p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p> a data transfer object. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data passed to <a class="link" href="GrlSource.html#grl-source-remove" title="grl_source_remove ()"><code class="function">grl_source_remove()</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p> possible <span class="type">GError</span> generated at processing. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceResolveCb"></a><h3>GrlSourceResolveCb ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*GrlSourceResolveCb<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                       <em class="parameter"><code><span class="type">guint</span> operation_id</code></em>,
+                       <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                       <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
+                       <em class="parameter"><code>const <span class="type">GError</span> *error</code></em>);</pre>
+<p>Prototype for the callback passed to <a class="link" href="GrlSource.html#grl-source-resolve" title="grl_source_resolve ()"><code class="function">grl_source_resolve()</code></a></p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>operation_id</p></td>
+<td class="parameter_description"><p>operation identifier</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p> a data transfer object. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data passed to <a class="link" href="GrlSource.html#grl-source-resolve" title="grl_source_resolve ()"><code class="function">grl_source_resolve()</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p> possible <span class="type">GError</span> generated at processing. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceResultCb"></a><h3>GrlSourceResultCb ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*GrlSourceResultCb<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                      <em class="parameter"><code><span class="type">guint</span> operation_id</code></em>,
+                      <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                      <em class="parameter"><code><span class="type">guint</span> remaining</code></em>,
+                      <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
+                      <em class="parameter"><code>const <span class="type">GError</span> *error</code></em>);</pre>
+<p>Prototype for the callback passed to the media sources' methods</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>operation_id</p></td>
+<td class="parameter_description"><p>operation identifier</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p> a data transfer object. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>remaining</p></td>
+<td class="parameter_description"><p>the number of remaining <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> to process, or
+GRL_SOURCE_REMAINING_UNKNOWN if it is unknown</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data passed to the used method</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p> possible <span class="type">GError</span> generated at processing. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceStoreCb"></a><h3>GrlSourceStoreCb ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*GrlSourceStoreCb<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                     <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                     <em class="parameter"><code><span class="type">GList</span> *failed_keys</code></em>,
+                     <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
+                     <em class="parameter"><code>const <span class="type">GError</span> *error</code></em>);</pre>
+<p>Prototype for the callback passed to grl_source_store_foo functions</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p> a <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> transfer object. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>failed_keys</p></td>
+<td class="parameter_description"><p> <span class="type">GList</span> of
+keys that could not be updated, if any. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p> possible <span class="type">GError</span> generated. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-browse"></a><h3>grl_source_browse ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>
+grl_source_browse (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                   <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *container</code></em>,
+                   <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                   <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                   <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceResultCb" title="GrlSourceResultCb ()"><span class="type">GrlSourceResultCb</span></a> callback</code></em>,
+                   <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Browse from media elements through an available list.</p>
+<p>This method is asynchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.6.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p> a container of data transfer objects. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p> the user defined callback. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the user data to pass in the callback</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.6.7"></a><h4>Returns</h4>
+<p> the operation identifier</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-browse-sync"></a><h3>grl_source_browse_sync ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_source_browse_sync (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                        <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *container</code></em>,
+                        <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                        <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                        <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Browse media elements through an available
+list.</p>
+<p>This method is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.7.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p> a container of data transfer objects. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.7.7"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> with <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a>
+elements. After use <code class="function">g_object_unref()</code> every element and <code class="function">g_list_free()</code> the
+list. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlMedia][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-auto-split-threshold"></a><h3>grl_source_get_auto_split_threshold ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>
+grl_source_get_auto_split_threshold (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<p>Gets how much elements the source is able to handle in a single request.</p>
+<p>See <a class="link" href="GrlSource.html#grl-source-set-auto-split-threshold" title="grl_source_set_auto_split_threshold ()"><code class="function">grl_source_set_auto_split_threshold()</code></a></p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.8.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.8.7"></a><h4>Returns</h4>
+<p> the assigned threshold, or 0 if there is no threshold</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-caps"></a><h3>grl_source_get_caps ()</h3>
+<pre class="programlisting"><a class="link" href="GrlCaps.html" title="GrlCaps"><span class="returnvalue">GrlCaps</span></a> *
+grl_source_get_caps (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                     <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSupportedOps" title="enum GrlSupportedOps"><span class="type">GrlSupportedOps</span></a> operation</code></em>);</pre>
+<p>Get the capabilities of <em class="parameter"><code>source</code></em>
+ for <em class="parameter"><code>operation</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>operation</p></td>
+<td class="parameter_description"><p>a supported operation. Even though the type allows to specify
+several operations, only one should be provided here.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.9.6"></a><h4>Returns</h4>
+<p> The capabilities. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-description"></a><h3>grl_source_get_description ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_source_get_description (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.10.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.10.5"></a><h4>Returns</h4>
+<p> the description of the <em class="parameter"><code>source</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-icon"></a><h3>grl_source_get_icon ()</h3>
+<pre class="programlisting"><span class="returnvalue">GIcon</span> *
+grl_source_get_icon (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.11.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.11.5"></a><h4>Returns</h4>
+<p> a <span class="type">GIcon</span>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-id"></a><h3>grl_source_get_id ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_source_get_id (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.12.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.12.5"></a><h4>Returns</h4>
+<p> the ID of the <em class="parameter"><code>source</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-media-from-uri"></a><h3>grl_source_get_media_from_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>
+grl_source_get_media_from_uri (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                               <em class="parameter"><code>const <span class="type">gchar</span> *uri</code></em>,
+                               <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                               <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                               <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceResolveCb" title="GrlSourceResolveCb ()"><span class="type">GrlSourceResolveCb</span></a> callback</code></em>,
+                               <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Creates an instance of <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> representing the media resource
+exposed at <em class="parameter"><code>uri</code></em>
+.</p>
+<p>It is recommended to call <a class="link" href="GrlSource.html#grl-source-test-media-from-uri" title="grl_source_test_media_from_uri ()"><code class="function">grl_source_test_media_from_uri()</code></a> before invoking
+this to check whether the target source can theoretically do the resolution.</p>
+<p>This method is asynchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.13.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>A URI that can be used to identify a media resource</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> A list of keys to resolve. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p> the user defined callback. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the user data to pass in the callback</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.13.8"></a><h4>Returns</h4>
+<p> the operation identifier</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-media-from-uri-sync"></a><h3>grl_source_get_media_from_uri_sync ()</h3>
+<pre class="programlisting"><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+grl_source_get_media_from_uri_sync (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                                    <em class="parameter"><code>const <span class="type">gchar</span> *uri</code></em>,
+                                    <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                                    <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                                    <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Creates an instance of <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> representing the media resource
+exposed at <em class="parameter"><code>uri</code></em>
+.</p>
+<p>It is recommended to call <a class="link" href="GrlSource.html#grl-source-test-media-from-uri" title="grl_source_test_media_from_uri ()"><code class="function">grl_source_test_media_from_uri()</code></a> before
+invoking this to check whether the target source can theoretically do the
+resolution.</p>
+<p>This method is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.14.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>A URI that can be used to identify a media resource</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> a list of keys to resolve. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.14.8"></a><h4>Returns</h4>
+<p> a filled <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-name"></a><h3>grl_source_get_name ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
+grl_source_get_name (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.15.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.15.5"></a><h4>Returns</h4>
+<p> the name of the <em class="parameter"><code>source</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-plugin"></a><h3>grl_source_get_plugin ()</h3>
+<pre class="programlisting"><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="returnvalue">GrlPlugin</span></a> *
+grl_source_get_plugin (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.16.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.16.5"></a><h4>Returns</h4>
+<p> the plugin this source belongs to. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-rank"></a><h3>grl_source_get_rank ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+grl_source_get_rank (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<p>Gets the source rank</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.17.6"></a><h4>Returns</h4>
+<p> rank value</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-supported-media"></a><h3>grl_source_get_supported_media ()</h3>
+<pre class="programlisting"><a class="link" href="GrlMedia.html#GrlMediaType" title="enum GrlMediaType"><span class="returnvalue">GrlMediaType</span></a>
+grl_source_get_supported_media (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<p>Gets the supported type of medias <em class="parameter"><code>source</code></em>
+ can deal with.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.18.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="GrlMedia.html#GrlMediaType" title="enum GrlMediaType"><span class="type">GrlMediaType</span></a> value</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-get-tags"></a><h3>grl_source_get_tags ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> **
+grl_source_get_tags (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.19.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.19.5"></a><h4>Returns</h4>
+<p> a <code class="literal">NULL</code>-terminated list of tags. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-may-resolve"></a><h3>grl_source_may_resolve ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_source_may_resolve (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                        <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                        <em class="parameter"><code><a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> key_id</code></em>,
+                        <em class="parameter"><code><span class="type">GList</span> **missing_keys</code></em>);</pre>
+<p>Checks whether <em class="parameter"><code>key_id</code></em>
+ may be resolved with <em class="parameter"><code>source</code></em>
+ for <em class="parameter"><code>media</code></em>
+, so that the
+caller can avoid calling <a class="link" href="GrlSource.html#grl-source-resolve" title="grl_source_resolve ()"><code class="function">grl_source_resolve()</code></a> if it can be known in
+advance it will fail.</p>
+<p>If the resolution is known to be impossible because more keys are needed in
+<em class="parameter"><code>media</code></em>
+, and <em class="parameter"><code>missing_keys</code></em>
+ is not <em class="parameter"><code>NULL</code></em>
+, it is populated with the list of
+GrlKeyID that would be needed.</p>
+<p>This function is synchronous and should not block.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.20.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p>a media on which we want more metadata</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key_id</p></td>
+<td class="parameter_description"><p>the key corresponding to a metadata we might want</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>missing_keys</p></td>
+<td class="parameter_description"><p> an optional originally empty list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.20.8"></a><h4>Returns</h4>
+<p> <em class="parameter"><code>TRUE</code></em>
+if there's a possibility that <em class="parameter"><code>source</code></em>
+resolves <em class="parameter"><code>key_id</code></em>
+for
+<em class="parameter"><code>media</code></em>
+, <em class="parameter"><code>FALSE</code></em>
+otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-notify-change"></a><h3>grl_source_notify_change ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_source_notify_change (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                          <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                          <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceChangeType" title="enum GrlSourceChangeType"><span class="type">GrlSourceChangeType</span></a> change_type</code></em>,
+                          <em class="parameter"><code><span class="type">gboolean</span> location_unknown</code></em>);</pre>
+<p>Emits "content-changed" signal to notify subscribers that a change ocurred
+in <em class="parameter"><code>source</code></em>
+.</p>
+<p>See <a class="link" href="GrlSource.html#grl-source-notify-change-list" title="grl_source_notify_change_list ()"><code class="function">grl_source_notify_change_list()</code></a> function.</p>
+<div class="note"><p>
+   This function is intended to be used only by plugins.
+ </p></div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.21.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p> the media which has changed, or <em class="parameter"><code>NULL</code></em>
+to use the root box. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>change_type</p></td>
+<td class="parameter_description"><p>the type of change</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location_unknown</p></td>
+<td class="parameter_description"><p>if change has happened in <em class="parameter"><code>media</code></em>
+or any descendant</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-notify-change-list"></a><h3>grl_source_notify_change_list ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_source_notify_change_list (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                               <em class="parameter"><code><span class="type">GPtrArray</span> *changed_medias</code></em>,
+                               <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceChangeType" title="enum GrlSourceChangeType"><span class="type">GrlSourceChangeType</span></a> change_type</code></em>,
+                               <em class="parameter"><code><span class="type">gboolean</span> location_unknown</code></em>);</pre>
+<p>Emits "content-changed" signal to notify subscribers that a change ocurred
+in <em class="parameter"><code>source</code></em>
+.</p>
+<p>The function will take ownership of <em class="parameter"><code>changed</code></em>
+ medias and it should not be
+manipulated in any way by the caller after invoking this function. If that is
+needed, the caller must ref the array in advance.</p>
+<p>See GrlSource::content-changed signal.</p>
+<div class="note"><p>
+   This function is intended to be used only by plugins.
+ </p></div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.22.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>changed_medias</p></td>
+<td class="parameter_description"><p> the list of
+medias that have changed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlMedia][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>change_type</p></td>
+<td class="parameter_description"><p>the type of change</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location_unknown</p></td>
+<td class="parameter_description"><p>if change has happpened in <em class="parameter"><code>media</code></em>
+or any descendant</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-notify-change-start"></a><h3>grl_source_notify_change_start ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_source_notify_change_start (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Starts emitting ::content-changed signals when <em class="parameter"><code>source</code></em>
+ discovers changes in
+the content. This instructs <em class="parameter"><code>source</code></em>
+ to setup the machinery needed to be aware
+of changes in the content.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.23.6"></a><h4>Returns</h4>
+<p> <em class="parameter"><code>TRUE</code></em>
+if initialization has succeed.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-notify-change-stop"></a><h3>grl_source_notify_change_stop ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_source_notify_change_stop (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                               <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>This will drop emission of ::content-changed signals from <em class="parameter"><code>source</code></em>
+. When this
+is done <em class="parameter"><code>source</code></em>
+ should stop the machinery required for it to track changes in
+the content.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.24.6"></a><h4>Returns</h4>
+<p> <em class="parameter"><code>TRUE</code></em>
+if stop has succeed.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-query"></a><h3>grl_source_query ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>
+grl_source_query (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                  <em class="parameter"><code>const <span class="type">gchar</span> *query</code></em>,
+                  <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                  <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                  <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceResultCb" title="GrlSourceResultCb ()"><span class="type">GrlSourceResultCb</span></a> callback</code></em>,
+                  <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Execute a specialized query (specific for each provider) on a media
+repository.</p>
+<p>It is different from <a class="link" href="GrlSource.html#grl-source-search" title="grl_source_search ()"><code class="function">grl_source_search()</code></a> semantically, because the query
+implies a carefully crafted string, rather than a simple string to search.</p>
+<p>This method is asynchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.25.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>query</p></td>
+<td class="parameter_description"><p>the query to process</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p> the user defined callback. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the user data to pass in the callback</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.25.8"></a><h4>Returns</h4>
+<p> the operation identifier</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-query-sync"></a><h3>grl_source_query_sync ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_source_query_sync (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                       <em class="parameter"><code>const <span class="type">gchar</span> *query</code></em>,
+                       <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                       <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                       <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Execute a specialized query (specific for each provider) on a media
+repository.</p>
+<p>This method is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.26.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>query</p></td>
+<td class="parameter_description"><p>the query to process</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.26.7"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> with <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a>
+elements. After use <code class="function">g_object_unref()</code> every element and <code class="function">g_list_free()</code> the
+list. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlMedia][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-remove"></a><h3>grl_source_remove ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_source_remove (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                   <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                   <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceRemoveCb" title="GrlSourceRemoveCb ()"><span class="type">GrlSourceRemoveCb</span></a> callback</code></em>,
+                   <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Remove a <em class="parameter"><code>media</code></em>
+ from the <em class="parameter"><code>source</code></em>
+ repository.</p>
+<p>This method is asynchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.27.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p>a data transfer object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p> the user defined callback. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the user data to pass in the callback</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-remove-sync"></a><h3>grl_source_remove_sync ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_source_remove_sync (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                        <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                        <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Remove a <em class="parameter"><code>media</code></em>
+ from the <em class="parameter"><code>source</code></em>
+ repository.</p>
+<p>This method is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.28.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p>a data transfer object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-resolve"></a><h3>grl_source_resolve ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>
+grl_source_resolve (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                    <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                    <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                    <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                    <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceResolveCb" title="GrlSourceResolveCb ()"><span class="type">GrlSourceResolveCb</span></a> callback</code></em>,
+                    <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>This method is intended to fetch the requested keys of metadata of
+a given <em class="parameter"><code>media</code></em>
+ to the media source.</p>
+<p>This method is asynchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.29.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p> a data transfer object. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options to pass to this operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p> the user defined callback. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the user data to pass in the callback</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.29.7"></a><h4>Returns</h4>
+<p> the operation identifie</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-resolve-sync"></a><h3>grl_source_resolve_sync ()</h3>
+<pre class="programlisting"><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="returnvalue">GrlMedia</span></a> *
+grl_source_resolve_sync (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                         <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                         <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                         <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                         <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>This method is intended to fetch the requested keys of metadata of
+a given <em class="parameter"><code>media</code></em>
+ to the media source.</p>
+<p>This method is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.30.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p> a data transfer object. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options to pass to this operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.30.7"></a><h4>Returns</h4>
+<p> a filled <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-search"></a><h3>grl_source_search ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>
+grl_source_search (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                   <em class="parameter"><code>const <span class="type">gchar</span> *text</code></em>,
+                   <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                   <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                   <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceResultCb" title="GrlSourceResultCb ()"><span class="type">GrlSourceResultCb</span></a> callback</code></em>,
+                   <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Search for the <em class="parameter"><code>text</code></em>
+ string in a source for data identified with that string.</p>
+<p>If <em class="parameter"><code>text</code></em>
+ is <em class="parameter"><code>NULL</code></em>
+ then no text filter will be applied, and thus, no media
+items from <em class="parameter"><code>source</code></em>
+ will be filtered. If <em class="parameter"><code>source</code></em>
+ does not support NULL-text
+search operations it should notiy the client by setting
+<em class="parameter"><code>GRL_CORE_ERROR_SEARCH_NULL_UNSUPPORTED</code></em>
+ in <em class="parameter"><code>callback</code></em>
+'s error parameter.</p>
+<p>This method is asynchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.31.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>text</p></td>
+<td class="parameter_description"><p>the text to search</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p> the user defined callback. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the user data to pass in the callback</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.31.8"></a><h4>Returns</h4>
+<p> the operation identifier</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-search-sync"></a><h3>grl_source_search_sync ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_source_search_sync (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                        <em class="parameter"><code>const <span class="type">gchar</span> *text</code></em>,
+                        <em class="parameter"><code>const <span class="type">GList</span> *keys</code></em>,
+                        <em class="parameter"><code><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *options</code></em>,
+                        <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Search for the <em class="parameter"><code>text</code></em>
+ string in a source for data identified with that string.</p>
+<p>If <em class="parameter"><code>text</code></em>
+ is <em class="parameter"><code>NULL</code></em>
+ then no text filter will be applied, and thus, no media
+items from <em class="parameter"><code>source</code></em>
+ will be filtered. If <em class="parameter"><code>source</code></em>
+ does not support NULL-text
+search operations it should notiy the client by setting
+<em class="parameter"><code>GRL_CORE_ERROR_SEARCH_NULL_UNSUPPORTED</code></em>
+ in the error parameter.</p>
+<p>This method is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.32.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>text</p></td>
+<td class="parameter_description"><p>the text to search</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> the <span class="type">GList</span> of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>options</p></td>
+<td class="parameter_description"><p>options wanted for that operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.32.8"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> with <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a>
+elements. After use <code class="function">g_object_unref()</code> every element and <code class="function">g_list_free()</code> the
+list. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlMedia][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-set-auto-split-threshold"></a><h3>grl_source_set_auto_split_threshold ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_source_set_auto_split_threshold (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                                     <em class="parameter"><code><span class="type">guint</span> threshold</code></em>);</pre>
+<p>Sets how much elements the source is able to handle in a single request.</p>
+<p>If user, during a search or browsing operation, asks for more elements than
+the threshold, the request will be automatically splitted in chunks, so up to
+<em class="parameter"><code>threshold</code></em>
+ elements will be asked in each request.</p>
+<p>Source will act as if user were asking just a chunk, and user won't notice
+that the request was chunked.</p>
+<div class="note"><p>
+   This function is intended to be used only by plugins.
+ </p></div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.33.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>threshold</p></td>
+<td class="parameter_description"><p>the threshold to set</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-slow-keys"></a><h3>grl_source_slow_keys ()</h3>
+<pre class="programlisting">const <span class="returnvalue">GList</span> *
+grl_source_slow_keys (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<p>Similar to <a class="link" href="GrlSource.html#grl-source-supported-keys" title="grl_source_supported_keys ()"><code class="function">grl_source_supported_keys()</code></a>, but these keys
+are marked as slow because of the amount of traffic/processing needed
+to fetch them.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.34.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.34.6"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> with the keys. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-store"></a><h3>grl_source_store ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_source_store (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                  <em class="parameter"><code><a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a> *parent</code></em>,
+                  <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                  <em class="parameter"><code><a class="link" href="GrlSource.html#GrlWriteFlags" title="enum GrlWriteFlags"><span class="type">GrlWriteFlags</span></a> flags</code></em>,
+                  <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceStoreCb" title="GrlSourceStoreCb ()"><span class="type">GrlSourceStoreCb</span></a> callback</code></em>,
+                  <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Store the <em class="parameter"><code>media</code></em>
+ into the <em class="parameter"><code>parent</code></em>
+ container</p>
+<p>This method is asynchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.35.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>parent</p></td>
+<td class="parameter_description"><p> a parent to store the data transfer objects. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p>a data transfer object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>flags to configure specific behaviour of the operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p> the user defined callback. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the user data to pass in the callback</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-store-metadata"></a><h3>grl_source_store_metadata ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_source_store_metadata (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                           <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                           <em class="parameter"><code><span class="type">GList</span> *keys</code></em>,
+                           <em class="parameter"><code><a class="link" href="GrlSource.html#GrlWriteFlags" title="enum GrlWriteFlags"><span class="type">GrlWriteFlags</span></a> flags</code></em>,
+                           <em class="parameter"><code><a class="link" href="GrlSource.html#GrlSourceStoreCb" title="GrlSourceStoreCb ()"><span class="type">GrlSourceStoreCb</span></a> callback</code></em>,
+                           <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Get the values for <em class="parameter"><code>keys</code></em>
+ from <em class="parameter"><code>media</code></em>
+ and store it permanently. After
+calling this method, future queries that return this media object
+shall return this new values for the selected keys.</p>
+<p>This function is asynchronous and uses the Glib's main loop.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.36.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a metadata source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> object that we want to operate on.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> a list
+of <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> whose values we want to change. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>Flags to configure specific behaviors of the operation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p> the callback to execute when the operation is finished. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set for the <em class="parameter"><code>callback</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-store-metadata-sync"></a><h3>grl_source_store_metadata_sync ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+grl_source_store_metadata_sync (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                                <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                                <em class="parameter"><code><span class="type">GList</span> *keys</code></em>,
+                                <em class="parameter"><code><a class="link" href="GrlSource.html#GrlWriteFlags" title="enum GrlWriteFlags"><span class="type">GrlWriteFlags</span></a> flags</code></em>,
+                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Update <em class="parameter"><code>keys</code></em>
+ values from <em class="parameter"><code>media</code></em>
+ in the <em class="parameter"><code>source</code></em>
+. After calling this method,
+future queries that return this media object shall return this new value for
+the selected key.</p>
+<p>This function is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.37.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> object that we want to operate on</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keys</p></td>
+<td class="parameter_description"><p> a list of
+<a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a> whose values we want to change. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>Flags to configure specific behaviors of the operation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.37.7"></a><h4>Returns</h4>
+<p>a <span class="type">GList</span> of keys that could not be updated, or <em class="parameter"><code>NULL</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-store-sync"></a><h3>grl_source_store_sync ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_source_store_sync (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                       <em class="parameter"><code><a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a> *parent</code></em>,
+                       <em class="parameter"><code><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *media</code></em>,
+                       <em class="parameter"><code><a class="link" href="GrlSource.html#GrlWriteFlags" title="enum GrlWriteFlags"><span class="type">GrlWriteFlags</span></a> flags</code></em>,
+                       <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Store the <em class="parameter"><code>media</code></em>
+ into the <em class="parameter"><code>parent</code></em>
+ container.</p>
+<p>This method is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.38.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>parent</p></td>
+<td class="parameter_description"><p> a <a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a> to store the data transfer objects. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>media</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> data transfer object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>flags to configure specific behaviour of the operation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span>, or <em class="parameter"><code>NULL</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-supported-keys"></a><h3>grl_source_supported_keys ()</h3>
+<pre class="programlisting">const <span class="returnvalue">GList</span> *
+grl_source_supported_keys (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<p>Get a list of <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>, which describe a metadata types that this
+source can fetch and store.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.39.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.39.6"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> with the keys. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-supported-operations"></a><h3>grl_source_supported_operations ()</h3>
+<pre class="programlisting"><a class="link" href="GrlSource.html#GrlSupportedOps" title="enum GrlSupportedOps"><span class="returnvalue">GrlSupportedOps</span></a>
+grl_source_supported_operations (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<p>By default the derived objects of <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> can only resolve.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.40.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.40.6"></a><h4>Returns</h4>
+<p> a bitwise mangle with the supported operations by
+the source. </p>
+<p><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> uint]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-test-media-from-uri"></a><h3>grl_source_test_media_from_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_source_test_media_from_uri (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *uri</code></em>);</pre>
+<p>Tests whether <em class="parameter"><code>source</code></em>
+ can instantiate a <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> object representing
+the media resource exposed at <em class="parameter"><code>uri</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.41.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>A URI that can be used to identify a media resource</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.41.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if it can, <code class="literal">FALSE</code> otherwise.</p>
+<p>This method is synchronous.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-source-writable-keys"></a><h3>grl_source_writable_keys ()</h3>
+<pre class="programlisting">const <span class="returnvalue">GList</span> *
+grl_source_writable_keys (<em class="parameter"><code><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *source</code></em>);</pre>
+<p>Similar to <a class="link" href="GrlSource.html#grl-source-supported-keys" title="grl_source_supported_keys ()"><code class="function">grl_source_supported_keys()</code></a>, but these keys
+are marked as writable, meaning the source allows the client
+to provide new values for these keys that will be stored permanently.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.42.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>a source</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.4.3.10.42.6"></a><h4>Returns</h4>
+<p>a <span class="type">GList</span> with the keys. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlKeyID][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.2.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlSource.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlSource-struct"></a><h3>struct GrlSource</h3>
+<pre class="programlisting">struct GrlSource;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceClass"></a><h3>struct GrlSourceClass</h3>
+<pre class="programlisting">struct GrlSourceClass {
+  GObjectClass parent_class;
+
+  GrlSupportedOps (*supported_operations) (GrlSource *source);
+
+  const GList * (*supported_keys) (GrlSource *source);
+
+  const GList * (*slow_keys) (GrlSource *source);
+
+  const GList * (*writable_keys) (GrlSource *source);
+
+  GrlCaps * (*get_caps) (GrlSource *source, GrlSupportedOps operation);
+
+  void (*resolve) (GrlSource *source, GrlSourceResolveSpec *ms);
+
+  gboolean (*may_resolve) (GrlSource *source, GrlMedia *media,
+                           GrlKeyID key_id, GList **missing_keys);
+
+  gboolean (*test_media_from_uri) (GrlSource *source,
+                                   const gchar *uri);
+
+  void (*media_from_uri) (GrlSource *source,
+                          GrlSourceMediaFromUriSpec *mfus);
+
+  void (*browse) (GrlSource *source, GrlSourceBrowseSpec *bs);
+
+  void (*search) (GrlSource *source, GrlSourceSearchSpec *ss);
+
+  void (*query) (GrlSource *source, GrlSourceQuerySpec *qs);
+
+  void (*remove) (GrlSource *source, GrlSourceRemoveSpec *rs);
+
+  void (*store) (GrlSource *source, GrlSourceStoreSpec *ss);
+
+  void (*store_metadata) (GrlSource *source, GrlSourceStoreMetadataSpec *sms);
+
+  void (*cancel) (GrlSource *source, guint operation_id);
+
+  gboolean (*notify_change_start) (GrlSource *source,
+                                    GError **error);
+
+  gboolean (*notify_change_stop) (GrlSource *source,
+                                  GError **error);
+};
+</pre>
+<p>Grilo Source class. Override the vmethods to implement the
+element functionality.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.3.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><span class="type">GObjectClass</span> <em class="structfield"><code><a name="GrlSourceClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent class structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.supported-operations"></a>supported_operations</code></em> ()</p></td>
+<td class="struct_member_description"><p>the operations that can be called</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.supported-keys"></a>supported_keys</code></em> ()</p></td>
+<td class="struct_member_description"><p>the list of keys that can be handled</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.slow-keys"></a>slow_keys</code></em> ()</p></td>
+<td class="struct_member_description"><p>the list of slow keys that can be fetched</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.writable-keys"></a>writable_keys</code></em> ()</p></td>
+<td class="struct_member_description"><p>the list of keys which value can be written</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.get-caps"></a>get_caps</code></em> ()</p></td>
+<td class="struct_member_description"><p>the capabilities that <em class="parameter"><code>source</code></em>
+supports for <em class="parameter"><code>operation</code></em>
+</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.resolve"></a>resolve</code></em> ()</p></td>
+<td class="struct_member_description"><p>resolve the metadata of a given transfer object</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.may-resolve"></a>may_resolve</code></em> ()</p></td>
+<td class="struct_member_description"><p>return FALSE if it can be known without blocking that <em class="parameter"><code>key_id</code></em>
+</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.test-media-from-uri"></a>test_media_from_uri</code></em> ()</p></td>
+<td class="struct_member_description"><p>tests if this source can create <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a>
+instances from a given URI.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.media-from-uri"></a>media_from_uri</code></em> ()</p></td>
+<td class="struct_member_description"><p>Creates a <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> instance representing the media
+exposed by a certain URI.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.browse"></a>browse</code></em> ()</p></td>
+<td class="struct_member_description"><p>browse through a list of media</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.search"></a>search</code></em> ()</p></td>
+<td class="struct_member_description"><p>search for media</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.query"></a>query</code></em> ()</p></td>
+<td class="struct_member_description"><p>query for a specific media</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.remove"></a>remove</code></em> ()</p></td>
+<td class="struct_member_description"><p>remove a media from a container</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.store"></a>store</code></em> ()</p></td>
+<td class="struct_member_description"><p>store a media in a container</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.store-metadata"></a>store_metadata</code></em> ()</p></td>
+<td class="struct_member_description"><p>update metadata values for a given object in a
+permanent fashion</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.cancel"></a>cancel</code></em> ()</p></td>
+<td class="struct_member_description"><p>cancel the current operation</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.notify-change-start"></a>notify_change_start</code></em> ()</p></td>
+<td class="struct_member_description"><p>start emitting signals about changes in content</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GrlSourceClass.notify-change-stop"></a>notify_change_stop</code></em> ()</p></td>
+<td class="struct_member_description"><p>stop emitting signals about changes in content</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlResolutionFlags"></a><h3>enum GrlResolutionFlags</h3>
+<p>Resolution flags</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.4.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-RESOLVE-NORMAL:CAPS"></a>GRL_RESOLVE_NORMAL</p></td>
+<td class="enum_member_description">
+<p>Normal mode.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-RESOLVE-FULL:CAPS"></a>GRL_RESOLVE_FULL</p></td>
+<td class="enum_member_description">
+<p>Try other plugins if necessary.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-RESOLVE-IDLE-RELAY:CAPS"></a>GRL_RESOLVE_IDLE_RELAY</p></td>
+<td class="enum_member_description">
+<p>Use idle loop to relay results.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-RESOLVE-FAST-ONLY:CAPS"></a>GRL_RESOLVE_FAST_ONLY</p></td>
+<td class="enum_member_description">
+<p>Only resolve fast metadata keys.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceBrowseSpec"></a><h3>GrlSourceBrowseSpec</h3>
+<pre class="programlisting">typedef struct {
+  GrlSource *source;
+  guint operation_id;
+  GrlMedia *container;
+  GList *keys;
+  GrlOperationOptions *options;
+    GrlSourceResultCb callback;
+  gpointer user_data;
+} GrlSourceBrowseSpec;
+</pre>
+<p>Data transport structure used internally by the plugins which support
+browse vmethod.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.5.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *<em class="structfield"><code><a name="GrlSourceBrowseSpec.source"></a>source</code></em>;</p></td>
+<td class="struct_member_description"><p>a source</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint</span> <em class="structfield"><code><a name="GrlSourceBrowseSpec.operation-id"></a>operation_id</code></em>;</p></td>
+<td class="struct_member_description"><p>operation identifier</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *<em class="structfield"><code><a name="GrlSourceBrowseSpec.container"></a>container</code></em>;</p></td>
+<td class="struct_member_description"><p>a container of data transfer objects</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">GList</span> *<em class="structfield"><code><a name="GrlSourceBrowseSpec.keys"></a>keys</code></em>;</p></td>
+<td class="struct_member_description"><p>the <span class="type">GList</span> of <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *<em class="structfield"><code><a name="GrlSourceBrowseSpec.options"></a>options</code></em>;</p></td>
+<td class="struct_member_description"><p>options wanted for that operation</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html#GrlSourceResultCb" title="GrlSourceResultCb ()"><span class="type">GrlSourceResultCb</span></a> <em class="structfield"><code><a name="GrlSourceBrowseSpec.callback"></a>callback</code></em>;</p></td>
+<td class="struct_member_description"><p>the user defined callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gpointer</span> <em class="structfield"><code><a name="GrlSourceBrowseSpec.user-data"></a>user_data</code></em>;</p></td>
+<td class="struct_member_description"><p>the user data to pass in the callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceChangeType"></a><h3>enum GrlSourceChangeType</h3>
+<p>Specifies which kind of change has happened in the plugin</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.6.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CONTENT-CHANGED:CAPS"></a>GRL_CONTENT_CHANGED</p></td>
+<td class="enum_member_description">
+<p>content has changed. It is used when any property of
+<a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> has changed, or in case of <a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a>, if several children have
+been added and removed.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CONTENT-ADDED:CAPS"></a>GRL_CONTENT_ADDED</p></td>
+<td class="enum_member_description">
+<p>new content has been added.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-CONTENT-REMOVED:CAPS"></a>GRL_CONTENT_REMOVED</p></td>
+<td class="enum_member_description">
+<p>content has been removed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceMediaFromUriSpec"></a><h3>GrlSourceMediaFromUriSpec</h3>
+<pre class="programlisting">typedef struct {
+  GrlSource *source;
+  guint operation_id;
+  gchar *uri;
+  GList *keys;
+  GrlOperationOptions *options;
+  GrlSourceResolveCb callback;
+  gpointer user_data;
+} GrlSourceMediaFromUriSpec;
+</pre>
+<p>Data transport structure used internally by the plugins which support
+media_from_uri vmethod.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.7.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *<em class="structfield"><code><a name="GrlSourceMediaFromUriSpec.source"></a>source</code></em>;</p></td>
+<td class="struct_member_description"><p>a source</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint</span> <em class="structfield"><code><a name="GrlSourceMediaFromUriSpec.operation-id"></a>operation_id</code></em>;</p></td>
+<td class="struct_member_description"><p>operation identifier</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="GrlSourceMediaFromUriSpec.uri"></a>uri</code></em>;</p></td>
+<td class="struct_member_description"><p>A URI that can be used to identify a media resource</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">GList</span> *<em class="structfield"><code><a name="GrlSourceMediaFromUriSpec.keys"></a>keys</code></em>;</p></td>
+<td class="struct_member_description"><p>Metadata keys to resolve</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *<em class="structfield"><code><a name="GrlSourceMediaFromUriSpec.options"></a>options</code></em>;</p></td>
+<td class="struct_member_description"><p>options wanted for that operation</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html#GrlSourceResolveCb" title="GrlSourceResolveCb ()"><span class="type">GrlSourceResolveCb</span></a> <em class="structfield"><code><a name="GrlSourceMediaFromUriSpec.callback"></a>callback</code></em>;</p></td>
+<td class="struct_member_description"><p>the user defined callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gpointer</span> <em class="structfield"><code><a name="GrlSourceMediaFromUriSpec.user-data"></a>user_data</code></em>;</p></td>
+<td class="struct_member_description"><p>the user data to pass in the callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceQuerySpec"></a><h3>GrlSourceQuerySpec</h3>
+<pre class="programlisting">typedef struct {
+  GrlSource *source;
+  guint operation_id;
+  gchar *query;
+  GList *keys;
+  GrlOperationOptions *options;
+  GrlSourceResultCb callback;
+  gpointer user_data;
+} GrlSourceQuerySpec;
+</pre>
+<p>Data transport structure used internally by the plugins which support
+query vmethod.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.8.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *<em class="structfield"><code><a name="GrlSourceQuerySpec.source"></a>source</code></em>;</p></td>
+<td class="struct_member_description"><p>a source</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint</span> <em class="structfield"><code><a name="GrlSourceQuerySpec.operation-id"></a>operation_id</code></em>;</p></td>
+<td class="struct_member_description"><p>operation identifier</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="GrlSourceQuerySpec.query"></a>query</code></em>;</p></td>
+<td class="struct_member_description"><p>the query to process</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">GList</span> *<em class="structfield"><code><a name="GrlSourceQuerySpec.keys"></a>keys</code></em>;</p></td>
+<td class="struct_member_description"><p>the <span class="type">GList</span> of <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *<em class="structfield"><code><a name="GrlSourceQuerySpec.options"></a>options</code></em>;</p></td>
+<td class="struct_member_description"><p>options wanted for that operation</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html#GrlSourceResultCb" title="GrlSourceResultCb ()"><span class="type">GrlSourceResultCb</span></a> <em class="structfield"><code><a name="GrlSourceQuerySpec.callback"></a>callback</code></em>;</p></td>
+<td class="struct_member_description"><p>the user defined callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gpointer</span> <em class="structfield"><code><a name="GrlSourceQuerySpec.user-data"></a>user_data</code></em>;</p></td>
+<td class="struct_member_description"><p>the user data to pass in the callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceRemoveSpec"></a><h3>GrlSourceRemoveSpec</h3>
+<pre class="programlisting">typedef struct {
+  GrlSource *source;
+  gchar *media_id;
+  GrlMedia *media;
+  GrlSourceRemoveCb callback;
+  gpointer user_data;
+} GrlSourceRemoveSpec;
+</pre>
+<p>Data transport structure used internally by the plugins which support
+store vmethod.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.9.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *<em class="structfield"><code><a name="GrlSourceRemoveSpec.source"></a>source</code></em>;</p></td>
+<td class="struct_member_description"><p>a source</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="GrlSourceRemoveSpec.media-id"></a>media_id</code></em>;</p></td>
+<td class="struct_member_description"><p>media identifier to remove</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *<em class="structfield"><code><a name="GrlSourceRemoveSpec.media"></a>media</code></em>;</p></td>
+<td class="struct_member_description"><p>a data transfer object</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html#GrlSourceRemoveCb" title="GrlSourceRemoveCb ()"><span class="type">GrlSourceRemoveCb</span></a> <em class="structfield"><code><a name="GrlSourceRemoveSpec.callback"></a>callback</code></em>;</p></td>
+<td class="struct_member_description"><p>the user defined callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gpointer</span> <em class="structfield"><code><a name="GrlSourceRemoveSpec.user-data"></a>user_data</code></em>;</p></td>
+<td class="struct_member_description"><p>the user data to pass in the callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceResolveSpec"></a><h3>GrlSourceResolveSpec</h3>
+<pre class="programlisting">typedef struct {
+  GrlSource *source;
+  guint operation_id;
+  GrlMedia *media;
+  GList *keys;
+  GrlOperationOptions *options;
+  GrlSourceResolveCb callback;
+  gpointer user_data;
+} GrlSourceResolveSpec;
+</pre>
+<p>Data transport structure used internally by the plugins which support
+resolve vmethod.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.10.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *<em class="structfield"><code><a name="GrlSourceResolveSpec.source"></a>source</code></em>;</p></td>
+<td class="struct_member_description"><p>a source</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint</span> <em class="structfield"><code><a name="GrlSourceResolveSpec.operation-id"></a>operation_id</code></em>;</p></td>
+<td class="struct_member_description"><p>operation identifier</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *<em class="structfield"><code><a name="GrlSourceResolveSpec.media"></a>media</code></em>;</p></td>
+<td class="struct_member_description"><p>a data transfer object</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">GList</span> *<em class="structfield"><code><a name="GrlSourceResolveSpec.keys"></a>keys</code></em>;</p></td>
+<td class="struct_member_description"><p>the <span class="type">GList</span> of <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *<em class="structfield"><code><a name="GrlSourceResolveSpec.options"></a>options</code></em>;</p></td>
+<td class="struct_member_description"><p>options wanted for that operation</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html#GrlSourceResolveCb" title="GrlSourceResolveCb ()"><span class="type">GrlSourceResolveCb</span></a> <em class="structfield"><code><a name="GrlSourceResolveSpec.callback"></a>callback</code></em>;</p></td>
+<td class="struct_member_description"><p>the user defined callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gpointer</span> <em class="structfield"><code><a name="GrlSourceResolveSpec.user-data"></a>user_data</code></em>;</p></td>
+<td class="struct_member_description"><p>the user data to pass in the callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceSearchSpec"></a><h3>GrlSourceSearchSpec</h3>
+<pre class="programlisting">typedef struct {
+  GrlSource *source;
+  guint operation_id;
+  gchar *text;
+  GList *keys;
+  GrlOperationOptions *options;
+  GrlSourceResultCb callback;
+  gpointer user_data;
+} GrlSourceSearchSpec;
+</pre>
+<p>Data transport structure used internally by the plugins which support
+search vmethod.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.11.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *<em class="structfield"><code><a name="GrlSourceSearchSpec.source"></a>source</code></em>;</p></td>
+<td class="struct_member_description"><p>a source</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint</span> <em class="structfield"><code><a name="GrlSourceSearchSpec.operation-id"></a>operation_id</code></em>;</p></td>
+<td class="struct_member_description"><p>operation identifier</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="GrlSourceSearchSpec.text"></a>text</code></em>;</p></td>
+<td class="struct_member_description"><p>the text to search</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">GList</span> *<em class="structfield"><code><a name="GrlSourceSearchSpec.keys"></a>keys</code></em>;</p></td>
+<td class="struct_member_description"><p>the <span class="type">GList</span> of <a class="link" href="grilo-grl-metadata-key.html#GrlKeyID" title="GrlKeyID"><span class="type">GrlKeyID</span></a>s to request</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlOperationOptions.html" title="GrlOperationOptions"><span class="type">GrlOperationOptions</span></a> *<em class="structfield"><code><a name="GrlSourceSearchSpec.options"></a>options</code></em>;</p></td>
+<td class="struct_member_description"><p>options wanted for that operation</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html#GrlSourceResultCb" title="GrlSourceResultCb ()"><span class="type">GrlSourceResultCb</span></a> <em class="structfield"><code><a name="GrlSourceSearchSpec.callback"></a>callback</code></em>;</p></td>
+<td class="struct_member_description"><p>the user defined callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gpointer</span> <em class="structfield"><code><a name="GrlSourceSearchSpec.user-data"></a>user_data</code></em>;</p></td>
+<td class="struct_member_description"><p>the user data to pass in the callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceStoreMetadataSpec"></a><h3>GrlSourceStoreMetadataSpec</h3>
+<pre class="programlisting">typedef struct {
+  GrlSource *source;
+  GrlMedia *media;
+  GList *keys;
+  GrlWriteFlags flags;
+  GrlSourceStoreCb callback;
+  gpointer user_data;
+  GList *failed_keys;
+} GrlSourceStoreMetadataSpec;
+</pre>
+<p>Data transport structure used internally by the plugins which support
+store_metadata vmethod.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.12.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *<em class="structfield"><code><a name="GrlSourceStoreMetadataSpec.source"></a>source</code></em>;</p></td>
+<td class="struct_member_description"><p>a source</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *<em class="structfield"><code><a name="GrlSourceStoreMetadataSpec.media"></a>media</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> transfer object</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">GList</span> *<em class="structfield"><code><a name="GrlSourceStoreMetadataSpec.keys"></a>keys</code></em>;</p></td>
+<td class="struct_member_description"><p>List of keys to be stored/updated.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html#GrlWriteFlags" title="enum GrlWriteFlags"><span class="type">GrlWriteFlags</span></a> <em class="structfield"><code><a name="GrlSourceStoreMetadataSpec.flags"></a>flags</code></em>;</p></td>
+<td class="struct_member_description"><p>Flags to control specific bahviors of the set metadata operation.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html#GrlSourceStoreCb" title="GrlSourceStoreCb ()"><span class="type">GrlSourceStoreCb</span></a> <em class="structfield"><code><a name="GrlSourceStoreMetadataSpec.callback"></a>callback</code></em>;</p></td>
+<td class="struct_member_description"><p>the callback passed to <a class="link" href="GrlSource.html#grl-source-store-metadata" title="grl_source_store_metadata ()"><code class="function">grl_source_store_metadata()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gpointer</span> <em class="structfield"><code><a name="GrlSourceStoreMetadataSpec.user-data"></a>user_data</code></em>;</p></td>
+<td class="struct_member_description"><p>user data passed to <a class="link" href="GrlSource.html#grl-source-store-metadata" title="grl_source_store_metadata ()"><code class="function">grl_source_store_metadata()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">GList</span> *<em class="structfield"><code><a name="GrlSourceStoreMetadataSpec.failed-keys"></a>failed_keys</code></em>;</p></td>
+<td class="struct_member_description"><p>for internal use of the framework only.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSourceStoreSpec"></a><h3>GrlSourceStoreSpec</h3>
+<pre class="programlisting">typedef struct {
+  GrlSource *source;
+  GrlMediaBox *parent;
+  GrlMedia *media;
+  GrlSourceStoreCb callback;
+  gpointer user_data;
+} GrlSourceStoreSpec;
+</pre>
+<p>Data transport structure used internally by the plugins which support
+store vmethod.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.13.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> *<em class="structfield"><code><a name="GrlSourceStoreSpec.source"></a>source</code></em>;</p></td>
+<td class="struct_member_description"><p>a media source</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a> *<em class="structfield"><code><a name="GrlSourceStoreSpec.parent"></a>parent</code></em>;</p></td>
+<td class="struct_member_description"><p>a parent to store the data transfer objects</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> *<em class="structfield"><code><a name="GrlSourceStoreSpec.media"></a>media</code></em>;</p></td>
+<td class="struct_member_description"><p>a data transfer object</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GrlSource.html#GrlSourceStoreCb" title="GrlSourceStoreCb ()"><span class="type">GrlSourceStoreCb</span></a> <em class="structfield"><code><a name="GrlSourceStoreSpec.callback"></a>callback</code></em>;</p></td>
+<td class="struct_member_description"><p>the user defined callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gpointer</span> <em class="structfield"><code><a name="GrlSourceStoreSpec.user-data"></a>user_data</code></em>;</p></td>
+<td class="struct_member_description"><p>the user data to pass in the callback</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSupportedOps"></a><h3>enum GrlSupportedOps</h3>
+<p>Bitwise flags which reflect the kind of operations that a
+<a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a> supports.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.14.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-OP-NONE:CAPS"></a>GRL_OP_NONE</p></td>
+<td class="enum_member_description">
+<p>no operation is supported</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-OP-RESOLVE:CAPS"></a>GRL_OP_RESOLVE</p></td>
+<td class="enum_member_description">
+<p>Fetch specific keys of metadata based on other metadata.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-OP-BROWSE:CAPS"></a>GRL_OP_BROWSE</p></td>
+<td class="enum_member_description">
+<p>Retrieve complete sets of <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a></p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-OP-SEARCH:CAPS"></a>GRL_OP_SEARCH</p></td>
+<td class="enum_member_description">
+<p>Look up for <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> given a search text</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-OP-QUERY:CAPS"></a>GRL_OP_QUERY</p></td>
+<td class="enum_member_description">
+<p>Look up for <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> give a service specific query</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-OP-STORE:CAPS"></a>GRL_OP_STORE</p></td>
+<td class="enum_member_description">
+<p>Store content in a service</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-OP-STORE-PARENT:CAPS"></a>GRL_OP_STORE_PARENT</p></td>
+<td class="enum_member_description">
+<p>Store content as child of a certian parent category.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-OP-STORE-METADATA:CAPS"></a>GRL_OP_STORE_METADATA</p></td>
+<td class="enum_member_description">
+<p>Update metadata of a <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> in a service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-OP-REMOVE:CAPS"></a>GRL_OP_REMOVE</p></td>
+<td class="enum_member_description">
+<p>Remove content from a service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-OP-MEDIA-FROM-URI:CAPS"></a>GRL_OP_MEDIA_FROM_URI</p></td>
+<td class="enum_member_description">
+<p>Create a <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a> instance from an URI
+representing a media resource.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-OP-NOTIFY-CHANGE:CAPS"></a>GRL_OP_NOTIFY_CHANGE</p></td>
+<td class="enum_member_description">
+<p>Notify about changes in the <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a>.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlWriteFlags"></a><h3>enum GrlWriteFlags</h3>
+<p>Flags for writing operations.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.11.15.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-WRITE-NORMAL:CAPS"></a>GRL_WRITE_NORMAL</p></td>
+<td class="enum_member_description">
+<p>Normal mode.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-WRITE-FULL:CAPS"></a>GRL_WRITE_FULL</p></td>
+<td class="enum_member_description">
+<p>Try other plugins if necessary.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlSource.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GrlSource--auto-split-threshold"></a><h3>The <code class="literal">“auto-split-threshold”</code> property</h3>
+<pre class="programlisting">  “auto-split-threshold”     <span class="type">guint</span></pre>
+<p>Transparently split queries with count requests
+bigger than a certain threshold into smaller queries.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSource--plugin"></a><h3>The <code class="literal">“plugin”</code> property</h3>
+<pre class="programlisting">  “plugin”                   <a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a> *</pre>
+<p>Plugin the source belongs to</p>
+<p>Flags: Read / Write / Construct</p>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSource--rank"></a><h3>The <code class="literal">“rank”</code> property</h3>
+<pre class="programlisting">  “rank”                     <span class="type">gint</span></pre>
+<p>Source rank</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: 0</p>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSource--source-desc"></a><h3>The <code class="literal">“source-desc”</code> property</h3>
+<pre class="programlisting">  “source-desc”              <span class="type">gchar</span> *</pre>
+<p>A description of the source</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: ""</p>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSource--source-icon"></a><h3>The <code class="literal">“source-icon”</code> property</h3>
+<pre class="programlisting">  “source-icon”              <span class="type">GIcon</span> *</pre>
+<p><span class="type">GIcon</span> representing the source</p>
+<p>Flags: Read / Write / Construct</p>
+<p class="since">Since 0.2.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSource--source-id"></a><h3>The <code class="literal">“source-id”</code> property</h3>
+<pre class="programlisting">  “source-id”                <span class="type">gchar</span> *</pre>
+<p>The identifier of the source.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: ""</p>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSource--source-name"></a><h3>The <code class="literal">“source-name”</code> property</h3>
+<pre class="programlisting">  “source-name”              <span class="type">gchar</span> *</pre>
+<p>The name of the source.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: ""</p>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSource--source-tags"></a><h3>The <code class="literal">“source-tags”</code> property</h3>
+<pre class="programlisting">  “source-tags”              <span class="type">GStrv</span></pre>
+<p>A string array of tags relevant this source.</p>
+<p>The tags are arbitrary, and applications should just pass over the tags
+it does not understand. Applications would usually use this to either
+group sources together, or hide certain sources: a radio application
+would filter for <a class="link" href="GrlMedia.html#GRL-MEDIA-TYPE-AUDIO:CAPS"><code class="literal">GRL_MEDIA_TYPE_AUDIO</code></a> in GrlSource::supported-media as
+well as "radio" being listed in the tags.</p>
+<p>To avoid irrelevant content being listed in applications, sources
+such as generic video sites should not be tagged as "cinema" or
+"tv" as they contain a lot of content that's not either of those.</p>
+<p>This is a list of commonly used values:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>"cinema", or "tv"
+The content served is from cinema or TV sources. For example, a
+source for movie trailers would select the former, a source for
+streaming live TV would select the latter.</p></li>
+<li class="listitem"><p>"radio"
+The content served is from streaming radios.</p></li>
+<li class="listitem"><p>"music"
+The content served is music, for example, music stores such as
+Jamendo or Magnatune.</p></li>
+<li class="listitem"><p>"country:country-code"
+The content is mostly relevant to users from a particular country,
+such as a national broadcaster. For example, BBC content would be
+tagged as "country:uk". Country codes should be an ISO-639-1 or
+ISO-639-2 code.</p></li>
+<li class="listitem"><p>"protocol:protocol-name"
+The content browsing or searching uses a particular protocol, such
+as DLNA/UPnP or DMAP/DAAP. This makes it easier to whitelist or
+blacklist sources rather than matching the implementation specific
+source ID. Examples are "protocol:dlna" and "protocol:dmap".</p></li>
+<li class="listitem">
+<p>"localhost", or "localuser"
+The content is served from the machine the application is running on,
+or by an application the user is running. Applications might choose to
+avoid showing the user's own data in their interfaces, or integrate it
+in the user's local collection.</p>
+<p>"net:local", or "net:internet"
+The source requires a connection to the local network, or a connection
+to the Internet. Sources with those tags will be automatically hidden
+from the application's reach when such networks aren't available, or
+we're not connected to a network.</p>
+</li>
+</ul></div>
+<p>Flags: Read / Write / Construct</p>
+<p class="since">Since 0.2.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlSource--supported-media"></a><h3>The <code class="literal">“supported-media”</code> property</h3>
+<pre class="programlisting">  “supported-media”          <a class="link" href="GrlMedia.html#GrlMediaType" title="enum GrlMediaType"><span class="type">GrlMediaType</span></a></pre>
+<p>List of supported media types by this source.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: GRL_MEDIA_TYPE_AUDIO | GRL_MEDIA_TYPE_VIDEO | GRL_MEDIA_TYPE_IMAGE</p>
+<p class="since">Since 0.2.3</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlSource.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GrlSource-content-changed"></a><h3>The <code class="literal">“content-changed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a>          *source,
+               <span class="type">GPtrArray</span>          *changed_medias,
+               <a class="link" href="GrlSource.html#GrlSourceChangeType" title="enum GrlSourceChangeType"><span class="type">GrlSourceChangeType</span></a> change_type,
+               <span class="type">gboolean</span>            location_unknown,
+               <span class="type">gpointer</span>            user_data)</pre>
+<p>Signals that the content in the source has changed. <em class="parameter"><code>changed_medias</code></em>
+ is the
+list of elements that have changed. Usually these medias are of type
+<a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a>, meaning that the content of that box has changed.</p>
+<p>If <em class="parameter"><code>location_unknown</code></em>
+ is <em class="parameter"><code>TRUE</code></em>
+ it means the source cannot establish where the
+change happened: could be either in the box, in any child, or in any other
+descendant of the box in the hierarchy.</p>
+<p>Both <em class="parameter"><code>change_type</code></em>
+ and <em class="parameter"><code>location_unknown</code></em>
+ are applied to all elements in the
+list.</p>
+<p>For the cases where the source can only signal that a change happened, but
+not where, it would use a list with the the root box (<em class="parameter"><code>NULL</code></em>
+ id) and set
+location_unknown as <em class="parameter"><code>TRUE</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.4.3.13.2.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>source that has changed</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>changed_medias</p></td>
+<td class="parameter_description"><p> a <span class="type">GPtrArray</span> with the medias
+that changed or a common ancestor of them of type <a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GrlMedia]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>change_type</p></td>
+<td class="parameter_description"><p>the kind of change that ocurred</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location_unknown</p></td>
+<td class="parameter_description"><p><em class="parameter"><code>TRUE</code></em>
+if the change happened in <em class="parameter"><code>media</code></em>
+itself or in one
+of its direct children (when <em class="parameter"><code>media</code></em>
+is a <a class="link" href="GrlMediaBox.html" title="GrlMediaBox"><span class="type">GrlMediaBox</span></a>). <em class="parameter"><code>FALSE</code></em>
+otherwise</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Action</p>
+<p class="since">Since 0.2.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GrlSource.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GrlPlugin.html" title="GrlPlugin"><span class="type">GrlPlugin</span></a>, <a class="link" href="GrlSource.html" title="GrlSource"><span class="type">GrlSource</span></a>, <a class="link" href="GrlMedia.html" title="GrlMedia"><span class="type">GrlMedia</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>

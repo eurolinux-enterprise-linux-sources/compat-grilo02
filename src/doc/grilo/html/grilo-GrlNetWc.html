@@ -1,0 +1,716 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GrlNetWc: Grilo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Grilo Reference Manual">
+<link rel="up" href="grilo-net.html" title="Grilo Net Classes">
+<link rel="prev" href="grilo-net.html" title="Grilo Net Classes">
+<link rel="next" href="grilo-pls.html" title="Grilo Playlist Functions">
+<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#grilo-GrlNetWc.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="grilo-net.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="grilo-net.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="grilo-pls.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="grilo-GrlNetWc"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="grilo-GrlNetWc.top_of_page"></a>GrlNetWc</span></h2>
+<p>GrlNetWc — small and simple HTTP client</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="grilo-GrlNetWc.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="returnvalue">GrlNetWc</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlNetWc.html#grl-net-wc-new" title="grl_net_wc_new ()">grl_net_wc_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GQuark</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlNetWc.html#grl-net-wc-error-quark" title="grl_net_wc_error_quark ()">grl_net_wc_error_quark</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlNetWc.html#grl-net-wc-flush-delayed-requests" title="grl_net_wc_flush_delayed_requests ()">grl_net_wc_flush_delayed_requests</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlNetWc.html#grl-net-wc-request-async" title="grl_net_wc_request_async ()">grl_net_wc_request_async</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlNetWc.html#grl-net-wc-request-finish" title="grl_net_wc_request_finish ()">grl_net_wc_request_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlNetWc.html#grl-net-wc-request-with-headers-async" title="grl_net_wc_request_with_headers_async ()">grl_net_wc_request_with_headers_async</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlNetWc.html#grl-net-wc-request-with-headers-hash-async" title="grl_net_wc_request_with_headers_hash_async ()">grl_net_wc_request_with_headers_hash_async</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlNetWc.html#grl-net-wc-set-cache" title="grl_net_wc_set_cache ()">grl_net_wc_set_cache</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlNetWc.html#grl-net-wc-set-cache-size" title="grl_net_wc_set_cache_size ()">grl_net_wc_set_cache_size</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlNetWc.html#grl-net-wc-set-log-level" title="grl_net_wc_set_log_level ()">grl_net_wc_set_log_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="grilo-GrlNetWc.html#grl-net-wc-set-throttling" title="grl_net_wc_set_throttling ()">grl_net_wc_set_throttling</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="grilo-GrlNetWc.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc">GrlNetWc</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="grilo-GrlNetWc.html#GrlNetWcClass" title="struct GrlNetWcClass">GrlNetWcClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="grilo-GrlNetWc.html#GrlNetWcError" title="enum GrlNetWcError">GrlNetWcError</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="grilo-GrlNetWc.html#GRL-NET-WC-ERROR:CAPS" title="GRL_NET_WC_ERROR">GRL_NET_WC_ERROR</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="grilo-GrlNetWc.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;grilo.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="grilo-GrlNetWc.description"></a><h2>Description</h2>
+<p>Most of the Grilo's sources need to access to web resources. The purpose of
+this utility class is to provide a thin and lean mechanism for those plugins
+to interact with those resources.</p>
+</div>
+<div class="refsect1">
+<a name="grilo-GrlNetWc.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="grl-net-wc-new"></a><h3>grl_net_wc_new ()</h3>
+<pre class="programlisting"><a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="returnvalue">GrlNetWc</span></a> *
+grl_net_wc_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.7.2.5"></a><h4>Returns</h4>
+<p> a new allocated instance of <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a>. Do <code class="function">g_object_unref()</code> after
+use it.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-net-wc-error-quark"></a><h3>grl_net_wc_error_quark ()</h3>
+<pre class="programlisting"><span class="returnvalue">GQuark</span>
+grl_net_wc_error_quark (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-net-wc-flush-delayed-requests"></a><h3>grl_net_wc_flush_delayed_requests ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_net_wc_flush_delayed_requests (<em class="parameter"><code><a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> *self</code></em>);</pre>
+<p>This method will flush all the pending request in the queue.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.7.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-net-wc-request-async"></a><h3>grl_net_wc_request_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_net_wc_request_async (<em class="parameter"><code><a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> *self</code></em>,
+                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+                          <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
+                          <em class="parameter"><code><span class="type">GAsyncReadyCallback</span> callback</code></em>,
+                          <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Request the fetching of a web resource given the <em class="parameter"><code>uri</code></em>
+. This request is
+asynchronous, thus the result will be returned within the <em class="parameter"><code>callback</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.7.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>The URI of the resource to request</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> a <span class="type">GCancellable</span> instance or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>The callback when the result is ready</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data set for the <em class="parameter"><code>callback</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-net-wc-request-finish"></a><h3>grl_net_wc_request_finish ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+grl_net_wc_request_finish (<em class="parameter"><code><a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> *self</code></em>,
+                           <em class="parameter"><code><span class="type">GAsyncResult</span> *result</code></em>,
+                           <em class="parameter"><code><span class="type">gchar</span> **content</code></em>,
+                           <em class="parameter"><code><span class="type">gsize</span> *length</code></em>,
+                           <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Finishes an asynchronous load of the file's contents.
+The contents are placed in contents, and length is set to the size of the
+contents string.</p>
+<p>The content address will be invalidated at the next request. So if you
+want to keep it, please copy it into another address.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.7.6.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>result</p></td>
+<td class="parameter_description"><p>The result of the request</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>content</p></td>
+<td class="parameter_description"><p> The contents of the resource. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p> The length of the contents or <code class="literal">NULL</code> if it is not
+needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for a <span class="type">GError</span>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.6.4.2.7.6.7"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if the request was successfull. If <code class="literal">FALSE</code> an error occurred.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-net-wc-request-with-headers-async"></a><h3>grl_net_wc_request_with_headers_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_net_wc_request_with_headers_async (<em class="parameter"><code><a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> *self</code></em>,
+                                       <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+                                       <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
+                                       <em class="parameter"><code><span class="type">GAsyncReadyCallback</span> callback</code></em>,
+                                       <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
+                                       <em class="parameter"><code>...</code></em>);</pre>
+<p>Request the fetching of a web resource given the <em class="parameter"><code>uri</code></em>
+. This request is
+asynchronous, thus the result will be returned within the <em class="parameter"><code>callback</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.7.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>The URI of the resource to request</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> a <span class="type">GCancellable</span> instance or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>The callback when the result is ready</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data set for the <em class="parameter"><code>callback</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>List of tuples of header name and header value, terminated by
+<code class="literal">NULL</code>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-net-wc-request-with-headers-hash-async"></a><h3>grl_net_wc_request_with_headers_hash_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_net_wc_request_with_headers_hash_async
+                               (<em class="parameter"><code><a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+                                <em class="parameter"><code><span class="type">GHashTable</span> *headers</code></em>,
+                                <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
+                                <em class="parameter"><code><span class="type">GAsyncReadyCallback</span> callback</code></em>,
+                                <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Request the fetching of a web resource given the <em class="parameter"><code>uri</code></em>
+. This request is
+asynchronous, thus the result will be returned within the <em class="parameter"><code>callback</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.7.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>The URI of the resource to request</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>headers</p></td>
+<td class="parameter_description"><p> a set of additional HTTP
+headers for this request or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 utf8]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> a <span class="type">GCancellable</span> instance or <code class="literal">NULL</code> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>The callback when the result is ready</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data set for the <em class="parameter"><code>callback</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-net-wc-set-cache"></a><h3>grl_net_wc_set_cache ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_net_wc_set_cache (<em class="parameter"><code><a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> *self</code></em>,
+                      <em class="parameter"><code><span class="type">gboolean</span> use_cache</code></em>);</pre>
+<p>Sets if cache must be used. Note that this will only work if caching is
+supporting.  If sets <code class="literal">TRUE</code>, a new cache will be created. If sets to <code class="literal">FALSE</code>,
+current cache is clean and removed.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.7.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>use_cache</p></td>
+<td class="parameter_description"><p>if cache must be used or not</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-net-wc-set-cache-size"></a><h3>grl_net_wc_set_cache_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_net_wc_set_cache_size (<em class="parameter"><code><a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> *self</code></em>,
+                           <em class="parameter"><code><span class="type">guint</span> cache_size</code></em>);</pre>
+<p>Sets the new maximum size of cache, in Megabytes. Default value is 10. Using
+0 means no cache will be done.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.7.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cache_size</p></td>
+<td class="parameter_description"><p>size of cache (in Mb)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-net-wc-set-log-level"></a><h3>grl_net_wc_set_log_level ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_net_wc_set_log_level (<em class="parameter"><code><a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> *self</code></em>,
+                          <em class="parameter"><code><span class="type">guint</span> log_level</code></em>);</pre>
+<p>Setting the log level the logger feature is added into
+the libsoup session.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.7.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>log_level</p></td>
+<td class="parameter_description"><p>the libsoup log level to set [0,3]</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="grl-net-wc-set-throttling"></a><h3>grl_net_wc_set_throttling ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+grl_net_wc_set_throttling (<em class="parameter"><code><a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> *self</code></em>,
+                           <em class="parameter"><code><span class="type">guint</span> throttling</code></em>);</pre>
+<p>Setting this property, the <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> will queue all the requests and
+will dispatch them with a pause between them of this value.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.7.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="grilo-GrlNetWc.html#GrlNetWc" title="struct GrlNetWc"><span class="type">GrlNetWc</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>throttling</p></td>
+<td class="parameter_description"><p>the number of seconds to wait between requests</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="grilo-GrlNetWc.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GrlNetWc"></a><h3>struct GrlNetWc</h3>
+<pre class="programlisting">struct GrlNetWc {
+  GObject parent;
+};
+</pre>
+<div class="refsect3">
+<a name="id-1.6.4.2.8.2.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">GObject</span> <em class="structfield"><code><a name="GrlNetWc.parent"></a>parent</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent object struct</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlNetWcClass"></a><h3>struct GrlNetWcClass</h3>
+<pre class="programlisting">struct GrlNetWcClass {
+  GObjectClass parent_class;
+};
+</pre>
+<p>Grilo web client helper class.</p>
+<p>It's a simple and thin web client to be used by the sources to download
+content from Internet.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.8.3.6"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">GObjectClass</span> <em class="structfield"><code><a name="GrlNetWcClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent class structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GrlNetWcError"></a><h3>enum GrlNetWcError</h3>
+<p>These constants identify all the available errors managed by
+the web client.</p>
+<div class="refsect3">
+<a name="id-1.6.4.2.8.4.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-NET-WC-ERROR-UNAVAILABLE:CAPS"></a>GRL_NET_WC_ERROR_UNAVAILABLE</p></td>
+<td class="enum_member_description">
+<p>TBD</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-NET-WC-ERROR-PROTOCOL-ERROR:CAPS"></a>GRL_NET_WC_ERROR_PROTOCOL_ERROR</p></td>
+<td class="enum_member_description">
+<p>Invalid URI or header</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-NET-WC-ERROR-AUTHENTICATION-REQUIRED:CAPS"></a>GRL_NET_WC_ERROR_AUTHENTICATION_REQUIRED</p></td>
+<td class="enum_member_description">
+<p>Required authentication</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-NET-WC-ERROR-NOT-FOUND:CAPS"></a>GRL_NET_WC_ERROR_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>Request resource not found</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-NET-WC-ERROR-CONFLICT:CAPS"></a>GRL_NET_WC_ERROR_CONFLICT</p></td>
+<td class="enum_member_description">
+<p>The entry has been modified since is was
+downloaded</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-NET-WC-ERROR-FORBIDDEN:CAPS"></a>GRL_NET_WC_ERROR_FORBIDDEN</p></td>
+<td class="enum_member_description">
+<p>TBD</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-NET-WC-ERROR-NETWORK-ERROR:CAPS"></a>GRL_NET_WC_ERROR_NETWORK_ERROR</p></td>
+<td class="enum_member_description">
+<p>Cannot connect to the server</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-NET-WC-ERROR-PROXY-ERROR:CAPS"></a>GRL_NET_WC_ERROR_PROXY_ERROR</p></td>
+<td class="enum_member_description">
+<p>Cannot connect to the proxy server</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GRL-NET-WC-ERROR-CANCELLED:CAPS"></a>GRL_NET_WC_ERROR_CANCELLED</p></td>
+<td class="enum_member_description">
+<p>The operation has been cancelled (see <span class="type">GCancellable</span>)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GRL-NET-WC-ERROR:CAPS"></a><h3>GRL_NET_WC_ERROR</h3>
+<pre class="programlisting">#define GRL_NET_WC_ERROR grl_net_wc_error_quark ()
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21.1</div>
+</body>
+</html>
